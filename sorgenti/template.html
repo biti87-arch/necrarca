@@ -33,6 +33,8 @@ header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background
 .brand{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
 h1{font-family:var(--f-display);font-weight:700;font-size:1.45rem;margin:0;letter-spacing:.02em;text-wrap:balance}
 .sub{color:var(--muted);font-size:.8rem}
+.pgSel{max-width:60vw;padding:6px 8px;border:1px solid var(--line);border-radius:7px;background:var(--surface);color:var(--ink);font:600 .85rem var(--f-body)}
+.hsub{color:var(--muted);font-size:.8rem;margin-top:4px}
 nav.tabs{display:flex;gap:6px;margin-top:10px}
 nav.tabs button{flex:1;padding:9px 6px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;font:600 .9rem var(--f-body);cursor:pointer}
 nav.tabs button[aria-selected="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
@@ -101,8 +103,9 @@ details summary{cursor:pointer;font-weight:600}
 <header class="top">
   <div class="brand">
     <h1>Grimorio del Necrarca</h1>
-    <span class="sub" id="hdrSub"></span>
+    <span class="row" style="gap:6px"><label class="label" for="pgSel">Personaggio</label><select id="pgSel" class="pgSel"></select></span>
   </div>
+  <div class="hsub" id="hdrSub"></div>
   <nav class="tabs" role="tablist">
     <button role="tab" id="tab-profilo" aria-selected="true" data-tab="profilo">Profilo</button>
     <button role="tab" id="tab-evoca" aria-selected="false" data-tab="evoca">Evocazioni</button>
@@ -132,11 +135,6 @@ const DEFAULT={esempio:true,livello:10,archetipo:'carnaio',carnaio:true,famPf:nu
   For:10,Des:14,Car:18,babOverride:'',pf:62,tsT:5,tsR:5,tsV:9,armatura:4,scudo:0,deviazione:1,naturale:0,schivare:0,caAltro:0,iniAltro:0,
   doti:{esplosione:true,banchetto:false,sacrificio:true,rapida:true,falange:false},
   usiEvoca:0,usiForma:0,schierati:[],formaAttiva:null,pfTemp:0,extraSpeciali:[],tab:'profilo'};
-let S=load();
-function load(){try{const r=localStorage.getItem('grimorio-necrarca-v1');if(r){return Object.assign(JSON.parse(JSON.stringify(DEFAULT)),JSON.parse(r));}}catch(e){}return JSON.parse(JSON.stringify(DEFAULT));}
-function norm(){if(!S.archetipo)S.archetipo=S.carnaio?'carnaio':'nessuno';S.carnaio=S.archetipo==='carnaio';}
-norm();
-function save(){try{localStorage.setItem('grimorio-necrarca-v1',JSON.stringify(S));}catch(e){}}
 
 const mod=v=>Math.floor((v-10)/2);
 const sg=n=>(n>=0?'+':'')+n;
@@ -211,11 +209,34 @@ function vLegione(pfT){
    <p class="note">Velocità ${esc(c.vel)}</p><p class="txt">${fmt(p.note)}</p></div>`;}).join('')}</div>
    <p class="note">PF di ogni parte: 40% dei PF massimi (${Math.floor(S.pf*0.4)}) più un terzo dei PF temporanei di categoria (${Math.floor(pfT/3)}).</p>`;
 }
+/* ---------- personaggi ---------- */
+const nuovoStato=nome=>Object.assign(JSON.parse(JSON.stringify(DEFAULT)),{nome,esempio:false});
+function norm(){if(!S.archetipo)S.archetipo=S.carnaio?'carnaio':'nessuno';S.carnaio=S.archetipo==='carnaio';if(!S.nome)S.nome='Personaggio';}
+let G=loadG(),S;
+function loadG(){
+  try{const r=localStorage.getItem('grimorio-necrarca-v2');if(r){const g=JSON.parse(r);if(g&&g.dati&&Object.keys(g.dati).length)return g;}}catch(e){}
+  let v1=null;try{const r=localStorage.getItem('grimorio-necrarca-v1');if(r)v1=JSON.parse(r);}catch(e){}
+  const st=Object.assign(JSON.parse(JSON.stringify(DEFAULT)),v1||{});if(!st.nome)st.nome=v1?'Personaggio 1':'Esempio';
+  return {attivo:'p1',dati:{p1:st}};
+}
+function usa(id){G.attivo=id;S=Object.assign(JSON.parse(JSON.stringify(DEFAULT)),G.dati[id]);G.dati[id]=S;norm();}
+usa(G.dati[G.attivo]?G.attivo:Object.keys(G.dati)[0]);
+function save(){G.dati[G.attivo]=S;try{localStorage.setItem('grimorio-necrarca-v2',JSON.stringify(G));}catch(e){}}
+function nuovoId(){let i=1;while(G.dati['p'+i])i++;return 'p'+i;}
+function vPersonaggi(){
+  const ids=Object.keys(G.dati);
+  return `<div class="card"><h2>Personaggi</h2>
+   <div class="grid"><label class="field" style="grid-column:1/-1"><span class="label">Nome del personaggio</span><input id="nome" data-k="nome" type="text" value="${esc(S.nome)}" style="font-family:var(--f-body)"></label></div>
+   <div class="row" style="margin-top:10px"><button class="btn" id="pgNuovo">Nuovo personaggio</button><button class="btn" id="pgDup">Duplica</button>${ids.length>1?(S._confElimina?`<span class="note">Eliminare ${esc(S.nome)}?</span><button class="btn sm" id="pgDelOk" style="border-color:var(--cond);color:var(--cond)">Elimina</button><button class="btn sm" id="pgDelNo">Annulla</button>`:`<button class="btn" id="pgDel">Elimina</button>`):''}</div>
+   <p class="note">${ids.length} personaggi salvati su questo dispositivo. Ognuno ha profilo, non morti schierati, usi e forma attiva propri.</p></div>`;
+}
 /* ---------- navigazione ---------- */
+document.getElementById('pgSel').onchange=e=>{S._confElimina=false;save();usa(e.target.value);save();closeModal();render();};
 document.querySelectorAll('nav.tabs button').forEach(b=>b.onclick=()=>{S.tab=b.dataset.tab;save();render();});
 function render(){
   document.querySelectorAll('nav.tabs button').forEach(b=>b.setAttribute('aria-selected',b.dataset.tab===S.tab));
   document.getElementById('hdrSub').textContent=`Liv. ${S.livello} · ${S.carnaio?'Carnaio · Dominio '+FAM[S.dominio]:ARCH_NOME[S.archetipo]}`;
+  const sel=document.getElementById('pgSel');sel.innerHTML=Object.keys(G.dati).map(id=>`<option value="${id}" ${id===G.attivo?'selected':''}>${esc(G.dati[id].nome||id)}</option>`).join('');
   const m=document.getElementById('main');
   m.innerHTML=S.tab==='profilo'?vProfilo():S.tab==='evoca'?vEvoca():vForme();
   bind();
@@ -226,8 +247,9 @@ function num(id,label,v,min,max){return `<label class="field"><span class="label
 function vProfilo(){
   const b=bab();
   return `<section class="panel">
+  ${vPersonaggi()}
   ${S.esempio?`<div class="banner">Valori d'esempio: sostituiscili con quelli del tuo personaggio. Vengono salvati su questo dispositivo.</div>`:''}
-  <div class="card"><h2>Personaggio</h2>
+  <div class="card"><h2>Caratteristiche</h2>
    <div class="grid">
     ${num('livello','Livello necrarca',S.livello,1,20)}
     ${num('For','Forza',S.For)}${num('Des','Destrezza',S.Des)}${num('Car','Carisma',S.Car)}
@@ -472,6 +494,10 @@ function bind(){
   m.querySelectorAll('[data-g]').forEach(el=>el.onchange=()=>{S.gradi[el.dataset.g]=+el.value;S.esempio=false;save();render();});
   m.querySelectorAll('[data-d]').forEach(el=>el.onchange=()=>{S.doti[el.dataset.d]=el.checked;save();render();});
   const q=(id,fn)=>{const e=m.querySelector('#'+id);if(e)e.onclick=fn;};
+  q('pgNuovo',()=>{const id=nuovoId();G.dati[id]=nuovoStato('Personaggio '+id.slice(1));save();usa(id);S.tab='profilo';save();render();});
+  q('pgDup',()=>{const id=nuovoId();const c=JSON.parse(JSON.stringify(S));c.nome=S.nome+' (copia)';delete c._confElimina;G.dati[id]=c;save();usa(id);save();render();});
+  q('pgDel',()=>{S._confElimina=true;render();});q('pgDelNo',()=>{S._confElimina=false;render();});
+  q('pgDelOk',()=>{const id=G.attivo;delete G.dati[id];usa(Object.keys(G.dati)[0]);save();render();});
   q('riposo',()=>{S.usiEvoca=0;S.usiForma=0;S.usiOrda=0;save();render();});
   q('evUsa',()=>{S.usiEvoca++;save();render();});q('evRid',()=>{S.usiEvoca=Math.max(0,S.usiEvoca-1);save();render();});
   q('fmRid',()=>{S.usiForma=Math.max(0,S.usiForma-1);save();render();});
