@@ -1,0 +1,3610 @@
+[
+ {
+  "id": "carcassa",
+  "nome": "Carcassa",
+  "livello": 1,
+  "tipo": "Zombie",
+  "taglia": "piccolo",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": -1,
+  "descr": "Poco più di carne putrescente animata dalla volontà del necrarca, la carcassa è la più rudimentale delle sue creazioni. Barcolla verso il nemico con ferocia cieca, incapace di fermarsi finché non cade in polvere.",
+  "extra": [],
+  "capacita": [
+   {
+    "nome": "Barcollante",
+    "tipo": "Sfo",
+    "testo": "La carcassa ha sempre la condizione [BARCOLLANTE] ma può effettuare cariche muovendosi alla propria velocità base."
+   }
+  ],
+  "ca": 11,
+  "contatto": 8,
+  "impreparato": 11,
+  "pf": 5,
+  "dv": 1,
+  "ts": {
+   "Tempra": 2,
+   "Riflessi": 0,
+   "Volontà": 0
+  },
+  "velocita": "9 m",
+  "attacchi": [
+   "Schianto +3 (1d4+2)"
+  ],
+  "att_speciali": "Barcollante",
+  "car": {
+   "For": 16,
+   "Des": 8,
+   "Cos": null,
+   "Int": 2,
+   "Sag": 10,
+   "Car": 10
+  },
+  "bmc": "BMC +4, DMC 14",
+  "talenti": "nessuno",
+  "abilita": "nessuna"
+ },
+ {
+  "id": "mucchio_dossa",
+  "nome": "Mucchio d'ossa",
+  "livello": 1,
+  "tipo": "Scheletro",
+  "taglia": "piccolo",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 2,
+  "descr": "Un groviglio di ossa spezzate e denti scheggati che tintinna avanzando. Non ha più carne né scopo — solo il ricordo istintivo di graffiare e squarciare qualunque cosa si muova.",
+  "extra": [
+   "Immunità: Freddo"
+  ],
+  "capacita": [],
+  "ca": 14,
+  "contatto": 12,
+  "impreparato": 10,
+  "pf": 6,
+  "dv": 1,
+  "ts": {
+   "Tempra": 0,
+   "Riflessi": 2,
+   "Volontà": 0
+  },
+  "velocita": "9 m",
+  "attacchi": [
+   "2 Artigli +2 (1d4+1)"
+  ],
+  "att_speciali": "",
+  "car": {
+   "For": 10,
+   "Des": 14,
+   "Cos": null,
+   "Int": 2,
+   "Sag": 10,
+   "Car": 10
+  },
+  "bmc": "BMC +0, DMC 11",
+  "talenti": "Schivare",
+  "abilita": "nessuna"
+ },
+ {
+  "id": "necrosciame",
+  "nome": "Necrosciame",
+  "livello": 1,
+  "tipo": "Zombie",
+  "taglia": "sciame di minuscoli",
+  "sciame": true,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 0,
+  "descr": "Una massa brulicante di frammenti di carne, insetti necrotici e schegge ossee che si muove come un'unica entità ribollente. Ciò che non riesce a distruggere, lo logora dall'interno.",
+  "extra": [
+   "Capacità difensive: tratti degli sciami"
+  ],
+  "capacita": [
+   {
+    "nome": "Tratti degli sciami",
+    "tipo": "Sfo",
+    "testo": "Uno sciame di minuscoli è immune a qualsiasi danno da arma singola. Subisce danno dimezzato da armi taglienti e perforanti, danno normale da armi contundenti e +50% di danno da effetti ad area. È immune a [FRASTORNAMENTO] e manovre di combattimento. Non può essere [IN LOTTA]. Occupa uno spazio di 3 m × 3 m."
+   },
+   {
+    "nome": "Brulicare",
+    "tipo": "Sop",
+    "testo": "Ogni creatura che si trova nello spazio dello sciame al termine del proprio turno deve superare un TS su Tempra con CD 11 o essere [ACCECATA] per 1 round. CD = 10 + 0 (½×1) + 0 (Car 10)."
+   }
+  ],
+  "ca": 11,
+  "contatto": 10,
+  "impreparato": 11,
+  "pf": 9,
+  "dv": 1,
+  "ts": {
+   "Tempra": 2,
+   "Riflessi": 3,
+   "Volontà": 0
+  },
+  "velocita": "9 m, Nuotare 3 m, Scalare 3 m",
+  "attacchi": [
+   "Sciame 1d4"
+  ],
+  "att_speciali": "Brulicare CD 11 ([ACCECATO] 1 round)",
+  "car": {
+   "For": 4,
+   "Des": 10,
+   "Cos": null,
+   "Int": 2,
+   "Sag": 10,
+   "Car": 10
+  },
+  "bmc": "BMC —, DMC —",
+  "talenti": "nessuno",
+  "abilita": "Furtività +8, Percezione +4"
+ },
+ {
+  "id": "ectoplasma",
+  "nome": "Ectoplasma",
+  "livello": 2,
+  "tipo": "Spirito",
+  "taglia": "piccolo",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 3,
+  "descr": "Una bolla vischiosa di protoplasma etereo, fredda al tatto come la morte. Scivola attraverso le crepe dei muri e si insinua tra i nemici prima che possano accorgersi della sua presenza.",
+  "extra": [
+   "Capacità difensive: fumoso, +4 vs scacciare/positiva"
+  ],
+  "capacita": [
+   {
+    "nome": "Amorfo",
+    "tipo": "Sfo",
+    "testo": "L'ectoplasma non ha forma definita e non subisce danni critici. Non è soggetto a manovre di Sbilanciare o Viaggio."
+   },
+   {
+    "nome": "Fluttuare",
+    "tipo": "Sfo",
+    "testo": "L'ectoplasma può muoversi verticalmente senza costo aggiuntivo, mantenendo un'altezza massima di 1 m dal suolo."
+   },
+   {
+    "nome": "Scatto in fase",
+    "tipo": "Sfo",
+    "testo": "Come azione veloce, l'ectoplasma può muoversi attraverso pareti o ostacoli solidi spessi fino a 1,5 m. Non provoca attacchi di opportunità."
+   },
+   {
+    "nome": "Fumoso",
+    "tipo": "Sfo",
+    "testo": "50% di probabilità di fallimento contro attacchi fisici non magici. Non si applica agli attacchi magici o agli incantesimi."
+   },
+   {
+    "nome": "Melma orripilante",
+    "tipo": "Sop",
+    "testo": "Chi viene colpito dallo schianto deve superare un TS su Volontà con CD 12 o essere [SCOSSO] per 1d4 round. Effetto [paura, influenza mentale]."
+   }
+  ],
+  "ca": 15,
+  "contatto": 15,
+  "impreparato": 10,
+  "pf": 9,
+  "dv": 2,
+  "ts": {
+   "Tempra": 0,
+   "Riflessi": 3,
+   "Volontà": 2
+  },
+  "velocita": "6 m",
+  "attacchi": [
+   "Schianto +3 a contatto (1d6+1 più Melma orripilante Vol CD 12)"
+  ],
+  "att_speciali": "",
+  "car": {
+   "For": null,
+   "Des": 16,
+   "Cos": null,
+   "Int": 6,
+   "Sag": 10,
+   "Car": 12
+  },
+  "bmc": "BMC +3, DMC 13",
+  "talenti": "nessuno",
+  "abilita": "Furtività +7, Percezione +4"
+ },
+ {
+  "id": "ghoul_comune",
+  "nome": "Ghoul comune",
+  "livello": 2,
+  "tipo": "Ghoul",
+  "taglia": "medio",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 2,
+  "descr": "Dal ventre affamato e le dita adunche, il ghoul comune è animato da un istinto divorante. Il suo tocco provoca nausea e disorientamento in chiunque sopravviva al primo contatto.",
+  "extra": [
+   "Capacità difensive: +4 vs scacciare/positiva"
+  ],
+  "capacita": [
+   {
+    "nome": "Tocco nauseante",
+    "tipo": "Sop",
+    "testo": "Chi viene colpito da morso o artiglio deve superare un TS su Tempra con CD 13 o essere [FRASTORNATO] per 1d4+1 round. CD = 10 + 1 (½ DV) + 2 (Car). Chi supera il tiro è immune per 24 ore allo stesso ghoul."
+   }
+  ],
+  "ca": 14,
+  "contatto": 12,
+  "impreparato": 12,
+  "pf": 13,
+  "dv": 2,
+  "ts": {
+   "Tempra": 0,
+   "Riflessi": 2,
+   "Volontà": 5
+  },
+  "velocita": "9 m",
+  "attacchi": [
+   "Morso +2 (1d6+1 più Tocco nauseante) e 2 Artigli +2 (1d4+1 più Tocco nauseante)"
+  ],
+  "att_speciali": "",
+  "car": {
+   "For": 13,
+   "Des": 15,
+   "Cos": null,
+   "Int": 13,
+   "Sag": 14,
+   "Car": 14
+  },
+  "bmc": "BMC +3, DMC 15",
+  "talenti": "nessuno",
+  "abilita": "Furtività +7, Percezione +7, Scalare +6"
+ },
+ {
+  "id": "mezzo_ghoul_servitore",
+  "nome": "Mezzo-ghoul servitore",
+  "livello": 2,
+  "tipo": "Ghoul",
+  "taglia": "medio",
+  "sciame": false,
+  "focus": true,
+  "nota": "",
+  "iniziativa": 1,
+  "descr": "A metà tra il vivo e il morto, questo servitore maledetto mantiene abbastanza intelletto da obbedire a ordini complessi. Il necrarca lo utilizza come agente discreto, messaggero o maggiordomo.",
+  "extra": [],
+  "capacita": [
+   {
+    "nome": "Focus semplice",
+    "tipo": "Sop",
+    "testo": "Non conta nel limite di 3 non morti controllabili mentre è sotto forma di parte focale. Un solo Focus semplice attivo alla volta."
+   },
+   {
+    "nome": "Maggiordomo",
+    "tipo": "Sop",
+    "testo": "Può sbrigare compiti complessi (scrivere, cucinare, portare messaggi, sorvegliare) come un servitore competente. Le doti di Dominio dei Ghoul che richiedono il combattimento attivo (Dominio dei Ghoul II e IV) non si applicano a questa creatura."
+   }
+  ],
+  "ca": 12,
+  "contatto": 12,
+  "impreparato": 10,
+  "pf": 9,
+  "dv": 2,
+  "ts": {
+   "Tempra": 2,
+   "Riflessi": 2,
+   "Volontà": 5
+  },
+  "velocita": "9 m",
+  "attacchi": [
+   "Artiglio +0 (1d2)"
+  ],
+  "att_speciali": "",
+  "car": {
+   "For": 10,
+   "Des": 12,
+   "Cos": null,
+   "Int": 13,
+   "Sag": 10,
+   "Car": 14
+  },
+  "bmc": "BMC +0, DMC 11",
+  "talenti": "nessuno",
+  "abilita": "Conoscenze (gen.) +6, Percezione +7, Furtività +6, Raggirare +4"
+ },
+ {
+  "id": "zombie",
+  "nome": "Zombie",
+  "livello": 2,
+  "tipo": "Zombie",
+  "taglia": "medio",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 0,
+  "descr": "Il classico non morto: lento, instancabile, capace di assorbire punizioni che abbatterebbero qualsiasi essere vivente. Avanza senza pensare, senza fermarsi, senza smettere.",
+  "extra": [
+   "RD 1/tagliente"
+  ],
+  "capacita": [
+   {
+    "nome": "Barcollante",
+    "tipo": "Sfo",
+    "testo": "Ha sempre la condizione [BARCOLLANTE] ma può effettuare cariche muovendosi alla propria velocità base."
+   }
+  ],
+  "ca": 13,
+  "contatto": 12,
+  "impreparato": 12,
+  "pf": 9,
+  "dv": 2,
+  "ts": {
+   "Tempra": 2,
+   "Riflessi": 0,
+   "Volontà": 2
+  },
+  "velocita": "9 m",
+  "attacchi": [
+   "Schianto +4 (1d6+3)"
+  ],
+  "att_speciali": "Barcollante",
+  "car": {
+   "For": 17,
+   "Des": 10,
+   "Cos": null,
+   "Int": 2,
+   "Sag": 10,
+   "Car": 12
+  },
+  "bmc": "BMC +4, DMC 14",
+  "talenti": "nessuno",
+  "abilita": "nessuna"
+ },
+ {
+  "id": "zucca_maligna",
+  "nome": "Zucca maligna",
+  "livello": 2,
+  "tipo": "Spirito",
+  "taglia": "minuscolo",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 2,
+  "descr": "Una testa animata dalla magia necromantica, con occhi incandescenti e un sorriso pieno di denti aguzzi. Vola radente al suolo sputando fiamme e scrutando l'invisibile con la sua luce spettrale.",
+  "extra": [
+   "Immunità: Fuoco",
+   "Capacità difensive: fumoso, +4 vs scacciare/positiva"
+  ],
+  "capacita": [
+   {
+    "nome": "Fumoso",
+    "tipo": "Sfo",
+    "testo": "Come Ectoplasma: 50% di probabilità di fallimento contro attacchi fisici non magici."
+   },
+   {
+    "nome": "Vedere invisibilità",
+    "tipo": "Sop",
+    "testo": "1/giorno, come azione standard: la zucca attiva la capacità di vedere creature e oggetti invisibili per 1 minuto."
+   },
+   {
+    "nome": "Bagliore",
+    "tipo": "Sop",
+    "testo": "Come azione standard, la zucca emette una luce spettrale che illumina un'area di 6 m. La durata e il colore sono a discrezione del necrarca (massimo 1 ora)."
+   },
+   {
+    "nome": "Sputo infuocato",
+    "tipo": "Sop",
+    "testo": "Attacco a distanza, gittata 9 m (incremento 3 m), 1d6 danni da fuoco. La zucca è immune al fuoco."
+   }
+  ],
+  "ca": 12,
+  "contatto": 12,
+  "impreparato": 10,
+  "pf": 8,
+  "dv": 2,
+  "ts": {
+   "Tempra": 0,
+   "Riflessi": 2,
+   "Volontà": 3
+  },
+  "velocita": "6 m",
+  "attacchi": [
+   "Schianto +1 (1d4)",
+   "Distanza: Sputo infuocato +3 a contatto (1d6 fuoco, gittata 9 m)"
+  ],
+  "att_speciali": "",
+  "car": {
+   "For": 8,
+   "Des": 14,
+   "Cos": null,
+   "Int": 8,
+   "Sag": 12,
+   "Car": 12
+  },
+  "bmc": "BMC +0, DMC 10",
+  "talenti": "nessuno",
+  "abilita": "Percezione +5, Furtività +6"
+ },
+ {
+  "id": "mano_strisciante",
+  "nome": "Mano strisciante",
+  "livello": 3,
+  "tipo": "Disarticolato",
+  "taglia": "minuscolo",
+  "sciame": false,
+  "focus": true,
+  "nota": "",
+  "iniziativa": 4,
+  "descr": "Una mano mozza che striscia come un ragno, silenziosa e velocissima. Non c'è guardia abbastanza vigile da sentirla avvicinarsi, e nessuno dimentica la sensazione di quelle dita che si stringono intorno alla gola.",
+  "extra": [],
+  "capacita": [
+   {
+    "nome": "Focus semplice",
+    "tipo": "Sop",
+    "testo": "Non conta nel limite di 3 non morti controllabili mentre è parte focale. Un solo Focus semplice attivo alla volta."
+   },
+   {
+    "nome": "Strangolare",
+    "tipo": "Sfo",
+    "testo": "Se colpisce una creatura di taglia media o inferiore con lo schianto, può effettuare una manovra di Lottare come azione gratuita senza provocare attacchi di opportunità. Non subisce penalità di taglia a queste manovre contro creature di taglia media o inferiore. Se la manovra riesce, in ogni turno successivo infligge automaticamente 1d4+2 danni. L'avversario trattenuto non può parlare né lanciare incantesimi con componenti verbali."
+   }
+  ],
+  "ca": 17,
+  "contatto": 14,
+  "impreparato": 12,
+  "pf": 11,
+  "dv": 2,
+  "ts": {
+   "Tempra": 1,
+   "Riflessi": 4,
+   "Volontà": 2
+  },
+  "velocita": "6 m, Scalare 3 m",
+  "attacchi": [
+   "Schianto +4 (1d4+2 più Afferrare)"
+  ],
+  "att_speciali": "Strangolare",
+  "car": {
+   "For": 15,
+   "Des": 19,
+   "Cos": null,
+   "Int": 2,
+   "Sag": 12,
+   "Car": 10
+  },
+  "bmc": "BMC +3 (+5 Lottare), DMC 17",
+  "talenti": "Mobilità",
+  "abilita": "Furtività +16, Percezione +6, Scalare +12"
+ },
+ {
+  "id": "festrog",
+  "nome": "Festrog",
+  "livello": 3,
+  "tipo": "Ghoul",
+  "taglia": "piccolo",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 3,
+  "descr": "Questa creatura deforme, metà umana e metà bestia, corre a quattro zampe con una velocità inquietante. Le sue pustole infette scoppiano al contatto e la sua frenesia in carica abbatte anche chi regge i suoi artigli.",
+  "extra": [],
+  "capacita": [
+   {
+    "nome": "Pustole infette",
+    "tipo": "Sop",
+    "testo": "Quando il festrog colpisce in mischia, il bersaglio deve superare un TS su Tempra con CD 13 o essere [INFERMO] per 1d4 round. Effetto [veleno, malattia]."
+   },
+   {
+    "nome": "Nutrirsi",
+    "tipo": "Sfo",
+    "testo": "Ogni volta che colpisce con il morso una creatura vivente dotata di carne, il festrog si cura di 1d4 Punti Ferita."
+   },
+   {
+    "nome": "Sbilanciare in carica",
+    "tipo": "Sfo",
+    "testo": "Al termine di una carica, il festrog può effettuare una manovra di Sbilanciare come azione gratuita con BMC +7."
+   }
+  ],
+  "ca": 17,
+  "contatto": 13,
+  "impreparato": 13,
+  "pf": 17,
+  "dv": 3,
+  "ts": {
+   "Tempra": 0,
+   "Riflessi": 4,
+   "Volontà": 4
+  },
+  "velocita": "9 m (12 m su 4 zampe)",
+  "attacchi": [
+   "2 Artigli +4 (1d4+2) e Morso +3 (1d3+1 più Nutrirsi 1d4 PF)"
+  ],
+  "att_speciali": "Pustole infette CD 13, Sbilanciare in carica",
+  "car": {
+   "For": 15,
+   "Des": 17,
+   "Cos": null,
+   "Int": 2,
+   "Sag": 14,
+   "Car": 12
+  },
+  "bmc": "BMC +5 (+7 Sbil.), DMC 18",
+  "talenti": "Inseguire",
+  "abilita": "Acrobazia +7, Percezione +8, Scalare +7"
+ },
+ {
+  "id": "mastino_etereo",
+  "nome": "Mastino etereo",
+  "livello": 3,
+  "tipo": "Spirito",
+  "taglia": "piccolo",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 1,
+  "descr": "Un cane spettrale che esiste a metà tra il mondo materiale e quello etereo. I suoi morsi trapassano armature e scudi come se non esistessero, e il suo fiuto soprannaturale lo guida direttamente agli altri non morti.",
+  "extra": [
+   "Capacità difensive: sfasatura eterea (20% mancato)"
+  ],
+  "capacita": [
+   {
+    "nome": "Sfasatura eterea",
+    "tipo": "Sfo",
+    "testo": "Parzialmente nel Piano Etereo: 20% probabilità di fallimento contro tutti gli attacchi fisici."
+   },
+   {
+    "nome": "Fauci eteree",
+    "tipo": "Sop",
+    "testo": "Gli attacchi di morso sono trattati come Tocco fantasma: ignorano il bonus di armatura e naturale, colpiscono le creature incorporee."
+   },
+   {
+    "nome": "Fiutare non morti",
+    "tipo": "Sfo",
+    "testo": "Individua automaticamente i non morti entro 30 m (90 m controvento), anche attraverso materiali solidi."
+   },
+   {
+    "nome": "",
+    "tipo": "",
+    "testo": "Capacità magiche (LI 3°, Concentrazione +4): 1/giorno — Suono fantasma (Vol CD 12), Immagine silenziosa (Vol CD 12), Foschia occultante"
+   }
+  ],
+  "ca": 14,
+  "contatto": 13,
+  "impreparato": 11,
+  "pf": 17,
+  "dv": 3,
+  "ts": {
+   "Tempra": 0,
+   "Riflessi": 1,
+   "Volontà": 4
+  },
+  "velocita": "12 m",
+  "attacchi": [
+   "Morso +5 (1d6+3 più Sbilanciare)"
+  ],
+  "att_speciali": "Fauci eteree",
+  "car": {
+   "For": 16,
+   "Des": 13,
+   "Cos": null,
+   "Int": 5,
+   "Sag": 14,
+   "Car": 12
+  },
+  "bmc": "BMC +4 (+6 Sbil.), DMC 15",
+  "talenti": "nessuno",
+  "abilita": "Percezione +8, Furtività +5, Fiutare +12"
+ },
+ {
+  "id": "zombie_rapido",
+  "nome": "Zombie rapido",
+  "livello": 3,
+  "tipo": "Zombie",
+  "taglia": "medio",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 2,
+  "descr": "Non c'è niente di lento in questo zombie. Strappa e colpisce con una furia caotica che sembra quasi vitalità, scaraventando i nemici a terra prima che abbiano il tempo di reagire.",
+  "extra": [
+   "RD 1/tagliente"
+  ],
+  "capacita": [
+   {
+    "nome": "Barcollante",
+    "tipo": "Sfo",
+    "testo": "Ha sempre la condizione [BARCOLLANTE] ma può effettuare cariche."
+   },
+   {
+    "nome": "Colpi rapidi",
+    "tipo": "Sfo",
+    "testo": "Quando effettua un attacco completo, lo zombie rapido sferza un secondo schianto al suo bonus di attacco massimo (+5). Entrambi i colpi si risolvono nella stessa azione."
+   }
+  ],
+  "ca": 15,
+  "contatto": 14,
+  "impreparato": 12,
+  "pf": 17,
+  "dv": 3,
+  "ts": {
+   "Tempra": 0,
+   "Riflessi": 2,
+   "Volontà": 3
+  },
+  "velocita": "9 m",
+  "attacchi": [
+   "Schianto +5 (1d6+3)"
+  ],
+  "att_speciali": "Colpi rapidi, Barcollante",
+  "car": {
+   "For": 17,
+   "Des": 14,
+   "Cos": null,
+   "Int": 2,
+   "Sag": 10,
+   "Car": 12
+  },
+  "bmc": "BMC +6, DMC 16",
+  "talenti": "nessuno",
+  "abilita": "nessuna"
+ },
+ {
+  "id": "decapitato",
+  "nome": "Decapitato",
+  "livello": 4,
+  "tipo": "Disarticolato",
+  "taglia": "minuscolo",
+  "sciame": false,
+  "focus": true,
+  "nota": "",
+  "iniziativa": 5,
+  "descr": "Una testa spiccata dal collo che volteggia nell'aria a pochi centimetri dal suolo, osservando tutto con occhi vuoti. Il suo urlo soprannaturale taglia il coraggio come una lama.",
+  "extra": [],
+  "capacita": [
+   {
+    "nome": "Focus semplice",
+    "tipo": "Sop",
+    "testo": "Non conta nel limite di 3 non morti controllabili mentre è parte focale. Un solo Focus semplice attivo alla volta."
+   },
+   {
+    "nome": "Sensore visivo",
+    "tipo": "Sop",
+    "testo": "Come azione di round completo, il necrarca può scegliere di vedere attraverso gli occhi del decapitato (portata massima 30 m dal necrarca). Ottiene anche la scurovisione del decapitato per tutta la durata. Può terminare l'effetto come azione gratuita."
+   },
+   {
+    "nome": "Urlo straziante",
+    "tipo": "Sop",
+    "testo": "1/1d4 round, come azione gratuita: tutte le creature entro 6 m devono superare un TS su Volontà con CD 12 o essere [SCOSSE] per 1d3+1 round. Le creature che superano il tiro sono immuni per 24 ore. Effetto [uditivo, paura, influenza mentale]."
+   }
+  ],
+  "ca": 17,
+  "contatto": 15,
+  "impreparato": 12,
+  "pf": 17,
+  "dv": 3,
+  "ts": {
+   "Tempra": 0,
+   "Riflessi": 2,
+   "Volontà": 2
+  },
+  "velocita": "Volare 12 m (perfetta), altezza max 1 m",
+  "attacchi": [
+   "Morso +4 (1d4)"
+  ],
+  "att_speciali": "Urlo straziante",
+  "car": {
+   "For": 11,
+   "Des": 20,
+   "Cos": null,
+   "Int": 6,
+   "Sag": 11,
+   "Car": 10
+  },
+  "bmc": "BMC +0, DMC 10 (non sbilanciato)",
+  "talenti": "Mobilità",
+  "abilita": "Furtività +17, Percezione +8"
+ },
+ {
+  "id": "isitoq",
+  "nome": "Isitoq",
+  "livello": 4,
+  "tipo": "Disarticolato",
+  "taglia": "minuscolo",
+  "sciame": false,
+  "focus": true,
+  "nota": "",
+  "iniziativa": 5,
+  "descr": "Un globo oculare disincarnato che fluttua silenzioso nell'ombra. Niente sfugge alla sua visione, e le lacrime spettrali che distilla disorientano chi osa incontrarne lo sguardo.",
+  "extra": [],
+  "capacita": [
+   {
+    "nome": "Focus semplice",
+    "tipo": "Sop",
+    "testo": "Come Decapitato."
+   },
+   {
+    "nome": "Sensore visivo",
+    "tipo": "Sop",
+    "testo": "Come Decapitato. Vista telescopica: può percepire dettagli a 300 m come se fossero a 9 m."
+   },
+   {
+    "nome": "Lacrime di angoscia",
+    "tipo": "Sop",
+    "testo": "Come azione di round completo, l'isitoq può bersagliare una creatura entro 9 m con un attacco a contatto a distanza. Se colpisce, il bersaglio deve superare un TS su Volontà con CD 12 o essere [FRASTORNATO] per 1 round. Effetto [compulsione, paura, influenza mentale]."
+   }
+  ],
+  "ca": 17,
+  "contatto": 15,
+  "impreparato": 12,
+  "pf": 17,
+  "dv": 3,
+  "ts": {
+   "Tempra": 0,
+   "Riflessi": 2,
+   "Volontà": 2
+  },
+  "velocita": "Volare 12 m (perfetta), altezza max 1 m",
+  "attacchi": [
+   "Nessun attacco in mischia"
+  ],
+  "att_speciali": "Lacrime di angoscia",
+  "car": {
+   "For": 11,
+   "Des": 20,
+   "Cos": null,
+   "Int": 6,
+   "Sag": 11,
+   "Car": 10
+  },
+  "bmc": "BMC +0, DMC 10 (non sbilanciato)",
+  "talenti": "Mobilità",
+  "abilita": "Furtività +17, Percezione +8"
+ },
+ {
+  "id": "armatura_fantasma",
+  "nome": "Armatura fantasma",
+  "livello": 4,
+  "tipo": "Spirito",
+  "taglia": "medio",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 0,
+  "descr": "Un'armatura vuota che si muove da sola, silenziosa come un fantasma. Ferma contro una parete è indistinguibile da un equipaggiamento abbandonato — finché non è troppo tardi.",
+  "extra": [
+   "Capacità difensive: +4 vs scacciare/positiva"
+  ],
+  "capacita": [
+   {
+    "nome": "Immobilità",
+    "tipo": "Sfo",
+    "testo": "Se l'armatura fantasma rimane ferma per almeno 1 round, ottiene automaticamente 20 sulla prova di Furtività, sembrando del tutto identica a un'armatura normale abbandonata. Qualsiasi movimento interrompe l'effetto."
+   },
+   {
+    "nome": "Equipaggiamento",
+    "tipo": "Sfo",
+    "testo": "Vedi regola generale Equipaggiamento (Sezione regole). L'armatura fantasma può usare qualsiasi arma da mischia senza la qualità \"Difficile da usare\"."
+   }
+  ],
+  "ca": 19,
+  "contatto": 10,
+  "impreparato": 19,
+  "pf": 22,
+  "dv": 4,
+  "ts": {
+   "Tempra": 1,
+   "Riflessi": 2,
+   "Volontà": 3
+  },
+  "velocita": "9 m",
+  "attacchi": [
+   "2 Schianti +5 (1d6+3)"
+  ],
+  "att_speciali": "",
+  "car": {
+   "For": 17,
+   "Des": 11,
+   "Cos": null,
+   "Int": 6,
+   "Sag": 11,
+   "Car": 10
+  },
+  "bmc": "BMC +4, DMC 16",
+  "talenti": "Attacco poderoso",
+  "abilita": "Furtività +12"
+ },
+ {
+  "id": "ghoul_assassino",
+  "nome": "Ghoul assassino",
+  "livello": 4,
+  "tipo": "Ghoul",
+  "taglia": "medio",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 4,
+  "descr": "Agile e predatorio, questo ghoul ha conservato gli istinti del cacciatore che era in vita. Si muove nell'ombra e colpisce con precisione chirurgica, sfruttando ogni minimo abbassamento della guardia del bersaglio.",
+  "extra": [],
+  "capacita": [
+   {
+    "nome": "Attacco furtivo",
+    "tipo": "Sfo",
+    "testo": "Se il ghoul assassino colpisce un nemico [COLTO ALLA SPROVVISTA] o uno che gli stia fiancheggiando, infligge 1d6 danni aggiuntivi."
+   },
+   {
+    "nome": "Eludere",
+    "tipo": "Sfo",
+    "testo": "Se il ghoul assassino supera un Tiro Salvezza su Riflessi contro un effetto che infligge metà danno in caso di successo, non subisce alcun danno."
+   }
+  ],
+  "ca": 17,
+  "contatto": 15,
+  "impreparato": 11,
+  "pf": 22,
+  "dv": 4,
+  "ts": {
+   "Tempra": 0,
+   "Riflessi": 7,
+   "Volontà": 1
+  },
+  "velocita": "9 m",
+  "attacchi": [
+   "2 Artigli +5 (1d6+3 / 19-20)"
+  ],
+  "att_speciali": "Attacco furtivo +1d6, Eludere",
+  "car": {
+   "For": 17,
+   "Des": 19,
+   "Cos": null,
+   "Int": 4,
+   "Sag": 13,
+   "Car": 10
+  },
+  "bmc": "BMC +5, DMC 19",
+  "talenti": "Critico migliorato (artiglio)",
+  "abilita": "Acrobazia +8, Furtività +8, Nuotare +8, Percezione +6, Rapidità di mano +9, Scalare +16"
+ },
+ {
+  "id": "scheletro_guerriero",
+  "nome": "Scheletro guerriero",
+  "livello": 4,
+  "tipo": "Scheletro",
+  "taglia": "medio",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 1,
+  "descr": "Più che uno scheletro, un soldato eterno. Le sue ossa conservano la memoria muscolare di decenni di combattimento, e la sua tecnica è ancora letale quanto lo era da vivo.",
+  "extra": [
+   "Immunità: Freddo"
+  ],
+  "capacita": [
+   {
+    "nome": "Equipaggiamento",
+    "tipo": "Sfo",
+    "testo": "Vedi regola generale Equipaggiamento (Sezione regole)."
+   }
+  ],
+  "ca": 18,
+  "contatto": 11,
+  "impreparato": 14,
+  "pf": 22,
+  "dv": 4,
+  "ts": {
+   "Tempra": 3,
+   "Riflessi": 1,
+   "Volontà": 3
+  },
+  "velocita": "9 m",
+  "attacchi": [
+   "2 Artigli +4 (1d4+3) oppure Arma impugnata +6"
+  ],
+  "att_speciali": "",
+  "car": {
+   "For": 15,
+   "Des": 13,
+   "Cos": null,
+   "Int": 4,
+   "Sag": 10,
+   "Car": 12
+  },
+  "bmc": "BMC +5, DMC 16",
+  "talenti": "Attacco poderoso, Incalzare",
+  "abilita": "nessuna"
+ },
+ {
+  "id": "scheletro_tiratore",
+  "nome": "Scheletro tiratore",
+  "livello": 4,
+  "tipo": "Scheletro",
+  "taglia": "medio",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 3,
+  "descr": "Un arciere scheletrico dalla mira infallibile. Non conosce nervosismo, non perde la concentrazione, non trema. Scatta freccia dopo freccia con ritmo meccanico e devastante.",
+  "extra": [
+   "Immunità: Freddo"
+  ],
+  "capacita": [
+   {
+    "nome": "Equipaggiamento",
+    "tipo": "Sfo",
+    "testo": "Vedi regola generale Equipaggiamento (Sezione regole). Uno scheletro tiratore appena evocato è dotato di un arco corto (gittata 18 m, 1d6+1) o un arco lungo (gittata 21 m, 1d8+1), a scelta del necrarca. Le frecce sono generate dalla magia (illimitate) finché l'arco fa parte del corpo del non morto."
+   }
+  ],
+  "ca": 16,
+  "contatto": 13,
+  "impreparato": 12,
+  "pf": 22,
+  "dv": 4,
+  "ts": {
+   "Tempra": 3,
+   "Riflessi": 3,
+   "Volontà": 3
+  },
+  "velocita": "9 m",
+  "attacchi": [
+   "2 Artigli +2 (1d4+1)",
+   "Distanza: Arco +6 (1d6+1 o 1d8+1, gittata 18/21 m)"
+  ],
+  "att_speciali": "",
+  "car": {
+   "For": 13,
+   "Des": 17,
+   "Cos": null,
+   "Int": 4,
+   "Sag": 10,
+   "Car": 12
+  },
+  "bmc": "BMC +3, DMC 16",
+  "talenti": "Tiro ravvicinato, Tiro preciso",
+  "abilita": "Percezione +4"
+ },
+ {
+  "id": "allip",
+  "nome": "Allip",
+  "livello": 5,
+  "tipo": "Spirito",
+  "taglia": "piccolo",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 1,
+  "descr": "Il fantasma di chi è morto di follia, ancora intrappolato nel proprio delirio eterno. Il suo balbettio incessante contamina la mente di chi si avvicina, trascinandolo in un vortice di allucinazioni.",
+  "extra": [
+   "Capacità difensive: fumoso, +4 vs scacciare/positiva"
+  ],
+  "capacita": [
+   {
+    "nome": "Fumoso",
+    "tipo": "Sfo",
+    "testo": "Come Ectoplasma: 50% probabilità di fallimento contro attacchi fisici non magici."
+   },
+   {
+    "nome": "Balbettio",
+    "tipo": "Sop",
+    "testo": "Ogni creatura entro 3 m all'inizio del proprio turno deve superare un TS su Volontà con CD 15 o essere [AFFASCINATA] per 2d4 round (fissa l'allip e non può agire). CD = 10 + 1 (½ DV) + 2 (Car +2) + 2 bonus. Effetto [influenza mentale, compulsione]. Chi supera il TS è immune all'aura di questo allip per 24 ore."
+   },
+   {
+    "nome": "Follia",
+    "tipo": "Sop",
+    "testo": "Se l'allip infligge un colpo critico col tocco incorporeo, il bersaglio subisce 1d4 danni di Saggezza e l'allip si cura di 5 PF temporanei."
+   }
+  ],
+  "ca": 17,
+  "contatto": 14,
+  "impreparato": 13,
+  "pf": 17,
+  "dv": 3,
+  "ts": {
+   "Tempra": 4,
+   "Riflessi": 4,
+   "Volontà": 4
+  },
+  "velocita": "Volare 12 m (perfetta), altezza max 1 m",
+  "attacchi": [
+   "Tocco incorporeo +5 a contatto (1d6+2 energia negativa + Follia)",
+   "Aura: Balbettio (3 m, Vol CD 15)"
+  ],
+  "att_speciali": "",
+  "car": {
+   "For": null,
+   "Des": 12,
+   "Cos": null,
+   "Int": 6,
+   "Sag": 11,
+   "Car": 15
+  },
+  "bmc": "BMC +4, DMC 17",
+  "talenti": "nessuno",
+  "abilita": "Furtività +7, Percezione +6"
+ },
+ {
+  "id": "ombra",
+  "nome": "Ombra",
+  "livello": 5,
+  "tipo": "Spirito",
+  "taglia": "piccolo",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 2,
+  "descr": "Un'ombra che esiste indipendentemente da chi la proietta. Scivola tra la penombra, succhiando la forza vitale col suo tocco incorporeo e lasciando le vittime sempre più spossate ad ogni contatto.",
+  "extra": [
+   "Capacità difensive: fumoso, +4 vs scacciare/positiva"
+  ],
+  "capacita": [
+   {
+    "nome": "Fumoso",
+    "tipo": "Sfo",
+    "testo": "Come Ectoplasma: 50% probabilità di fallimento contro attacchi fisici non magici."
+   },
+   {
+    "nome": "Vera ombra",
+    "tipo": "Sfo",
+    "testo": "In condizioni di luce scarsa o oscurità, l'ombra ottiene +8 alle prove di Furtività quando è ferma o si muove lentamente (la metà della velocità)."
+   },
+   {
+    "nome": "Tocco sfiancante",
+    "tipo": "Sop",
+    "testo": "Se l'ombra infligge un colpo critico col tocco incorporeo, il bersaglio diventa [AFFATICATO]. Se era già [AFFATICATO], diventa [ESAUSTO]."
+   }
+  ],
+  "ca": 17,
+  "contatto": 15,
+  "impreparato": 13,
+  "pf": 17,
+  "dv": 3,
+  "ts": {
+   "Tempra": 3,
+   "Riflessi": 3,
+   "Volontà": 4
+  },
+  "velocita": "12 m",
+  "attacchi": [
+   "Tocco incorporeo +5 a contatto (1d6+3 energia negativa + Tocco sfiancante)"
+  ],
+  "att_speciali": "",
+  "car": {
+   "For": null,
+   "Des": 14,
+   "Cos": null,
+   "Int": 6,
+   "Sag": 12,
+   "Car": 16
+  },
+  "bmc": "BMC +4, DMC 17",
+  "talenti": "nessuno",
+  "abilita": "Furtività +10 (+18 in condizioni di scarsa illuminazione), Percezione +6"
+ },
+ {
+  "id": "poltergeist",
+  "nome": "Poltergeist",
+  "livello": 5,
+  "tipo": "Spirito",
+  "taglia": "minuscolo",
+  "sciame": false,
+  "focus": true,
+  "nota": "",
+  "iniziativa": 3,
+  "descr": "Uno spirito che infesta oggetti e luoghi, spostando e scagliando cose con la mente incorporea. È impossibile da afferrare, difficile da scovare, e terrificante da fronteggiare in un ambiente chiuso.",
+  "extra": [
+   "Capacità difensive: +4 vs scacciare/positiva",
+   "Spazio: 75 cm"
+  ],
+  "capacita": [
+   {
+    "nome": "",
+    "tipo": "",
+    "testo": "Capacità magiche (LI = livello del necrarca, Concentrazione = LI + 3):"
+   },
+   {
+    "nome": "",
+    "tipo": "",
+    "testo": "A volontà — Mano magica; Telecinesi (solo Manovra in combattimento e Strattone violento)."
+   },
+   {
+    "nome": "Focus semplice",
+    "tipo": "Sop",
+    "testo": "Non conta nel limite di 3 non morti controllabili mentre è parte focale. Un solo Focus semplice attivo alla volta."
+   },
+   {
+    "nome": "Possessione",
+    "tipo": "Sop",
+    "testo": "Come azione standard, il poltergeist può entrare in un oggetto inanimato di taglia minuscola o inferiore entro 1,5 m, possedendolo. Non è visibile né bersagliabile finché è all'interno dell'oggetto. Può abbandonarlo come azione gratuita."
+   },
+   {
+    "nome": "Immobilità",
+    "tipo": "Sfo",
+    "testo": "Se il poltergeist rimane fermo all'interno di un oggetto per almeno 1 round, l'oggetto sembra del tutto normale a qualsiasi ispezione non magica."
+   }
+  ],
+  "ca": 19,
+  "contatto": 13,
+  "impreparato": 12,
+  "pf": 22,
+  "dv": 4,
+  "ts": {
+   "Tempra": 5,
+   "Riflessi": 7,
+   "Volontà": 7
+  },
+  "velocita": "Volare 6 m (perfetta), altezza max 1 m",
+  "attacchi": [
+   "Nessun attacco diretto"
+  ],
+  "att_speciali": "",
+  "car": {
+   "For": 6,
+   "Des": 17,
+   "Cos": null,
+   "Int": 6,
+   "Sag": 14,
+   "Car": 17
+  },
+  "bmc": "BMC +6, DMC 14",
+  "talenti": "Attacco rapido",
+  "abilita": "Disattivare congegni +10, Furtività +24, Percezione +12 (+15 trovare trappole), Sapienza magica +10"
+ },
+ {
+  "id": "decapitato_testa_di_medusa",
+  "nome": "Decapitato, Testa di medusa",
+  "livello": 5,
+  "tipo": "Disarticolato",
+  "taglia": "piccolo",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 1,
+  "descr": "Una testa di medusa recisa che continua a calcificare chi la guarda troppo da vicino. Le sue spine si contorcono ancora, come se stesse ancora cercando una preda da pietrificare.",
+  "extra": [],
+  "capacita": [
+   {
+    "nome": "Calcificazione",
+    "tipo": "Sop",
+    "testo": "Ogni creatura colpita dal morso deve superare un TS su Tempra con CD 15 o essere [FRASTORNATA] per 1d4 round mentre il proprio corpo tende a calcificarsi parzialmente. CD = 10 + 2 (½×5) + 2 (Car +2) + 1 bonus. Le creature immuni agli effetti di [veleno] sono immuni a questa capacità. Effetto [veleno]."
+   }
+  ],
+  "ca": 19,
+  "contatto": 12,
+  "impreparato": 14,
+  "pf": 33,
+  "dv": 5,
+  "ts": {
+   "Tempra": 3,
+   "Riflessi": 2,
+   "Volontà": 4
+  },
+  "velocita": "Volare 12 m (perfetta), altezza max 1 m",
+  "attacchi": [
+   "Morso +7 (1d4+2 + Calcificazione)"
+  ],
+  "att_speciali": "",
+  "car": {
+   "For": 14,
+   "Des": 12,
+   "Cos": null,
+   "Int": 4,
+   "Sag": 11,
+   "Car": 15
+  },
+  "bmc": "BMC +4, DMC 15 (non sbilanciato)",
+  "talenti": "Attacco in volo",
+  "abilita": "Furtività +9, Percezione +8"
+ },
+ {
+  "id": "zombie_bombardiere",
+  "nome": "Zombie bombardiere",
+  "livello": 5,
+  "tipo": "Zombie",
+  "taglia": "medio",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 0,
+  "descr": "Il corpo gonfiato di questo zombie pulsa di energia oscura, come una pentola a pressione sul punto di esplodere. Il necrarca lo usa come un'arma usa e getta: lanciarlo contro i nemici e detonarlo al momento giusto.",
+  "extra": [
+   "RD 1/tagliente"
+  ],
+  "capacita": [
+   {
+    "nome": "Barcollante",
+    "tipo": "Sfo",
+    "testo": "Ha sempre la condizione [BARCOLLANTE] ma può effettuare cariche muovendosi alla propria velocità base."
+   },
+   {
+    "nome": "Detonazione necrotica",
+    "tipo": "Sop",
+    "testo": "Quando lo zombie bombardiere viene ridotto a 0 Punti Ferita, all'inizio del round successivo esplode in un raggio di 3 m, infliggendo 3d6 danni da energia negativa a tutte le creature nell'area (cura i non morti). Le vittime possono superare un TS su Riflessi con CD 14 per dimezzare. Il necrarca può anche far esplodere lo zombie volontariamente come azione standard, a patto che lo zombie sia entro 18 m e visibile. CD = 10 + 2 (½×4) + 1 (Car +1) + 1 bonus."
+   }
+  ],
+  "ca": 13,
+  "contatto": 9,
+  "impreparato": 13,
+  "pf": 30,
+  "dv": 4,
+  "ts": {
+   "Tempra": 1,
+   "Riflessi": 0,
+   "Volontà": 6
+  },
+  "velocita": "9 m",
+  "attacchi": [
+   "Schianto +5 (1d6+3)"
+  ],
+  "att_speciali": "Detonazione necrotica, Barcollante",
+  "car": {
+   "For": 16,
+   "Des": 10,
+   "Cos": null,
+   "Int": 2,
+   "Sag": 10,
+   "Car": 12
+  },
+  "bmc": "BMC +6, DMC 16",
+  "talenti": "Robustezza, Volontà di ferro",
+  "abilita": "nessuna"
+ },
+ {
+  "id": "bocca_strisciante",
+  "nome": "Bocca strisciante",
+  "livello": 6,
+  "tipo": "Disarticolato",
+  "taglia": "piccolo",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 3,
+  "descr": "Una mascella spalancata e dentata che striscia per terra come un mollusco carnivoro. Silenziosa, veloce e affamata, ingoia i nemici più piccoli senza preavviso, digerendo dall'interno ciò che ha catturato.",
+  "extra": [],
+  "capacita": [
+   {
+    "nome": "Inghiottire",
+    "tipo": "Sop",
+    "testo": "Quando la bocca strisciante colpisce con il morso una creatura di taglia piccola o inferiore, può tentare di inghiottirla come azione gratuita (manovra di Lottare a BMC +10). Una creatura inghiottita subisce automaticamente 1d8+4 danni perforanti e 1d4 di sanguinamento all'inizio di ogni proprio turno. Può attaccare la bocca dall'interno (CA effettiva 13, 12 PF interni) o liberarsi con una prova di Lottare contrapposta come azione standard."
+   },
+   {
+    "nome": "Sanguinamento",
+    "tipo": "Sop",
+    "testo": "Ogni morso infligge sanguinamento 1d4. Il sanguinamento può essere fermato con una prova di Guarire con CD 15 o qualsiasi effetto di cura magica."
+   }
+  ],
+  "ca": 18,
+  "contatto": 14,
+  "impreparato": 15,
+  "pf": 32,
+  "dv": 5,
+  "ts": {
+   "Tempra": 1,
+   "Riflessi": 4,
+   "Volontà": 4
+  },
+  "velocita": "6 m, Scalare 3 m",
+  "attacchi": [
+   "Morso +8 (1d8+4 più Inghiottire e Sanguinamento 1d4)"
+  ],
+  "att_speciali": "",
+  "car": {
+   "For": 16,
+   "Des": 17,
+   "Cos": null,
+   "Int": 4,
+   "Sag": 12,
+   "Car": 13
+  },
+  "bmc": "BMC +6, DMC 19",
+  "talenti": "Attacco rapido",
+  "abilita": "Furtività +11, Percezione +9"
+ },
+ {
+  "id": "grottesco",
+  "nome": "Grottesco",
+  "livello": 6,
+  "tipo": "Ghoul",
+  "taglia": "medio",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 0,
+  "descr": "Una figura umanoide deforme e gonfia, con andatura barcollante e voce gutturale che risuona come un rantolo. Non è veloce — ma non si ferma mai, e il suo borbottio malsano spezza il coraggio dei più forti.",
+  "extra": [],
+  "capacita": [
+   {
+    "nome": "Scatto improvviso",
+    "tipo": "Sfo",
+    "testo": "1/minuto, come azione veloce: la velocità del grottesco aumenta a 12 m per 1 round."
+   },
+   {
+    "nome": "Lento ma determinato",
+    "tipo": "Sfo",
+    "testo": "Il grottesco ignora le penalità al movimento causate da terreno difficile."
+   },
+   {
+    "nome": "Borbottio",
+    "tipo": "Sop",
+    "testo": "1/giorno, come azione standard: tutte le creature entro 9 m che possono sentirlo devono superare un TS su Volontà con CD 17 o essere [SCOSSE] per 1 minuto. CD = 10 + 3 (½×6) + 4 (Car +4). Effetto [uditivo, paura, influenza mentale]."
+   },
+   {
+    "nome": "Dolore",
+    "tipo": "Sop",
+    "testo": "Ogni creatura colpita da un attacco del grottesco deve superare un TS su Tempra con CD 17 o essere [BARCOLLANTE] per 1 round. Le creature a contatto col terreno subiscono penalità −1 al tiro. CD = 10 + 3 + 4 (Car +4). Effetto [dolore]."
+   }
+  ],
+  "ca": 19,
+  "contatto": 8,
+  "impreparato": 15,
+  "pf": 39,
+  "dv": 6,
+  "ts": {
+   "Tempra": 3,
+   "Riflessi": 0,
+   "Volontà": 5
+  },
+  "velocita": "6 m, Scalare 3 m, Scavare 3 m",
+  "attacchi": [
+   "Morso +6 (1d4+2 + Dolore) e 2 Artigli +6 (1d4+2 + Dolore)"
+  ],
+  "att_speciali": "Borbottio CD 17, Scatto improvviso",
+  "car": {
+   "For": 15,
+   "Des": 10,
+   "Cos": null,
+   "Int": 4,
+   "Sag": 14,
+   "Car": 19
+  },
+  "bmc": "BMC +4, DMC 12",
+  "talenti": "Inseguire",
+  "abilita": "Furtività +6, Percezione +8, Scalare +10"
+ },
+ {
+  "id": "statua_posseduta",
+  "nome": "Statua posseduta",
+  "livello": 6,
+  "tipo": "Spirito",
+  "taglia": "grande",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 0,
+  "descr": "Un colosso di pietra o metallo animato da uno spirito ostile. Può stare immobile per ore — identico a una statua decorativa — prima di muoversi con una forza capace di abbattere muri.",
+  "extra": [
+   "Capacità difensive: +4 vs scacciare/positiva",
+   "Spazio 3 m, Portata 3 m"
+  ],
+  "capacita": [
+   {
+    "nome": "Immobilità",
+    "tipo": "Sfo",
+    "testo": "Se la statua posseduta rimane ferma per almeno 1 round, ottiene automaticamente 20 sulla prova di Furtività, sembrando del tutto identica a una statua inanimata. Qualsiasi movimento interrompe l'effetto."
+   }
+  ],
+  "ca": 20,
+  "contatto": 10,
+  "impreparato": 20,
+  "pf": 39,
+  "dv": 6,
+  "ts": {
+   "Tempra": 1,
+   "Riflessi": 2,
+   "Volontà": 3
+  },
+  "velocita": "6 m",
+  "attacchi": [
+   "Schianto possente +9 (2d8+7 / 19-20)"
+  ],
+  "att_speciali": "",
+  "car": {
+   "For": 20,
+   "Des": 11,
+   "Cos": null,
+   "Int": 6,
+   "Sag": 11,
+   "Car": 15
+  },
+  "bmc": "BMC +12, DMC 22",
+  "talenti": "Attacco poderoso",
+  "abilita": "Furtività +4"
+ },
+ {
+  "id": "vukodlak",
+  "nome": "Vukodlak",
+  "livello": 6,
+  "tipo": "Zombie",
+  "taglia": "grande",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 2,
+  "descr": "Un non morto dalla natura lupesca, rapido come un predatore e duro come un mostro. Il suo sguardo terrificante paralizza la preda un istante prima che le zanne raggiungano la gola.",
+  "extra": [
+   "RD 3/Argento",
+   "Resistenze: Elettricità 5, Freddo 5",
+   "Spazio 3 m, Portata 1,5 m"
+  ],
+  "capacita": [
+   {
+    "nome": "Aura innaturale",
+    "tipo": "Sfo",
+    "testo": "Gli animali a sangue caldo che si avvicinano entro 9 m sono automaticamente [SPAVENTATI] e non possono avvicinarsi ulteriormente, a meno che non superino un TS su Volontà con CD 15."
+   },
+   {
+    "nome": "Sguardo terrificante",
+    "tipo": "Sop",
+    "testo": "Come azione veloce, gittata 9 m: il bersaglio deve superare un TS su Volontà con CD 14 o essere [FRASTORNATO] per 1 round. Effetto [paura, influenza mentale]."
+   },
+   {
+    "nome": "Risucchio di sangue",
+    "tipo": "Sop",
+    "testo": "Ad ogni inizio del proprio turno in cui il vukodlak trattiene un avversario con una manovra di Lottare, il bersaglio subisce 1 danno di Costituzione."
+   }
+  ],
+  "ca": 19,
+  "contatto": 11,
+  "impreparato": 13,
+  "pf": 39,
+  "dv": 6,
+  "ts": {
+   "Tempra": 3,
+   "Riflessi": 3,
+   "Volontà": 5
+  },
+  "velocita": "15 m",
+  "attacchi": [
+   "Morso +8 (1d8+7 + Sbilanciare) e 2 Artigli +6 (1d8+5)",
+   "Aura: Aura innaturale (9 m)"
+  ],
+  "att_speciali": "Sguardo terrificante, Risucchio di sangue",
+  "car": {
+   "For": 21,
+   "Des": 15,
+   "Cos": null,
+   "Int": 6,
+   "Sag": 12,
+   "Car": 10
+  },
+  "bmc": "BMC +9 (+13 Lottare), DMC 21 (+25 vs Sbil.)",
+  "talenti": "Correre",
+  "abilita": "Percezione +10, Scalare +9"
+ },
+ {
+  "id": "ardente_assiderato_disciolto_folgorato",
+  "nome": "Ardente / Assiderato / Disciolto / Folgorato",
+  "livello": 7,
+  "tipo": "Scheletro",
+  "taglia": "medio",
+  "sciame": false,
+  "focus": false,
+  "nota": "scegliere una variante all'evocazione",
+  "iniziativa": 1,
+  "descr": "Uno scheletro che ha assorbito l'energia elementale della sua morte violenta. Fuoco, freddo, acido o fulmine lo permeano dalla testa ai piedi — il semplice contatto brucia, congela, corrode o fulmina chiunque non sia abbastanza cauto.",
+  "extra": [
+   "Immunità: elemento scelto",
+   "Vulnerabilità: elemento opposto",
+   "Aure: Puzza di morte + Visioni di morte (3 m)"
+  ],
+  "capacita": [
+   {
+    "nome": "",
+    "tipo": "",
+    "testo": "Varianti: Ardente (Fuoco, vulnerabile al Freddo) | Assiderato (Freddo, vulnerabile al Fuoco) | Disciolto (Acido, vulnerabile all'Elettricità) | Folgorato (Elettricità, vulnerabile all'Acido)."
+   },
+   {
+    "nome": "Puzza di morte",
+    "tipo": "Sop",
+    "testo": "Aura continua di 3 m. Ogni creatura che inizia il proprio turno nell'aura deve superare un TS su Tempra con CD 15 o essere [INFERMA] per 1 minuto. Effetto [veleno]. CD = 10 + 3 (½×7) + 1 (Car +1) + 1 bonus."
+   },
+   {
+    "nome": "Visioni di morte",
+    "tipo": "Sop",
+    "testo": "Aura continua di 3 m. Ogni creatura che inizia il proprio turno nell'aura deve superare un TS su Volontà con CD 14 o essere [STORDITA] per 1 round. Effetto [influenza mentale]."
+   },
+   {
+    "nome": "Maledizione elementale",
+    "tipo": "Sop",
+    "testo": "Chi subisce il danno dell'elemento dallo schianto deve superare un TS su Tempra con CD 16 o subire 2d6 danni dello stesso elemento all'inizio di ogni proprio turno per 1d4 round (ignora qualsiasi Resistenza all'energia). CD = 10 + 3 + 1 (Car +1) + 2 bonus."
+   },
+   {
+    "nome": "",
+    "tipo": "",
+    "testo": "Deflagrazione (Sim): A volontà, azione standard: attacco a contatto a distanza (gittata 9 m). Se colpisce, infligge 3d6 danni dell'elemento scelto. Non provoca attacchi di opportunità."
+   }
+  ],
+  "ca": 20,
+  "contatto": 14,
+  "impreparato": 15,
+  "pf": 46,
+  "dv": 7,
+  "ts": {
+   "Tempra": 2,
+   "Riflessi": 4,
+   "Volontà": 5
+  },
+  "velocita": "9 m",
+  "attacchi": [
+   "Schianto +6 (1d6+3 + 1d6 elemento + Maledizione elementale)",
+   "Distanza: Deflagrazione +6 a contatto (3d6 elemento, gittata 9 m, a volontà)"
+  ],
+  "att_speciali": "",
+  "car": {
+   "For": 17,
+   "Des": 13,
+   "Cos": null,
+   "Int": 4,
+   "Sag": 12,
+   "Car": 13
+  },
+  "bmc": "BMC +6, DMC 17",
+  "talenti": "nessuno",
+  "abilita": "Percezione +6"
+ },
+ {
+  "id": "libro_della_dannazione",
+  "nome": "Libro della dannazione",
+  "livello": 7,
+  "tipo": "Spirito",
+  "taglia": "piccolo",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 3,
+  "descr": "Un tomo vivente, fluttuante e dentato, che lancia incantesimi di morte mentre volteggia nell'aria. Le sue pagine vibrano di magia oscura, e il suo morso sottrae vitalità a chi osa avvicinarsi troppo.",
+  "extra": [
+   "Debolezze: Vulnerabilità al Fuoco",
+   "Capacità difensive: +4 vs scacciare/positiva"
+  ],
+  "capacita": [
+   {
+    "nome": "",
+    "tipo": "",
+    "testo": "Incantesimi (LI 5°, Concentrazione +10, Car +6):"
+   },
+   {
+    "nome": "",
+    "tipo": "",
+    "testo": "2° livello (3/g) — Vita falsata, Raggio rovente, Sfocatura."
+   },
+   {
+    "nome": "",
+    "tipo": "",
+    "testo": "1° livello (4/g, CD 17) — Dardo incantato, Incuti paura, Pasticcio."
+   },
+   {
+    "nome": "",
+    "tipo": "",
+    "testo": "0° livello (5/g, CD 16) — Individuazione del magico*, Raggio di gelo, Mano magica, Ristorare cadavere, Suono fantasma."
+   },
+   {
+    "nome": "Risucchio di energia",
+    "tipo": "Sop",
+    "testo": "Ogni morso infligge 1 livello negativo al bersaglio vivente (solo su creature viventi; i non morti sono immuni). Con un colpo critico, i livelli negativi inflitti sono 2."
+   }
+  ],
+  "ca": 20,
+  "contatto": 18,
+  "impreparato": 15,
+  "pf": 46,
+  "dv": 7,
+  "ts": {
+   "Tempra": 3,
+   "Riflessi": 4,
+   "Volontà": 7
+  },
+  "velocita": "Volare 12 m (perfetta), altezza max 1 m",
+  "attacchi": [
+   "Morso +7 (1d3 + Risucchio di energia)"
+  ],
+  "att_speciali": "",
+  "car": {
+   "For": 10,
+   "Des": 16,
+   "Cos": null,
+   "Int": 7,
+   "Sag": 16,
+   "Car": 22
+  },
+  "bmc": "BMC +3, DMC 15",
+  "talenti": "Incantare in combattimento, Attacco in volo"
+ },
+ {
+  "id": "zombie_della_rovina",
+  "nome": "Zombie della rovina",
+  "livello": 7,
+  "tipo": "Zombie",
+  "taglia": "grande",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 2,
+  "descr": "Massiccio e implacabile, questo zombie è ricoperto di pustole piene di umore tossico che esplodono al contatto. Chi lo abbatte senza cautela si ritrova coperto di veleno, e chi sopravvive viene marchiato come prossima preda.",
+  "extra": [
+   "Spazio 1,5 m, Portata 1,5 m"
+  ],
+  "capacita": [
+   {
+    "nome": "Esplosione di pus",
+    "tipo": "Sop",
+    "testo": "Ogni volta che una creatura colpisce lo zombie della rovina con un'arma tagliente o perforante senza la qualità Portata, deve superare un TS su Riflessi con CD 15 o subire 2d6 danni da energia negativa e diventare [NAUSEATA] per 1d3 round. CD = 10 + 3 (½×7) + 2 (Car +2)."
+   },
+   {
+    "nome": "Marchio purulento",
+    "tipo": "Sfo",
+    "testo": "Ogni volta che lo zombie colpisce con l'artiglio un determinato bersaglio, ottiene +1 ai tiri per colpire, ai danni e alle prove di abilità contro quell'avversario per il resto dell'incontro. Questo bonus si applica solo all'ultimo bersaglio ferito."
+   }
+  ],
+  "ca": 20,
+  "contatto": 13,
+  "impreparato": 16,
+  "pf": 46,
+  "dv": 7,
+  "ts": {
+   "Tempra": 4,
+   "Riflessi": 6,
+   "Volontà": 6
+  },
+  "velocita": "9 m",
+  "attacchi": [
+   "Artiglio +11 (1d6+7 + Afferrare)"
+  ],
+  "att_speciali": "Esplosione di pus CD 15, Marchio purulento",
+  "car": {
+   "For": 21,
+   "Des": 15,
+   "Cos": null,
+   "Int": 6,
+   "Sag": 13,
+   "Car": 14
+  },
+  "bmc": "BMC +10 (+16 Lottare), DMC 23",
+  "talenti": "Attacco poderoso, Critico migliorato (artiglio), Lottare migliorato",
+  "abilita": "Percezione +7, Scalare +11"
+ },
+ {
+  "id": "fucina_non_morta",
+  "nome": "Fucina non morta",
+  "livello": 8,
+  "tipo": "Ghoul",
+  "taglia": "medio",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 0,
+  "descr": "Un fabbro condannato che continua a lavorare anche da morto, il corpo cosparso di metallo fuso e cicatrici da forgia. Il suo respiro incandescente acceca chi non si protegge, e la catena che porta attacca con vita propria.",
+  "extra": [
+   "Guarigione rapida 1",
+   "Immunità: Fuoco"
+  ],
+  "capacita": [
+   {
+    "nome": "Corpo ardente",
+    "tipo": "Sop",
+    "testo": "Chiunque entra in lotta con la fucina non morta subisce 2d6 danni da fuoco. Chiunque rimane in lotta all'inizio del proprio turno subisce ulteriori 2d6 danni da fuoco."
+   },
+   {
+    "nome": "Respiro incandescente",
+    "tipo": "Sop",
+    "testo": "Come azione standard: emette un cono di 9 m di scorie incandescenti. Ogni creatura nell'area deve superare un TS su Riflessi con CD 15 o subire 1d6 danni da fuoco ed essere [ACCECATA] per 1d4 round. CD = 10 + 4 (½×8) + 1 (Car +1)."
+   },
+   {
+    "nome": "Catena dell'anima",
+    "tipo": "Sop",
+    "testo": "Una volta per round, come azione gratuita, la catena della fucina non morta attacca autonomamente un bersaglio entro 3 m con TxC +12 (1d6+7 + 1d6 fuoco). Conta come catena chiodata +1 Fiammeggiante."
+   },
+   {
+    "nome": "",
+    "tipo": "",
+    "testo": "Speciale: I gradi di Professione (fabbro) della fucina non morta sono pari al livello del necrarca + 6."
+   }
+  ],
+  "ca": 21,
+  "contatto": 10,
+  "impreparato": 16,
+  "pf": 52,
+  "dv": 8,
+  "ts": {
+   "Tempra": 2,
+   "Riflessi": 2,
+   "Volontà": 7
+  },
+  "velocita": "9 m",
+  "attacchi": [
+   "Arma a una mano +9 (1d8+6) e Catena dell'anima +12 (2d4+7, Fiammeggiante, Portata 3 m)"
+  ],
+  "att_speciali": "Corpo ardente, Respiro incandescente CD 15",
+  "car": {
+   "For": 18,
+   "Des": 10,
+   "Cos": null,
+   "Int": 7,
+   "Sag": 14,
+   "Car": 12
+  },
+  "bmc": "BMC +7, DMC 15",
+  "talenti": "Abilità focalizzata (Professione: fabbro), Attacco poderoso",
+  "abilita": "Professione (fabbro) +X (vedi Speciale), Percezione +8"
+ },
+ {
+  "id": "predatore_cinico",
+  "nome": "Predatore cinico",
+  "livello": 8,
+  "tipo": "Disarticolato",
+  "taglia": "piccolo",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 4,
+  "descr": "Una creatura disarticolata che si muove nell'ombra, trascinandosi sul soffitto e lungo le pareti. Il suo artiglio lascia ferite che non smettono di sanguinare, e le sue capacità mentali possono cancellare ricordi e spegnere la volontà.",
+  "extra": [
+   "Sensi: Percezione cieca 9 m",
+   "Capacità difensive: +4 vs scacciare/positiva"
+  ],
+  "capacita": [
+   {
+    "nome": "",
+    "tipo": "",
+    "testo": "Capacità magiche (LI 4°, Concentrazione +7):"
+   },
+   {
+    "nome": "",
+    "tipo": "",
+    "testo": "5/giorno — Aprire/Chiudere, Immagine silenziosa (Vol CD 14), Suono fantasma (Vol CD 13)."
+   },
+   {
+    "nome": "",
+    "tipo": "",
+    "testo": "3/giorno — Disperazione opprimente (Vol CD 16), Intralciare (Rifl CD 14), Svanire*, Vuoto di memoria (Vol CD 14)."
+   },
+   {
+    "nome": "Lacerazione deprimente",
+    "tipo": "Sop",
+    "testo": "Ogni colpo dell'artiglio che ferisce il bersaglio attiva tre effetti: (1) Sanguinamento pari al danno dell'artiglio (1d6+6, fermato da Guarire CD 15 o magia); (2) il bersaglio deve superare un TS su Tempra con CD 15 o subire 1 livello negativo; (3) il bersaglio deve superare un TS su Volontà con CD 15 o essere [AFFATICATO] e non poter beneficiare di bonus morali per 1 minuto. Effetto [maledizione, morale, influenza mentale]."
+   }
+  ],
+  "ca": 21,
+  "contatto": 16,
+  "impreparato": 14,
+  "pf": 60,
+  "dv": 8,
+  "ts": {
+   "Tempra": 5,
+   "Riflessi": 6,
+   "Volontà": 8
+  },
+  "velocita": "9 m, Scalare 3 m",
+  "attacchi": [
+   "Artiglio +9 (1d6+6 / 19-20 + Lacerazione deprimente)"
+  ],
+  "att_speciali": "",
+  "car": {
+   "For": 19,
+   "Des": 18,
+   "Cos": null,
+   "Int": 7,
+   "Sag": 15,
+   "Car": 16
+  },
+  "bmc": "BMC +5, DMC 19 (+26 vs Sbil.)",
+  "talenti": "Combattere alla cieca, Critico migliorato (artiglio), Riflessi in combattimento, Robustezza",
+  "abilita": "Furtività +15, Percezione +14 (+17 trovare trappole), Scalare +16"
+ },
+ {
+  "id": "ricucito",
+  "nome": "Ricucito",
+  "livello": 9,
+  "tipo": "Zombie",
+  "taglia": "grande",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": -1,
+  "descr": "Un corpo ricucito con grossolane suture, fatto di pezzi di cadaveri diversi tenuti insieme da filo necromantico. Non muore facilmente — e quando sembra farlo, spesso si rialza.",
+  "extra": [
+   "Aura: Raccapricciante (18 m)",
+   "Capacità difensive: Destinato a vivere",
+   "Spazio 3 m, Portata 3 m"
+  ],
+  "capacita": [
+   {
+    "nome": "Destinato a vivere",
+    "tipo": "Sfo",
+    "testo": "Il ricucito non subisce danni dall'energia positiva. Anziché danneggiarsi, ogni danno da energia positiva lo cura di metà dell'importo (arrotondato per difetto)."
+   },
+   {
+    "nome": "Raccapricciante",
+    "tipo": "Sop",
+    "testo": "Ogni creatura entro 18 m che può vedere il ricucito deve superare un TS su Tempra con CD 17 o essere [NAUSEATA] per 1d4 round. CD = 10 + 4 (½×9) + 3 (Car +3). Chi supera il TS è immune per 24 ore."
+   },
+   {
+    "nome": "Ricomporsi",
+    "tipo": "Sop",
+    "testo": "1/giorno, quando il ricucito viene ridotto a 0 PF, si rialza automaticamente all'inizio del round successivo con la metà dei propri PF massimi. Ogni creatura entro 6 m deve superare un TS su Volontà con CD 17 o essere [STORDITA] per 1 round. Questa capacità non funziona se il ricucito è stato ucciso da fuoco o dall'incantesimo Disintegrazione."
+   }
+  ],
+  "ca": 21,
+  "contatto": 9,
+  "impreparato": 18,
+  "pf": 59,
+  "dv": 9,
+  "ts": {
+   "Tempra": 5,
+   "Riflessi": 3,
+   "Volontà": 10
+  },
+  "velocita": "9 m",
+  "attacchi": [
+   "Morso +10 (1d4+5) e 2 Artigli +10 (1d4+5)"
+  ],
+  "att_speciali": "Ricomporsi CD 17",
+  "car": {
+   "For": 21,
+   "Des": 8,
+   "Cos": null,
+   "Int": 4,
+   "Sag": 17,
+   "Car": 16
+  },
+  "bmc": "BMC +10, DMC 19",
+  "talenti": "Attacco poderoso, Attacco rapido, Critico migliorato (artiglio), Volontà di ferro",
+  "abilita": "Percezione +13, Scalare +15"
+ },
+ {
+  "id": "scuoiato",
+  "nome": "Scuoiato",
+  "livello": 9,
+  "tipo": "Disarticolato",
+  "taglia": "grande",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 0,
+  "descr": "Una creatura orrificante che ha perso tutta la pelle, lasciando esposta una muscolatura scura e pulsante. Il solo guardarlo impone terrore, e il suo tocco sfibra il corpo come un veleno lento.",
+  "extra": [
+   "RD 5/−",
+   "Aura: Presenza terrificante (9 m)",
+   "Spazio 1,5 m, Portata 1,5 m"
+  ],
+  "capacita": [
+   {
+    "nome": "Presenza terrificante",
+    "tipo": "Sop",
+    "testo": "Ogni creatura entro 9 m che può vedere lo scuoiato deve superare un TS su Volontà con CD 16 o essere [BARCOLLANTE] per 1d3 round. CD = 10 + 4 (½×9) + 2 (Car +2). Effetto [paura, influenza mentale]."
+   },
+   {
+    "nome": "Tocco scuotipelle",
+    "tipo": "Sop",
+    "testo": "Ogni creatura colpita dallo schianto deve superare un TS su Tempra con CD 16 o essere [INFERMA] per 1 minuto. CD = 10 + 4 + 2 (Car +2)."
+   }
+  ],
+  "ca": 21,
+  "contatto": 10,
+  "impreparato": 20,
+  "pf": 68,
+  "dv": 9,
+  "ts": {
+   "Tempra": 4,
+   "Riflessi": 2,
+   "Volontà": 10
+  },
+  "velocita": "9 m",
+  "attacchi": [
+   "Schianto +14 (1d8+10 + Tocco scuotipelle Tempra CD 16)"
+  ],
+  "att_speciali": "",
+  "car": {
+   "For": 24,
+   "Des": 10,
+   "Cos": null,
+   "Int": 5,
+   "Sag": 15,
+   "Car": 15
+  },
+  "bmc": "BMC +13, DMC 23",
+  "talenti": "Attacco poderoso, Critico migliorato (schianto), Robustezza, Volontà di ferro",
+  "abilita": "Furtività +11, Percezione +16"
+ },
+ {
+  "id": "spirito_vendicativo",
+  "nome": "Spirito vendicativo",
+  "livello": 9,
+  "tipo": "Spirito",
+  "taglia": "medio",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 4,
+  "descr": "Un'anima incorporea consumata dall'odio verso un bersaglio designato dal necrarca. Il suo tocco lascia un marchio invisibile che insegue la vittima ovunque si nasconda, finché uno dei due è distrutto.",
+  "extra": [
+   "Capacità difensive: fumoso, +4 vs scacciare/positiva"
+  ],
+  "capacita": [
+   {
+    "nome": "Fumoso",
+    "tipo": "Sfo",
+    "testo": "Come Ectoplasma: 50% probabilità di fallimento contro attacchi fisici non magici."
+   },
+   {
+    "nome": "Marchio del rancore",
+    "tipo": "Sop",
+    "testo": "Quando lo spirito vendicativo colpisce una creatura vivente, questa deve superare un TS su Volontà con CD 17 o ricevere il Marchio del rancore. Una creatura marchiata subisce −2 a tutti i TS contro effetti di questo spirito, che conosce sempre la sua posizione (come Trova nemici permanente). Il marchio dura finché lo spirito non viene distrutto o dispelato con Rimuovi maledizione (CL 11°). Una creatura può avere il marchio di un solo spirito alla volta."
+   },
+   {
+    "nome": "Caccia spettrale",
+    "tipo": "Sop",
+    "testo": "1/giorno: lo spirito sceglie una creatura marchiata entro 30 m. Per 1 minuto ottiene +4 ai tiri per colpire e ai danni contro di essa e la vede attraverso qualsiasi effetto di Furtività o Invisibilità."
+   }
+  ],
+  "ca": 19,
+  "contatto": 16,
+  "impreparato": 14,
+  "pf": 45,
+  "dv": 7,
+  "ts": {
+   "Tempra": 5,
+   "Riflessi": 5,
+   "Volontà": 7
+  },
+  "velocita": "Volare 12 m (perfetta), altezza max 1 m",
+  "attacchi": [
+   "Tocco incorporeo +9 a contatto (4d6 energia negativa + Marchio del rancore)"
+  ],
+  "att_speciali": "",
+  "car": {
+   "For": null,
+   "Des": 18,
+   "Cos": null,
+   "Int": 9,
+   "Sag": 13,
+   "Car": 18
+  },
+  "bmc": "BMC +7, DMC 21",
+  "talenti": "Attacco in volo, Mobilità, Volontà di ferro",
+  "abilita": "Furtività +14, Intimidire +14, Percezione +11"
+ },
+ {
+  "id": "jagermeister",
+  "nome": "Jägermeister",
+  "livello": 10,
+  "tipo": "Spirito",
+  "taglia": "medio",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 6,
+  "descr": "Il cacciatore eterno: uno spirito incorporeo dalla mira infallibile e dalla velocità fulminea. Chi lo affronta spesso non capisce da dove arriverà il prossimo attacco — e quando lo capisce, di solito è già troppo tardi.",
+  "extra": [
+   "Resistenze: Acido 10, Freddo 10",
+   "Aura: Aura innaturale (9 m)",
+   "Capacità difensive: fumoso, +4 vs scacciare/positiva"
+  ],
+  "capacita": [
+   {
+    "nome": "Fumoso",
+    "tipo": "Sfo",
+    "testo": "Come Ectoplasma: 50% probabilità di fallimento contro attacchi fisici non magici."
+   },
+   {
+    "nome": "Aura innaturale",
+    "tipo": "Sfo",
+    "testo": "Come Vukodlak: gli animali a sangue caldo si rifiutano di avvicinarsi entro 9 m (TS Vol CD 15 per resistere)."
+   },
+   {
+    "nome": "Risucchio di Forza",
+    "tipo": "Sop",
+    "testo": "Ogni colpo che non sia un attacco mancato causa 1d3 danni a Forza alla creatura colpita (TS Tempra CD 18 dimezza). CD = 10 + 4 (½×8) + 4 (Car +4). Nota: questa capacità non funziona sui non morti, che sono immuni ai danni alle caratteristiche fisiche."
+   },
+   {
+    "nome": "",
+    "tipo": "",
+    "testo": "Capacità magiche (LI 7°, Concentrazione +11):"
+   },
+   {
+    "nome": "",
+    "tipo": "",
+    "testo": "1/giorno — Segugi spettrali (come Spada magica LI 7°: attacca a +11, 2d6+3 danni da forza, dura 1d4+3 round)."
+   }
+  ],
+  "ca": 21,
+  "contatto": 21,
+  "impreparato": 15,
+  "pf": 52,
+  "dv": 8,
+  "ts": {
+   "Tempra": 7,
+   "Riflessi": 11,
+   "Volontà": 8
+  },
+  "velocita": "Volare 12 m (perfetta), altezza max 1 m",
+  "attacchi": [
+   "Tocco incorporeo +12 (2d8 energia negativa + 1d3 Risucchio di Forza CD 18)"
+  ],
+  "att_speciali": "",
+  "car": {
+   "For": null,
+   "Des": 22,
+   "Cos": null,
+   "Int": 7,
+   "Sag": 15,
+   "Car": 19
+  },
+  "bmc": "BMC +12, DMC 26",
+  "talenti": "Attacco in volo, Inseguire, Stoccata",
+  "abilita": "Furtività +17, Percezione +13"
+ },
+ {
+  "id": "parassita_assassino",
+  "nome": "Parassita assassino",
+  "livello": 10,
+  "tipo": "Zombie",
+  "taglia": "grande",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 2,
+  "descr": "Una massa enorme di carne parassitaria capace di strisciare attraverso fessure impossibili. La sua aura rende nauseanti anche i guerrieri più temprati, e il suo morso ha la forza di uno schianto di catapulta.",
+  "extra": [
+   "Aura: Infestazione (1,5 m)",
+   "Spazio 3 m, Portata 3 m"
+  ],
+  "capacita": [
+   {
+    "nome": "Infestazione",
+    "tipo": "Sop",
+    "testo": "Ogni creatura che inizia il proprio turno entro 1,5 m dal parassita deve superare un TS su Tempra con CD 17 o essere [NAUSEATA] per 1 round e subire 1d6 danni. Se una creatura subisce 10 o più danni da un singolo attacco nell'area, l'aura è soppressa per 3 round. CD = 10 + 5 (½×10) + 2 (Car +2)."
+   },
+   {
+    "nome": "Comprimersi",
+    "tipo": "Sfo",
+    "testo": "Il parassita assassino può muoversi attraverso spazi adatti a creature di taglia piccola senza penalità."
+   },
+   {
+    "nome": "Ragnatela",
+    "tipo": "Sop",
+    "testo": "Attacco a contatto a distanza (gittata 15 m, incremento 3 m): 8/g. La creatura colpita è [INTRALCIATA] finché non supera una prova di Forza (CD 15) o Acrobazia (CD 15) come azione standard."
+   }
+  ],
+  "ca": 21,
+  "contatto": 13,
+  "impreparato": 18,
+  "pf": 75,
+  "dv": 10,
+  "ts": {
+   "Tempra": 5,
+   "Riflessi": 5,
+   "Volontà": 8
+  },
+  "velocita": "9 m, Scalare 6 m",
+  "attacchi": [
+   "Morso +15 (2d8+12)",
+   "Distanza: Ragnatela +9 a contatto (8/g, gittata 15 m)",
+   "Capacità speciali: Comprimersi"
+  ],
+  "att_speciali": "",
+  "car": {
+   "For": 26,
+   "Des": 14,
+   "Cos": null,
+   "Int": 6,
+   "Sag": 13,
+   "Car": 15
+  },
+  "bmc": "BMC +17, DMC 29 (+41 vs Sbil.)",
+  "talenti": "Attacco poderoso, Colpo terrificante, Robustezza, Spingere migliorato",
+  "abilita": "Furtività +16, Percezione +15, Scalare +16"
+ },
+ {
+  "id": "revenant",
+  "nome": "Revenant",
+  "livello": 10,
+  "tipo": "Ghoul",
+  "taglia": "medio",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 3,
+  "descr": "Un vendicatore non morto consacrato dal necrarca a un singolo bersaglio. Finché quel bersaglio vive, il revenant non si ferma — e se viene distrutto, basta raccogliere il teschio perché torni.",
+  "extra": [
+   "RI 17",
+   "Immunità: Freddo"
+  ],
+  "capacita": [
+   {
+    "nome": "Grido funesto",
+    "tipo": "Sop",
+    "testo": "1/1d4 round, come azione gratuita: tutte le creature entro 9 m devono superare un TS su Volontà con CD 18 o essere [BARCOLLANTI] per 1d3 round. CD = 10 + 5 + 4 (Car +4) − 1. Effetto [paura, influenza mentale]."
+   },
+   {
+    "nome": "Rancore",
+    "tipo": "Sop",
+    "testo": "Quando il necrarca evoca un revenant, sceglie una creatura vivente come bersaglio del Rancore (deve averla vista, conoscerne nome e descrizione, o possedere un suo oggetto personale). Il bersaglio non può essere cambiato dopo l'evocazione."
+   },
+   {
+    "nome": "",
+    "tipo": "",
+    "testo": "Il revenant conosce sempre la direzione del bersaglio. Contro di esso gode dei benefici di Rivela bugie, Visione del vero (LI 20°) e Velocità (LI 20°) come effetti indissolubili, e ottiene +4 ai tiri per colpire, ai danni, alle prove di Lottare e ai Tiri Salvezza contro di esso."
+   },
+   {
+    "nome": "",
+    "tipo": "",
+    "testo": "Finché il bersaglio è vivo, un revenant distrutto non si trasforma in polvere: il suo teschio può essere raccolto come parte focale e rianimato dopo 1d4 giorni. Quando il bersaglio muore, il revenant si trasforma in polvere immediatamente. Per distruggerlo permanentemente prima di allora: versare acqua santa sui resti."
+   }
+  ],
+  "ca": 21,
+  "contatto": 14,
+  "impreparato": 17,
+  "pf": 65,
+  "dv": 10,
+  "ts": {
+   "Tempra": 7,
+   "Riflessi": 6,
+   "Volontà": 7
+  },
+  "velocita": "9 m",
+  "attacchi": [
+   "2 Artigli +14 (1d8+7 + Afferrare + Stritolare 1d6+7)"
+  ],
+  "att_speciali": "Grido funesto CD 18, Rancore",
+  "car": {
+   "For": 24,
+   "Des": 17,
+   "Cos": null,
+   "Int": 7,
+   "Sag": 12,
+   "Car": 19
+  },
+  "bmc": "BMC +13 (+19 Lottare), DMC 26",
+  "talenti": "Attacco poderoso, Critico migliorato (artiglio), Incalzare, Lottare migliorato",
+  "abilita": "Intimidire +16, Percezione +13"
+ },
+ {
+  "id": "fantasma",
+  "nome": "Fantasma",
+  "livello": 11,
+  "tipo": "Spirito",
+  "taglia": "piccolo",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 1,
+  "descr": "Un'apparizione incorporea che porta con sé la follia e la morte. Il suo tocco corruttore dissolve la carne dall'interno, e il suo lamento può far perdere ogni controllo anche ai più coraggiosi.",
+  "extra": [
+   "Capacità difensive: fumoso, +4 vs scacciare/positiva"
+  ],
+  "capacita": [
+   {
+    "nome": "Fumoso",
+    "tipo": "Sfo",
+    "testo": "Come Ectoplasma: 50% probabilità di fallimento contro attacchi fisici non magici."
+   },
+   {
+    "nome": "Lamento terrificante",
+    "tipo": "Sop",
+    "testo": "1/1d4 round, come azione gratuita: tutte le creature entro 9 m devono superare un TS su Volontà con CD 18 o essere [IN PREDA AL PANICO] per 1d3 round. CD = 10 + 4 (½×9) + 5 (Car +5) − 1. Chi supera il TS è immune per 24 ore. Effetto [paura, influenza mentale]."
+   }
+  ],
+  "ca": 21,
+  "contatto": 18,
+  "impreparato": 16,
+  "pf": 68,
+  "dv": 9,
+  "ts": {
+   "Tempra": 7,
+   "Riflessi": 5,
+   "Volontà": 9
+  },
+  "velocita": "Volare 9 m (perfetta), altezza max 1 m",
+  "attacchi": [
+   "Tocco corruttore +6 a contatto (6d6, Tempra CD 18 dimezza)"
+  ],
+  "att_speciali": "Lamento terrificante CD 18",
+  "car": {
+   "For": null,
+   "Des": 12,
+   "Cos": null,
+   "Int": 7,
+   "Sag": 11,
+   "Car": 20
+  },
+  "bmc": "BMC +5, DMC 22",
+  "talenti": "Attacco in volo, Mobilità, Robustezza, Volontà di ferro",
+  "abilita": "Conoscenze +10, Furtività +9, Intuizione +10, Percezione +18"
+ },
+ {
+  "id": "sussurrante",
+  "nome": "Sussurrante",
+  "livello": 11,
+  "tipo": "Scheletro",
+  "taglia": "piccolo",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 4,
+  "descr": "Un'entità che sussurra instancabilmente, rubando la voce a chi si avvicina e avvolgendo l'ambiente in un'aura di silenzio opprimente. Il mago senza voce è il mago più vulnerabile del mondo.",
+  "extra": [
+   "Aura: Snervante (3 m)"
+  ],
+  "capacita": [
+   {
+    "nome": "Aura snervante",
+    "tipo": "Sop",
+    "testo": "Ogni creatura entro 3 m non può beneficiare di capacità uditive e subisce −1 ai tiri per colpire, ai danni e ai TS su Volontà. Effetto [uditivo, compulsione]."
+   },
+   {
+    "nome": "Rubare respiro",
+    "tipo": "Sop",
+    "testo": "Morso: la creatura colpita deve superare un TS su Volontà con CD 18 o diventare [AFFATICATA] per 1 ora (se già affaticata, diventa [ESAUSTA] — se esausta dal sussurrante, cade in un sonno magico per 24 ore). CD = 10 + 5 (½×11) + 4 (Car +4) − 1."
+   },
+   {
+    "nome": "Rubare voce",
+    "tipo": "Sop",
+    "testo": "Tocco a contatto: la creatura colpita deve superare un TS su Volontà con CD 18 o non poter parlare né lanciare incantesimi con componenti verbali per 1 ora. Il sussurrante può imitare perfettamente la voce rubata per la durata dell'effetto."
+   }
+  ],
+  "ca": 22,
+  "contatto": 17,
+  "impreparato": 15,
+  "pf": 72,
+  "dv": 11,
+  "ts": {
+   "Tempra": 5,
+   "Riflessi": 6,
+   "Volontà": 10
+  },
+  "velocita": "6 m",
+  "attacchi": [
+   "Morso +9 (1d4−1 + Rubare respiro Vol CD 18)",
+   "Tocco +4 a contatto (Rubare voce Vol CD 18)"
+  ],
+  "att_speciali": "",
+  "car": {
+   "For": 9,
+   "Des": 19,
+   "Cos": null,
+   "Int": 7,
+   "Sag": 16,
+   "Car": 18
+  },
+  "bmc": "BMC +2, DMC 17",
+  "talenti": "Arma accurata, Mobilità, Riflessi in combattimento, Stoccata, Volontà di ferro",
+  "abilita": "Conoscenze +8, Furtività +17, Percezione +12, Raggirare +9, Scalare +8"
+ },
+ {
+  "id": "indigesto",
+  "nome": "Indigesto",
+  "livello": 12,
+  "tipo": "Disarticolato",
+  "taglia": "sciame di minuscoli",
+  "sciame": true,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 3,
+  "descr": "Una massa di tessuto semidigesto che striscia come uno sciame vivente. Corrosivo, acido e nauseante, è quasi impossibile da fermare con le armi normali e devasta i maghi in ambienti chiusi.",
+  "extra": [
+   "Resistenze: Acido 10",
+   "Capacità difensive: tratti degli sciami",
+   "Spazio 3 m"
+  ],
+  "capacita": [
+   {
+    "nome": "Tratti degli sciami",
+    "tipo": "Sfo",
+    "testo": "Immune a qualsiasi danno da arma singola. Subisce danno dimezzato da armi taglienti e perforanti, danno normale da armi contundenti e +50% da effetti ad area. Immune a [FRASTORNAMENTO] e manovre di combattimento. Non può essere [IN LOTTA]. Occupa uno spazio di 3 m × 3 m."
+   },
+   {
+    "nome": "Distrazione",
+    "tipo": "Sop",
+    "testo": "Ogni creatura nel proprio spazio al termine del turno deve superare un TS su Tempra con CD 16 o essere [NAUSEATA] per 1 round. CD = 10 + 5 (½×10) + 0 (Car 11)."
+   },
+   {
+    "nome": "Digestione",
+    "tipo": "Sop",
+    "testo": "Ogni creatura nel proprio spazio deve superare un TS su Riflessi con CD 16 o subire 2d6 danni da acido per 1d4 round. Rimuovere il corrosivo richiede 1 round completo o equivale a un TS superato."
+   }
+  ],
+  "ca": 21,
+  "contatto": 16,
+  "impreparato": 21,
+  "pf": 75,
+  "dv": 10,
+  "ts": {
+   "Tempra": 6,
+   "Riflessi": 9,
+   "Volontà": 11
+  },
+  "velocita": "9 m, Nuotare 6 m, Scalare 6 m",
+  "attacchi": [
+   "Sciame 3d6"
+  ],
+  "att_speciali": "Distrazione CD 16, Digestione CD 16",
+  "car": {
+   "For": 4,
+   "Des": 16,
+   "Cos": null,
+   "Int": 2,
+   "Sag": 9,
+   "Car": 11
+  },
+  "bmc": "BMC —, DMC —",
+  "talenti": "Mobilità, Volontà di ferro",
+  "abilita": "Furtività +17, Nuotare +14, Percezione +8, Scalare +14"
+ },
+ {
+  "id": "ghaust",
+  "nome": "Ghaust",
+  "livello": 12,
+  "tipo": "Ghoul",
+  "taglia": "medio",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 4,
+  "descr": "Un cacciatore ghoulesco dal passo imprendibile, che agguanta le prede con entrambi gli artigli per farle diventare bersaglio del proprio morso avvelenato. La sua presa è quasi impossibile da spezzare.",
+  "extra": [],
+  "capacita": [
+   {
+    "nome": "Presa letale",
+    "tipo": "Sfo",
+    "testo": "Se il ghaust colpisce con entrambi gli artigli nello stesso round, può effettuare un attacco di morso aggiuntivo come azione gratuita (+10, 1d4 + Dolore lancinante)."
+   },
+   {
+    "nome": "Dolore lancinante",
+    "tipo": "Sop",
+    "testo": "Ogni morso infligge una fitta devastante: il bersaglio deve superare un TS su Tempra con CD 20 o essere [BARCOLLANTE] per 1 round. CD = 10 + 6 (½×12) + 2 (Car +2) + 2 bonus. Effetto [dolore]."
+   }
+  ],
+  "ca": 23,
+  "contatto": 16,
+  "impreparato": 19,
+  "pf": 78,
+  "dv": 12,
+  "ts": {
+   "Tempra": 6,
+   "Riflessi": 10,
+   "Volontà": 9
+  },
+  "velocita": "9 m",
+  "attacchi": [
+   "2 Artigli +15 (2d8+5 + Presa letale) e Morso +10 (1d4 + Dolore lancinante Tempra CD 20)"
+  ],
+  "att_speciali": "",
+  "car": {
+   "For": 21,
+   "Des": 19,
+   "Cos": null,
+   "Int": 7,
+   "Sag": 10,
+   "Car": 14
+  },
+  "bmc": "BMC +15 (+21 Lottare), DMC 30",
+  "talenti": "Attacco rapido, Critico focalizzato (artiglio), Critico migliorato (artiglio), Lottare migliorato, Mobilità",
+  "abilita": "Furtività +21, Percezione +23, Nuotare +19, Scalare +22"
+ },
+ {
+  "id": "kurobozu",
+  "nome": "Kurobozu",
+  "livello": 12,
+  "tipo": "Zombie",
+  "taglia": "medio",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 4,
+  "descr": "Uno zombie monaco dalla tecnica impeccabile e dalla determinazione impossibile. Colpisce con raffiche di pugni fulminei e ruba l'essenza spirituale di chi lo sfida, indebolendo la mente quanto il corpo.",
+  "extra": [],
+  "capacita": [
+   {
+    "nome": "Risveglio ascetico",
+    "tipo": "Sfo",
+    "testo": "Il kurobozu possiede la capacità di classe Eludere e può usare Pugno stordente (CD 20, [STORDITO] +1 round aggiuntivo). Usa la Saggezza al posto del Carisma per calcolare PF, TS Tempra e capacità basate su Cos."
+   },
+   {
+    "nome": "Flagello del saggio",
+    "tipo": "Sop",
+    "testo": "Ogni colpo che ferisce il bersaglio attiva (TS Tempra CD 18 nega): il bersaglio subisce 1d4 danni a Saggezza e 1d4 punti Ki vengono assorbiti (se il bersaglio ne possiede). Per ogni punto Ki assorbito, il kurobozu si cura di 5 PF. CD = 10 + 6 (½×12) + 4 (Sag +4) − 2."
+   }
+  ],
+  "ca": 23,
+  "contatto": 21,
+  "impreparato": 17,
+  "pf": 78,
+  "dv": 12,
+  "ts": {
+   "Tempra": 7,
+   "Riflessi": 9,
+   "Volontà": 10
+  },
+  "velocita": "15 m",
+  "attacchi": [
+   "Raffica di colpi +13/+13/+8 (1d8+5 + Flagello del saggio Tempra CD 18)"
+  ],
+  "att_speciali": "",
+  "car": {
+   "For": 21,
+   "Des": 18,
+   "Cos": null,
+   "Int": 7,
+   "Sag": 18,
+   "Car": 12
+  },
+  "bmc": "BMC +11, DMC 34 (+38 vs Sbil.)",
+  "talenti": "Arma focalizzata (colpo senz'armi), Attacco poderoso, Colpo senz'armi migliorato, Critico migliorato (colpo senz'armi), Pugno stordente migliorato",
+  "abilita": "Acrobazia +15, Furtività +11, Percezione +12, Scalare +13"
+ },
+ {
+  "id": "tetro_mietitore",
+  "nome": "Tetro mietitore",
+  "livello": 13,
+  "tipo": "Spirito",
+  "taglia": "piccolo",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 3,
+  "descr": "Una falce vivente che vola radente al suolo come il vento prima della tempesta. La sua presenza lascia una scia di gelo nell'aria, e chi tenta di sbarrargli il passo non sopravvive abbastanza per raccontarlo.",
+  "extra": [
+   "Capacità difensive: semicorporeo",
+   "Aura: Aura innaturale (9 m, CD 17)"
+  ],
+  "capacita": [
+   {
+    "nome": "Semicorporeo",
+    "tipo": "Sfo",
+    "testo": "Il tetro mietitore è parzialmente presente nel Piano Etereo. Subisce 50% danni dai normali attacchi fisici. Gli attacchi magici lo colpiscono normalmente."
+   },
+   {
+    "nome": "Aura innaturale",
+    "tipo": "Sfo",
+    "testo": "Come Vukodlak, animali entro 9 m vengono allontanati. CD 17 = 10 + 5 + 2 (Car +2)."
+   },
+   {
+    "nome": "Falce del terrore",
+    "tipo": "Sfo",
+    "testo": "La falce del tetro mietitore torna integra in 1 minuto se distrutta o perduta. Non può essere disarmato."
+   },
+   {
+    "nome": "Risucchio di energia",
+    "tipo": "Sop",
+    "testo": "Ogni colpo della falce infligge 1 livello negativo alla creatura vivente colpita. Con un colpo critico, i livelli negativi inflitti sono 2. Questa capacità non funziona sui non morti."
+   }
+  ],
+  "ca": 21,
+  "contatto": 16,
+  "impreparato": 13,
+  "pf": 75,
+  "dv": 10,
+  "ts": {
+   "Tempra": 4,
+   "Riflessi": 5,
+   "Volontà": 9
+  },
+  "velocita": "Volare 18 m (perfetta), altezza max 1 m",
+  "attacchi": [
+   "Falce del terrore +10 (1d8/×3 + Risucchio di energia)"
+  ],
+  "att_speciali": "",
+  "car": {
+   "For": null,
+   "Des": 16,
+   "Cos": null,
+   "Int": 7,
+   "Sag": 16,
+   "Car": 15
+  },
+  "bmc": "BMC +6, DMC 21",
+  "talenti": "Attacco in volo, Combattere alla cieca, Critico migliorato (falce), Mobilità",
+  "abilita": "Furtività +13, Percezione +16"
+ },
+ {
+  "id": "cavaliere_senza_testa",
+  "nome": "Cavaliere senza testa",
+  "livello": 13,
+  "tipo": "Scheletro",
+  "taglia": "medio",
+  "sciame": false,
+  "focus": false,
+  "nota": "in sella: spazio 3 m, portata 3 m",
+  "iniziativa": 2,
+  "descr": "Un cavaliere decapitato su cavalcatura fantasma, armato di una spada che congela il sangue. La sua sentenza di morte pende come una condanna su chiunque osi sfidarlo, e il suo galoppo notturno è un presagio funesto.",
+  "extra": [
+   "RI 18",
+   "Sensi: Vista cieca 18 m",
+   "Spazio 1,5 m (3 m in sella)"
+  ],
+  "capacita": [
+   {
+    "nome": "Cavalcatura fantomatica",
+    "tipo": "Sop",
+    "testo": "Come azione veloce, il cavaliere può far apparire o scomparire la propria cavalcatura spettrale. Sulla cavalcatura aumenta il suo spazio a 3 m e la sua velocità a 15 m. La cavalcatura condivide i suoi PF."
+   },
+   {
+    "nome": "Presenza terrificante",
+    "tipo": "Sop",
+    "testo": "Ogni creatura entro 9 m deve superare un TS su Volontà con CD 20 o essere [SCOSSA] per 1 minuto. Le creature con 4 DV o meno diventano invece [IN PREDA AL PANICO]. Effetto [paura, influenza mentale]."
+   },
+   {
+    "nome": "Sentenza di morte",
+    "tipo": "Sop",
+    "testo": "1/giorno, gittata 18 m: il bersaglio deve superare un TS su Tempra con CD 22 (CD 24 se il cavaliere conosce il suo nome completo) o essere [BARCOLLANTE] per 1d3+1 round. Inoltre, tutti i critici contro quel bersaglio vengono confermati automaticamente per le successive 24 ore o finché il cavaliere è distrutto."
+   }
+  ],
+  "ca": 24,
+  "contatto": 12,
+  "impreparato": 21,
+  "pf": 85,
+  "dv": 13,
+  "ts": {
+   "Tempra": 7,
+   "Riflessi": 5,
+   "Volontà": 12
+  },
+  "velocita": "6 m (15 m sulla cavalcatura)",
+  "attacchi": [
+   "Spada lunga +1 Affilata Gelida +14/+9 (1d8+6 / 17-20 + 1d6 freddo)",
+   "Aura: Presenza terrificante (9 m, CD 20)"
+  ],
+  "att_speciali": "Sentenza di morte CD 22/24",
+  "car": {
+   "For": 20,
+   "Des": 14,
+   "Cos": null,
+   "Int": 7,
+   "Sag": 16,
+   "Car": 18
+  },
+  "bmc": "BMC +12, DMC 28",
+  "talenti": "Attacco in sella, Combattere in sella, Critico focalizzato (+4 conferma), Maestria intimorente, Spezzare le difese, Travolgere",
+  "abilita": "Cavalcare +18, Percezione +16"
+ },
+ {
+  "id": "mohrg",
+  "nome": "Mohrg",
+  "livello": 13,
+  "tipo": "Ghoul",
+  "taglia": "medio",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 4,
+  "descr": "Un mostro grottesco di ossa e visceri, capace di afferrare e stritolare con forza sovraumana. La sua lingua raschiante frastorna chi tocca, rendendolo più facile da ghermire e da uccidere.",
+  "extra": [],
+  "capacita": [
+   {
+    "nome": "Frastornamento",
+    "tipo": "Sop",
+    "testo": "Ogni creatura toccata dalla lingua del mohrg deve superare un TS su Tempra con CD 20 o essere [FRASTORNATA] per 1 round. CD = 10 + 6 (½×13) + 2 (Car +2) + 2 (Cap. focalizzata)."
+   }
+  ],
+  "ca": 23,
+  "contatto": 16,
+  "impreparato": 19,
+  "pf": 98,
+  "dv": 13,
+  "ts": {
+   "Tempra": 6,
+   "Riflessi": 10,
+   "Volontà": 9
+  },
+  "velocita": "9 m",
+  "attacchi": [
+   "2 Schianti +15 (2d8+5 + Afferrare) e Lingua +10 a contatto (Frastornamento Tempra CD 20)"
+  ],
+  "att_speciali": "",
+  "car": {
+   "For": 21,
+   "Des": 19,
+   "Cos": null,
+   "Int": 7,
+   "Sag": 10,
+   "Car": 14
+  },
+  "bmc": "BMC +15 (+21 Lottare), DMC 30",
+  "talenti": "Attacco rapido, Capacità focalizzata (Frastornamento), Critico migliorato (schianto), Lottare migliorato, Mobilità, Robustezza",
+  "abilita": "Furtività +21, Percezione +13"
+ },
+ {
+  "id": "sanguigno",
+  "nome": "Sanguigno",
+  "livello": 14,
+  "tipo": "Spirito",
+  "taglia": "piccolo",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 4,
+  "descr": "Uno spirito che esiste per versare sangue, rinchiuso in una bottiglia rituale. Vede attraverso chiunque abbia sangue nelle vene e succhia forza vitale ad ogni tocco. Finché la bottiglia è integra, torna sempre.",
+  "extra": [
+   "Capacità difensive: semicorporeo, +4 vs scacciare/positiva",
+   "Sensi: Visione del vero parziale",
+   "Debolezze: Legato alla bottiglia"
+  ],
+  "capacita": [
+   {
+    "nome": "Semicorporeo",
+    "tipo": "Sfo",
+    "testo": "Come Tetro mietitore: 50% danni da attacchi fisici normali."
+   },
+   {
+    "nome": "Visione del vero parziale",
+    "tipo": "Sop",
+    "testo": "Il sanguigno gode degli effetti di Visione del vero (LI 14°), ma solo nei confronti di creature dotate di sangue (umanoidi, mammiferi, rettili, mostri viventi). Contro costrutti, non morti, elementali, melme e piante, non funziona."
+   },
+   {
+    "nome": "Legato alla bottiglia",
+    "tipo": "Sfo",
+    "testo": "Il sanguigno è ancorato a una bottiglia rituale creata con il necrarca. Si cura di 5 PF/ora quando è all'interno della bottiglia. La bottiglia ha CA 11, Durezza 1, PF 1. Se distrutta, il sanguigno si trasforma immediatamente in polvere. Chiunque raccolga la bottiglia può portarla con sé."
+   },
+   {
+    "nome": "Intento omicida",
+    "tipo": "Sop",
+    "testo": "Come azione immediata, il sanguigno può effettuare una prova di Intimidire per demoralizzare chiunque si avvicini entro 9 m. Chi supera il tiro è immune per 24 ore."
+   }
+  ],
+  "ca": 23,
+  "contatto": 20,
+  "impreparato": 15,
+  "pf": 72,
+  "dv": 11,
+  "ts": {
+   "Tempra": 8,
+   "Riflessi": 7,
+   "Volontà": 13
+  },
+  "velocita": "Volare 12 m (perfetta), altezza max 1 m",
+  "attacchi": [
+   "Tocco incorporeo +12 (6d8 + Sanguinamento 1d4)"
+  ],
+  "att_speciali": "",
+  "car": {
+   "For": null,
+   "Des": 18,
+   "Cos": null,
+   "Int": 7,
+   "Sag": 14,
+   "Car": 20
+  },
+  "bmc": "BMC +11, DMC 26",
+  "talenti": "Attacco in volo, Combattere alla cieca, Critico migliorato (tocco), Mobilità, Volontà di ferro",
+  "abilita": "Furtività +18, Intimidire +16, Percezione +16"
+ },
+ {
+  "id": "guecubu",
+  "nome": "Guecubu",
+  "livello": 14,
+  "tipo": "Scheletro",
+  "taglia": "medio",
+  "sciame": false,
+  "focus": false,
+  "nota": "sottotipo terra",
+  "iniziativa": 4,
+  "descr": "Un signore della terra e del fango, capace di manipolare il terreno per intrappolare i nemici. La sua maledizione sottrae precisione e fortuna a chiunque riesca a colpirlo.",
+  "extra": [
+   "Immunità: Elettricità",
+   "Resistenze: Freddo 10",
+   "Sensi: Percezione tellurica 18 m",
+   "Aura: Terreno impervio (3 m)"
+  ],
+  "capacita": [
+   {
+    "nome": "",
+    "tipo": "",
+    "testo": "Capacità magiche (LI 8°, Concentrazione +13):"
+   },
+   {
+    "nome": "",
+    "tipo": "",
+    "testo": "3/giorno — Ammorbidire terra e pietra. 1/giorno — Fango rallentante (Rifl CD 19), Trasmutare fango in roccia (CD 20), Trasmutare roccia in fango (CD 20)."
+   },
+   {
+    "nome": "Terreno impervio",
+    "tipo": "Sop",
+    "testo": "L'area entro 3 m dal guecubu è considerata terreno difficile. Non si applica contro creature che hanno effetti di libertà di movimento o si trovano in aria. Effetto [terra]. Può essere soppresso da Consacra o Cerchio magico contro il male (LI ≥ 8°)."
+   },
+   {
+    "nome": "Sfortuna",
+    "tipo": "Sop",
+    "testo": "Ogni creatura colpita deve superare un TS su Volontà con CD 20 o subire −2 ai tiri per colpire, ai TS e alle prove di abilità per 1 minuto, e tutti i critici contro di essa vengono confermati automaticamente. Effetto [maledizione]. CD = 10 + 7 (½×14) + 5 (Car +5) − 2."
+   }
+  ],
+  "ca": 23,
+  "contatto": 16,
+  "impreparato": 17,
+  "pf": 105,
+  "dv": 14,
+  "ts": {
+   "Tempra": 8,
+   "Riflessi": 7,
+   "Volontà": 11
+  },
+  "velocita": "9 m, Scavare 3 m",
+  "attacchi": [
+   "Morso +14 (1d8+6 + Sfortuna) e 2 Schianti +14 (1d6+6 + Sfortuna)"
+  ],
+  "att_speciali": "",
+  "car": {
+   "For": 22,
+   "Des": 18,
+   "Cos": null,
+   "Int": 7,
+   "Sag": 18,
+   "Car": 21
+  },
+  "bmc": "BMC +14, DMC 29",
+  "talenti": "Attacco rapido, Attacco turbinante, Critico focalizzato (morso), Critico migliorato (morso), Mobilità, Riflessi in combattimento, Robustezza",
+  "abilita": "Percezione +18, Scalare +10"
+ },
+ {
+  "id": "baykok",
+  "nome": "Baykok",
+  "livello": 15,
+  "tipo": "Ghoul",
+  "taglia": "medio",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 6,
+  "descr": "Un arciere scheletrico la cui mira non conosce errori e le cui frecce portano morte e stordimento. Quando urla, anche i più coraggiosi si coprono le orecchie — e quando uccide, si nutre dell'anima della vittima.",
+  "extra": [],
+  "capacita": [
+   {
+    "nome": "Arco d'osso",
+    "tipo": "Sfo",
+    "testo": "L'arco del baykok torna integro in 1 minuto se distrutto. Le frecce si generano automaticamente (illimitate) e contano come +1. La prima freccia che colpisce ogni round obbliga il bersaglio a superare un TS su Tempra con CD 19 o essere [BARCOLLANTE] per 1 round. CD = 10 + 7 + 2 (Car +2)."
+   },
+   {
+    "nome": "Stordimento",
+    "tipo": "Sop",
+    "testo": "Come indicato nell'Arco d'osso, su ogni colpo con la prima freccia del round."
+   },
+   {
+    "nome": "Divorare anima",
+    "tipo": "Sop",
+    "testo": "1/giorno, come azione standard: se una creatura entro 9 m è [MORENTE], il baykok la divora spiritualmente (muore immediatamente). Il baykok si cura di 5d6+10 PF e ottiene gli effetti di Velocità per 4 round."
+   },
+   {
+    "nome": "Ululato terrificante",
+    "tipo": "Sop",
+    "testo": "1/giorno, come azione standard: tutte le creature entro 9 m devono superare un TS su Volontà con CD 19 o essere [STORDITE] per 1 round (chi supera: [SCOSSA] per 1 round). Effetto [uditivo, paura, influenza mentale]."
+   }
+  ],
+  "ca": 22,
+  "contatto": 19,
+  "impreparato": 19,
+  "pf": 113,
+  "dv": 15,
+  "ts": {
+   "Tempra": 7,
+   "Riflessi": 11,
+   "Volontà": 9
+  },
+  "velocita": "9 m",
+  "attacchi": [
+   "2 Martelli +14 (1d6+3)",
+   "Distanza: Arco d'osso +20/+15/+10 (1d8+4 / 19-20/×3 + 1d6 energia negativa + Stordimento CD 19)"
+  ],
+  "att_speciali": "Divorare anima, Ululato terrificante CD 19",
+  "car": {
+   "For": 17,
+   "Des": 22,
+   "Cos": null,
+   "Int": 7,
+   "Sag": 10,
+   "Car": 15
+  },
+  "bmc": "BMC +14, DMC 31",
+  "talenti": "Critico migliorato (arco lungo composito), Tirare in movimento, Tiro preciso, Tiro rapido, Tiro ravvicinato",
+  "abilita": "Percezione +18, Furtività +24"
+ },
+ {
+  "id": "spettro_dei_tumuli",
+  "nome": "Spettro dei tumuli",
+  "livello": 15,
+  "tipo": "Scheletro",
+  "taglia": "medio",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 4,
+  "descr": "Un guerriero non morto che non può essere distrutto definitivamente. Armato di una spada maledetta e di un'armatura forgiata negli inferi, ritorna sempre dalla sua tomba per imporre la propria volontà.",
+  "extra": [
+   "RD 5/argento",
+   "RI 21",
+   "Immunità: Freddo",
+   "Resistenze: Elettricità 10, Fuoco 10",
+   "Capacità difensive: Immortalità degli spettri"
+  ],
+  "capacita": [
+   {
+    "nome": "",
+    "tipo": "",
+    "testo": "Capacità magiche (LI 15°, Concentrazione +19):"
+   },
+   {
+    "nome": "",
+    "tipo": "",
+    "testo": "5/giorno — Raggio di indebolimento (Vol CD 16). 3/giorno — Scagliare maledizione* (Vol CD 18)."
+   },
+   {
+    "nome": "Immortalità degli spettri",
+    "tipo": "Sfo",
+    "testo": "Quando lo spettro viene ridotto a 0 PF, il suo teschio sopravvive e può essere raccolto come parte focale. Dopo 1d3+1 giorni si rianima automaticamente. Per distruggerlo permanentemente: versare acqua santa sui resti."
+   },
+   {
+    "nome": "Equipaggiamento maledetto",
+    "tipo": "Sfo",
+    "testo": "La spada infernale e l'armatura dello spettro si ricompongono automaticamente in 1 minuto se distrutte o perse."
+   }
+  ],
+  "ca": 24,
+  "contatto": 14,
+  "impreparato": 20,
+  "pf": 113,
+  "dv": 15,
+  "ts": {
+   "Tempra": 9,
+   "Riflessi": 9,
+   "Volontà": 11
+  },
+  "velocita": "9 m",
+  "attacchi": [
+   "Spada infernale +1 +20/+15/+10 (1d10+8 / 17-20)"
+  ],
+  "att_speciali": "",
+  "car": {
+   "For": 25,
+   "Des": 18,
+   "Cos": null,
+   "Int": 7,
+   "Sag": 15,
+   "Car": 18
+  },
+  "bmc": "BMC +18, DMC 33",
+  "talenti": "Attacco poderoso, Attacco rapido, Critico migliorato (spada infernale), Incalzare, Incalzare migliorato, Mobilità",
+  "abilita": "Percezione +17, Intimidire +14"
+ },
+ {
+  "id": "sciame_di_teschi_schioccanti",
+  "nome": "Sciame di teschi schioccanti",
+  "livello": 16,
+  "tipo": "Disarticolato",
+  "taglia": "sciame di minuscoli",
+  "sciame": true,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 3,
+  "descr": "Centinaia di teschi animati che volano in formazione compatta, schioccando mascelle e urlando in coro. Chi si trova in mezzo a loro è assalito su tutti i fronti — e se li uccidi tutti in un colpo, esplodono.",
+  "extra": [
+   "Resistenze: Acido 10",
+   "Capacità difensive: tratti degli sciami",
+   "Spazio 3 m"
+  ],
+  "capacita": [
+   {
+    "nome": "Tratti degli sciami",
+    "tipo": "Sfo",
+    "testo": "Immune a qualsiasi danno da arma singola. Subisce danno dimezzato da armi taglienti e perforanti, danno normale da armi contundenti e +50% da effetti ad area. Immune a [FRASTORNAMENTO] e manovre di combattimento. Occupa uno spazio di 3 m × 3 m."
+   },
+   {
+    "nome": "Distrazione",
+    "tipo": "Sop",
+    "testo": "Ogni creatura nel proprio spazio alla fine del turno: TS Tempra CD 21 o [NAUSEATA] per 1 round."
+   },
+   {
+    "nome": "Esplosione d'ossa",
+    "tipo": "Sop",
+    "testo": "Se lo sciame viene ridotto a 0 PF da un attacco nemico, esplode in un raggio di 9 m infliggendo 8d8 danni (metà perforanti, metà da energia negativa). TS Riflessi CD 21 dimezza."
+   },
+   {
+    "nome": "Battere i denti",
+    "tipo": "Sop",
+    "testo": "Come azione gratuita: tutte le creature entro 6 m, TS Volontà CD 21 o [CONFUSE] per 1 round. Effetto [uditivo, influenza mentale, compulsione]."
+   },
+   {
+    "nome": "Urlo spaventoso",
+    "tipo": "Sop",
+    "testo": "1/1d4 round, azione gratuita: tutte le creature entro 9 m, TS Volontà CD 21 o [SCOSSE] per 1d4 round. Effetto [uditivo, paura, influenza mentale]."
+   }
+  ],
+  "ca": 23,
+  "contatto": 17,
+  "impreparato": 21,
+  "pf": 105,
+  "dv": 14,
+  "ts": {
+   "Tempra": 11,
+   "Riflessi": 10,
+   "Volontà": 12
+  },
+  "velocita": "Volare 12 m (perfetta), altezza max 1 m",
+  "attacchi": [
+   "Sciame 3d6"
+  ],
+  "att_speciali": "Distrazione CD 21, Esplosione d'ossa CD 21, Battere i denti CD 21, Urlo spaventoso CD 21",
+  "car": {
+   "For": 5,
+   "Des": 16,
+   "Cos": null,
+   "Int": 5,
+   "Sag": 13,
+   "Car": 19
+  },
+  "bmc": "BMC —, DMC —",
+  "talenti": "Mobilità, Riflessi fulminei, Robustezza, Tempra possente, Volontà di ferro"
+ },
+ {
+  "id": "bestia_mummificata",
+  "nome": "Bestia mummificata",
+  "livello": 16,
+  "tipo": "Zombie",
+  "taglia": "grande",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 1,
+  "descr": "Una bestia imbalsamata e riportata alla vita, rapida come il vento e forte come un muro. Sente l'invisibile, vola verso il bersaglio in uno scatto improvviso e lascia solo polvere dove c'era carne.",
+  "extra": [
+   "Debolezze: Vulnerabilità al Fuoco",
+   "Sensi: Vedere invisibilità",
+   "Aure: Telepatia (18 m), Presenza terrificante (9 m, CD 20)",
+   "Spazio 3 m, Portata 1,5 m"
+  ],
+  "capacita": [
+   {
+    "nome": "Telepatia",
+    "tipo": "Sfo",
+    "testo": "Comunicazione telepatica bidirezionale con il necrarca entro 18 m, senza necessità di linguaggio comune."
+   },
+   {
+    "nome": "Presenza terrificante",
+    "tipo": "Sop",
+    "testo": "Come Cavaliere senza testa ma CD 20. TS Vol CD 20 o [SCOSSA] 1 min (4 DV o meno: [IN PREDA AL PANICO])."
+   },
+   {
+    "nome": "Tempesta di fauci",
+    "tipo": "Sfo",
+    "testo": "Se la bestia mummificata è in lotta, può effettuare un attacco di morso aggiuntivo a +19 (3d6+8) come azione gratuita ogni round."
+   },
+   {
+    "nome": "Balzare",
+    "tipo": "Sfo",
+    "testo": "Al termine di una carica, la bestia può effettuare un attacco completo invece di un singolo attacco."
+   },
+   {
+    "nome": "Colpo di polvere",
+    "tipo": "Sfo",
+    "testo": "Ogni creatura vivente uccisa dalla bestia mummificata si disintegra in cenere. I cadaveri così distrutti non possono essere rianimati con altri metodi."
+   },
+   {
+    "nome": "Esplosione di velocità",
+    "tipo": "Sop",
+    "testo": "2/giorno, come azione veloce: la bestia ottiene gli effetti di Velocità per 1 round (atk extra, velocità raddoppiata). Non può effettuare cariche nello stesso round."
+   }
+  ],
+  "ca": 26,
+  "contatto": 12,
+  "impreparato": 26,
+  "pf": 120,
+  "dv": 16,
+  "ts": {
+   "Tempra": 12,
+   "Riflessi": 9,
+   "Volontà": 10
+  },
+  "velocita": "12 m",
+  "attacchi": [
+   "2 Artigli +19 (3d6+8 / 19-20 + Tempesta di fauci)"
+  ],
+  "att_speciali": "Balzare, Colpo di polvere, Esplosione di velocità (2/g)",
+  "car": {
+   "For": 26,
+   "Des": 13,
+   "Cos": null,
+   "Int": 7,
+   "Sag": 19,
+   "Car": 19
+  },
+  "bmc": "BMC +21, DMC 32 (+36 vs Sbil.)",
+  "talenti": "Allerta, Attacco poderoso, Attacco rapido, Combattere alla cieca, Critico focalizzato (artiglio), Critico migliorato (artiglio), Riflessi in combattimento",
+  "abilita": "Furtività +16, Percezione +23, Scalare +20"
+ },
+ {
+  "id": "scheletro_magus",
+  "nome": "Scheletro magus",
+  "livello": 16,
+  "tipo": "Scheletro",
+  "taglia": "medio",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 5,
+  "descr": "Uno scheletro caster di raro potere. Scaglia sei dardi di energia negativa per round, destabilizza ogni tentativo magico nemico e si protegge con uno scudo arcano quasi impenetrabile.",
+  "extra": [
+   "RD 5/magia",
+   "RI 21",
+   "+4 vs scacciare/positiva",
+   "Aura: Instabilità arcana (9 m)",
+   "Capacità difensive: Scudo superiore"
+  ],
+  "capacita": [
+   {
+    "nome": "Instabilità arcana",
+    "tipo": "Sop",
+    "testo": "Ogni caster nemico entro 9 m che tenti di lanciare un incantesimo deve farlo in difensiva (Concentrazione CD 15 + livello incantesimo) oppure l'incantesimo fallisce automaticamente."
+   },
+   {
+    "nome": "Dardi oscuri",
+    "tipo": "Sop",
+    "testo": "I dardi oscuri sono attacchi a distanza con gittata 9 m (incremento 3 m). Non curano i non morti. Con Arma focalizzata: +1 TxC → bonus totale elencato."
+   },
+   {
+    "nome": "Raggio dilaniante",
+    "tipo": "Sop",
+    "testo": "Azione di round completo: attacco a contatto a distanza (gittata 18 m), 7d6 danni da energia non elementale (ignora Resistenze all'energia standard). Critico su 19-20."
+   },
+   {
+    "nome": "Scudo superiore",
+    "tipo": "Sop",
+    "testo": "+6 alla CA come bonus di deviazione (già incluso nella CA base). Lo scheletro magus è inoltre immune all'incantesimo Dardo incantato."
+   }
+  ],
+  "ca": 26,
+  "contatto": 24,
+  "impreparato": 23,
+  "pf": 136,
+  "dv": 16,
+  "ts": {
+   "Tempra": 9,
+   "Riflessi": 10,
+   "Volontà": 13
+  },
+  "velocita": "9 m",
+  "attacchi": [
+   "Dardi oscuri +16/+16/+11/+11/+6/+6 (1d8+3 energia negativa / 19-20/×3)"
+  ],
+  "att_speciali": "Raggio dilaniante",
+  "car": {
+   "For": 12,
+   "Des": 21,
+   "Cos": null,
+   "Int": 18,
+   "Sag": 11,
+   "Car": 18
+  },
+  "bmc": "BMC +14, DMC 30",
+  "talenti": "Arma focalizzata (dardi oscuri), Critico focalizzato (dardi oscuri), Critico migliorato (dardi oscuri), Maestro ravvicinato, Robustezza, Tiro preciso, Tiro ravvicinato",
+  "abilita": "Conoscenze (arcane) +20, Furtività +17, Percezione +16"
+ },
+ {
+  "id": "megera_grigia",
+  "nome": "Megera grigia",
+  "livello": 17,
+  "tipo": "Spirito",
+  "taglia": "medio",
+  "sciame": false,
+  "focus": false,
+  "nota": "scegliere un elemento all'evocazione",
+  "iniziativa": 6,
+  "descr": "Un'entità semiincorporea che imita voci e suoni per attirare le vittime, poi le investe con un'aura di degrado elementale. Ciò che colpisce non si vede e non si sente — si subisce soltanto.",
+  "extra": [
+   "Immunità: elemento scelto",
+   "Capacità difensive: semicorporeo"
+  ],
+  "capacita": [
+   {
+    "nome": "",
+    "tipo": "",
+    "testo": "Capacità magiche (LI 11°, Concentrazione +16):"
+   },
+   {
+    "nome": "",
+    "tipo": "",
+    "testo": "5/giorno — Camuffare sé stesso, Luci danzanti, Pirotecnica (Vol CD 20), Raggio di indebolimento (Vol CD 19), Suono fantasma (Vol CD 18)."
+   },
+   {
+    "nome": "Semicorporeo",
+    "tipo": "Sfo",
+    "testo": "Come Tetro mietitore: 50% danni da attacchi fisici normali."
+   },
+   {
+    "nome": "Imitazione dei suoni",
+    "tipo": "Sfo",
+    "testo": "La megera grigia può imitare qualsiasi suono o voce. Ottiene +8 alle prove di Raggirare per imitare una voce familiare. Chi non conosce la voce subisce −8 alle prove di Intuizione per smascherare l'inganno."
+   },
+   {
+    "nome": "Aura grigia",
+    "tipo": "Sop",
+    "testo": "Ogni creatura colpita deve superare un TS su Volontà con CD 22 o essere avvolta da un'aura grigiastra per 10 minuti. L'aura causa: [LUMINESCENZA] (la creatura brilla), [INFERMA] e vulnerabilità all'elemento scelto della megera (subisce +50% dai danni di quell'elemento). Può essere dispelata da Aiuto divino, Rimuovi maledizione o Spezzare incantamento. Anche entrare nella casella della megera o colpirla in mischia senza Portata innesca il TS. CD = 10 + 7 + 7 (Car +7) − 2."
+   }
+  ],
+  "ca": 24,
+  "contatto": 28,
+  "impreparato": 21,
+  "pf": 91,
+  "dv": 14,
+  "ts": {
+   "Tempra": 10,
+   "Riflessi": 11,
+   "Volontà": 12
+  },
+  "velocita": "12 m",
+  "attacchi": [
+   "Tocco stregato +13 a contatto (8d6 elemento + Aura grigia Vol CD 22)",
+   "Distanza: Dardo stregato +13 a contatto (8d6 elemento + Aura grigia, gittata 9 m)"
+  ],
+  "att_speciali": "",
+  "car": {
+   "For": null,
+   "Des": 22,
+   "Cos": null,
+   "Int": 17,
+   "Sag": 16,
+   "Car": 25
+  },
+  "bmc": "BMC +13, DMC 31",
+  "talenti": "Attacco rapido, Combattere alla cieca, Critico migliorato (tocco stregato), Mobilità, Riflessi in combattimento, Volontà di ferro",
+  "abilita": "Furtività +20, Percezione +17, Raggirare +18"
+ },
+ {
+  "id": "infestato",
+  "nome": "Infestato",
+  "livello": 17,
+  "tipo": "Zombie",
+  "taglia": "grande",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 0,
+  "descr": "Un non morto massiccio e parassitario che emette uno sciame di insetti necrotici ad ogni respiro. Chi si avvicina rischia di trovarsi accecato da un nugolo di creature oscure prima ancora di riuscire a colpire.",
+  "extra": [
+   "Resistenze: Freddo 10, Fuoco 10",
+   "+4 vs scacciare/positiva",
+   "Spazio 3 m, Portata 3 m"
+  ],
+  "capacita": [
+   {
+    "nome": "Nugolo di necrotteri",
+    "tipo": "Sop",
+    "testo": "1/1d4 round, come azione standard: il corpo dell'infestato erutta un cono di 6 m di insetti necrotici. Ogni creatura nell'area deve superare un TS su Tempra con CD 21 o essere [ACCECATA] per 1d3 round. CD = 10 + 8 (½×17) + 4 (Car +4) − 1."
+   }
+  ],
+  "ca": 27,
+  "contatto": 11,
+  "impreparato": 27,
+  "pf": 128,
+  "dv": 17,
+  "ts": {
+   "Tempra": 9,
+   "Riflessi": 5,
+   "Volontà": 10
+  },
+  "velocita": "9 m",
+  "attacchi": [
+   "Morso +17 (1d8+7) e 2 Artigli +17 (2d8+7 / 19-20)"
+  ],
+  "att_speciali": "Nugolo di necrotteri CD 21",
+  "car": {
+   "For": 25,
+   "Des": 12,
+   "Cos": null,
+   "Int": 6,
+   "Sag": 13,
+   "Car": 19
+  },
+  "bmc": "BMC +19, DMC 29 (+31 vs Sbil.)",
+  "talenti": "Attacco poderoso, Colpo terrificante, Critico focalizzato (+4 conferma), Critico migliorato (artiglio), Incalzare, Incalzare potenziato, Spingere migliorato",
+  "abilita": "Percezione +17, Scalare +15"
+ },
+ {
+  "id": "orrore_dei_boschi",
+  "nome": "Orrore dei boschi",
+  "livello": 18,
+  "tipo": "Spirito",
+  "taglia": "medio",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 7,
+  "descr": "Uno spirito semiincorporeo dalla natura primitiva e feroce, che trae forza dal sangue altrui. Il ferro freddo e le creature fae lo possono ferire più facilmente, ma in campo aperto pochi sopravvivono ai suoi artigli.",
+  "extra": [
+   "Resistenze: Freddo 10, Fuoco 10",
+   "Capacità difensive: semicorporeo, +4 vs scacciare/positiva",
+   "Debolezze: Ferro freddo e fatati"
+  ],
+  "capacita": [
+   {
+    "nome": "",
+    "tipo": "",
+    "testo": "Capacità magiche (LI 11°, Concentrazione +17):"
+   },
+   {
+    "nome": "",
+    "tipo": "",
+    "testo": "5/giorno — Parlare con animali, Trance animale (Vol CD 18). 3/giorno — Charme su animali (Vol CD 17)."
+   },
+   {
+    "nome": "Semicorporeo",
+    "tipo": "Sfo",
+    "testo": "Come Tetro mietitore: 50% danni da attacchi fisici normali."
+   },
+   {
+    "nome": "Ferro freddo e fatati",
+    "tipo": "Sfo",
+    "testo": "Le armi in ferro freddo e le armi brandite da creature di origine fatata (folletti, eladrin, ecc.) traggono vantaggio dalla natura dell'orrore dei boschi: ignorano la probabilità di fallimento del Semicorporeo e trattano il danno come se provenisse da magia."
+   },
+   {
+    "nome": "Sanguinamento 1d8",
+    "tipo": "Sfo",
+    "testo": "Ogni artiglio dell'orrore dei boschi infligge sanguinamento 1d8 (fermato da Guarire CD 15 o cura magica)."
+   },
+   {
+    "nome": "Risucchio di sangue",
+    "tipo": "Sop",
+    "testo": "Come azione standard, se una creatura adiacente sta subendo sanguinamento: TS Tempra CD 24 o subisce 1d3 danni di Costituzione. L'orrore si cura di 5 PF. CD = 10 + 7 + 6 (Car +6) + 1."
+   }
+  ],
+  "ca": 26,
+  "contatto": 26,
+  "impreparato": 18,
+  "pf": 113,
+  "dv": 15,
+  "ts": {
+   "Tempra": 10,
+   "Riflessi": 11,
+   "Volontà": 12
+  },
+  "velocita": "12 m",
+  "attacchi": [
+   "2 Artigli +17 a contatto (5d8 + Sanguinamento 1d8)"
+  ],
+  "att_speciali": "Risucchio di sangue CD 24",
+  "car": {
+   "For": null,
+   "Des": 25,
+   "Cos": null,
+   "Int": 11,
+   "Sag": 8,
+   "Car": 22
+  },
+  "bmc": "BMC +17, DMC 34",
+  "talenti": "Attacco rapido, Combattere alla cieca, Critico migliorato (artiglio), Mobilità, Riflessi in combattimento, Stoccata, Volontà di ferro",
+  "abilita": "Furtività +22, Percezione +12"
+ },
+ {
+  "id": "signore_degli_spettri",
+  "nome": "Signore degli spettri",
+  "livello": 18,
+  "tipo": "Scheletro",
+  "taglia": "medio",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 1,
+  "descr": "Un generale non morto che comanda i propri servitori con la sua aura di potere. La spada infernale taglia carne e anima, la detonazione oscura spazza corridoi interi, e la sua immortalità lo rende quasi impossibile da eliminare.",
+  "extra": [
+   "RI 25",
+   "Immunità: Acido, Elettricità, Freddo",
+   "Aura: Icona non morta (9 m)",
+   "Capacità difensive: Immortalità degli spettri"
+  ],
+  "capacita": [
+   {
+    "nome": "Icona non morta",
+    "tipo": "Sop",
+    "testo": "Tutti i non morti entro 9 m beneficiano degli effetti di Rafforzare non morti (bonus non magico +2 ai tiri per colpire, ai danni e al morale). Ogni tentativo di usare energia positiva nell'area richiede una prova di Concentrazione CD 19 oppure l'incantesimo fallisce."
+   },
+   {
+    "nome": "Detonazione oscura",
+    "tipo": "Sop",
+    "testo": "3/giorno, come azione standard: cono di 9 m, 10d6 danni da energia negativa. TS Riflessi CD 25 dimezza. CD = 10 + 9 + 4 (Car +4) + 2 bonus."
+   },
+   {
+    "nome": "Immortalità degli spettri",
+    "tipo": "Sfo",
+    "testo": "Come Spettro dei tumuli: il teschio sopravvive come parte focale, rianima in 1d3+1 giorni. Acqua santa per distruggere permanentemente."
+   },
+   {
+    "nome": "Equipaggiamento maledetto",
+    "tipo": "Sfo",
+    "testo": "Spada infernale e armatura si ricompongono in 1 minuto."
+   }
+  ],
+  "ca": 27,
+  "contatto": 13,
+  "impreparato": 26,
+  "pf": 135,
+  "dv": 18,
+  "ts": {
+   "Tempra": 13,
+   "Riflessi": 6,
+   "Volontà": 8
+  },
+  "velocita": "9 m",
+  "attacchi": [
+   "Spada infernale +1 +25/+20 (2d6+19 + 2d6 energia negativa)",
+   "Distanza: Asce da lancio ritornanti +14/+9 (1d8+11/×3 + 2d6 energia negativa, gittata 9 m)"
+  ],
+  "att_speciali": "Detonazione oscura CD 25 (3/g)",
+  "car": {
+   "For": 27,
+   "Des": 12,
+   "Cos": null,
+   "Int": 15,
+   "Sag": 12,
+   "Car": 18
+  },
+  "bmc": "BMC +18, DMC 29",
+  "talenti": "Attacco poderoso, Critico focalizzato, Critico migliorato (spada infernale), Incalzare, Maestria intimorente, Spezzare le difese, Volontà di ferro",
+  "abilita": "Intimidire +19, Percezione +15"
+ },
+ {
+  "id": "harionago",
+  "nome": "Harionago",
+  "livello": 19,
+  "tipo": "Ghoul",
+  "taglia": "medio",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 5,
+  "descr": "Una creatura femminile dai lunghi capelli neri animati di vita propria, ognuno armato di un uncino affilato. La sua risata folle frantuma la sanità mentale, e il suo abbraccio è un'orchestra di lame che vengono da ogni direzione.",
+  "extra": [
+   "RD 5/magia",
+   "Spazio 1,5 m, Portata 1,5 m (3 m con capelli)"
+  ],
+  "capacita": [
+   {
+    "nome": "",
+    "tipo": "",
+    "testo": "Capacità magiche (LI 14°, Concentrazione +20):"
+   },
+   {
+    "nome": "",
+    "tipo": "",
+    "testo": "3/giorno — Rallentare caduta, Raggio di indebolimento (Vol CD 18), Lussuria innaturale (Vol CD 19). 1/giorno — Charme sui mostri (Vol CD 19), Tocco del vampiro (Vol CD 19)."
+   },
+   {
+    "nome": "Stordimento",
+    "tipo": "Sop",
+    "testo": "Ogni creatura colpita dagli artigli deve superare un TS su Tempra con CD 23 o essere [STORDITA] per 1 round. CD = 10 + 9 + 6 (Car +6) − 2."
+   },
+   {
+    "nome": "Sanguinamento 5",
+    "tipo": "Sfo",
+    "testo": "Ogni colpo dei capelli uncinati infligge sanguinamento 5 (fermato da Guarire CD 15 o cura magica)."
+   },
+   {
+    "nome": "Risata folle",
+    "tipo": "Sop",
+    "testo": "Azione di round completo: l'harionago ride con voce soprannaturale verso tutte le creature entro 18 m. Ogni bersaglio deve superare un TS su Volontà con CD 23 o cadere in uno stato equivalente all'incantesimo Risata incontenibile (LI 14°). Il bersaglio può fare un nuovo TS ogni round. Effetto [influenza mentale, compulsione]. Può essere contrastato con un controcanto."
+   }
+  ],
+  "ca": 27,
+  "contatto": 17,
+  "impreparato": 22,
+  "pf": 143,
+  "dv": 19,
+  "ts": {
+   "Tempra": 10,
+   "Riflessi": 9,
+   "Volontà": 12
+  },
+  "velocita": "9 m",
+  "attacchi": [
+   "2 Artigli +15 (1d6+4 / 19-20 + Stordimento CD 23)",
+   "4 Capelli uncinati +12 (1d6+2 / 19-20 + Sanguinamento 5)"
+  ],
+  "att_speciali": "Risata folle CD 23",
+  "car": {
+   "For": 19,
+   "Des": 20,
+   "Cos": null,
+   "Int": 15,
+   "Sag": 17,
+   "Car": 22
+  },
+  "bmc": "BMC +14, DMC 29",
+  "talenti": "Arma accurata, Attacco naturale migliorato (capelli uncinati), Critico focalizzato (artiglio), Critico migliorato (artiglio), Critico migliorato (capelli uncinati), Multiattacco, Riflessi in combattimento",
+  "abilita": "Furtività +24, Percezione +22, Raggirare +14"
+ },
+ {
+  "id": "varghoul",
+  "nome": "Varghoul",
+  "livello": 19,
+  "tipo": "Ghoul",
+  "taglia": "grande",
+  "sciame": false,
+  "focus": false,
+  "nota": "",
+  "iniziativa": 3,
+  "descr": "Un ghoul arcano di potere spaventoso, capace di strappare letteralmente il cuore a chi tocca con gli artigli. La sua follia accumulata in battaglia lo rende sempre più pericoloso man mano che i nemici cadono.",
+  "extra": [
+   "RI 22",
+   "Spazio 3 m, Portata 3 m"
+  ],
+  "capacita": [
+   {
+    "nome": "",
+    "tipo": "",
+    "testo": "Capacità magiche (LI 18°, Concentrazione +22, Int +4):"
+   },
+   {
+    "nome": "",
+    "tipo": "",
+    "testo": "1/giorno — Visione del vero. 2/giorno — Confusione CD 22. 3/giorno — Infliggi ferite gravi, Suggestione* CD 21, Tocco del vampiro. 4/giorno — Ora della dipartita, Tocco del ghoul* CD 20. 5/giorno — Raggio di indebolimento CD 19."
+   },
+   {
+    "nome": "Risucchio di energia",
+    "tipo": "Sop",
+    "testo": "Ogni colpo degli artigli infligge 1 livello negativo alla creatura vivente colpita (2 su critico). Solo su viventi — i non morti sono immuni."
+   },
+   {
+    "nome": "Strappare il cuore",
+    "tipo": "Sop",
+    "testo": "Azione standard: attacco con artiglio contro una creatura vivente dotata di cuore. Se colpisce: 12d6+18 danni da forza (TS Tempra CD 22 riduce a 3d6+18). Se la creatura viene uccisa, il varghoul guadagna +1 punto follia per ogni DV della vittima (max 16, i punti scompaiono al ritmo di 1/giorno)."
+   },
+   {
+    "nome": "Incantesimi folli",
+    "tipo": "Sfo",
+    "testo": "Per usare le proprie capacità magiche, il varghoul deve spendere un numero di punti follia pari al livello dell'incantesimo. Se non ne ha abbastanza, non può lanciare la capacità."
+   }
+  ],
+  "ca": 27,
+  "contatto": 14,
+  "impreparato": 24,
+  "pf": 162,
+  "dv": 19,
+  "ts": {
+   "Tempra": 9,
+   "Riflessi": 7,
+   "Volontà": 12
+  },
+  "velocita": "12 m",
+  "attacchi": [
+   "2 Artigli +18 (1d8+9 + Risucchio di energia)"
+  ],
+  "att_speciali": "Strappare il cuore CD 22",
+  "car": {
+   "For": 28,
+   "Des": 16,
+   "Cos": null,
+   "Int": 19,
+   "Sag": 16,
+   "Car": 21
+  },
+  "bmc": "BMC +20, DMC 33",
+  "talenti": "Attacco poderoso, Combattere alla cieca, Critico focalizzato (artiglio), Critico migliorato (artiglio), Incalzare, Incantare in combattimento, Riflessi in combattimento, Robustezza",
+  "abilita": "Furtività +18, Intimidire +18, Percezione +22"
+ },
+ {
+  "id": "sidhe",
+  "nome": "Sidhe",
+  "livello": 20,
+  "tipo": "Spirito",
+  "taglia": "medio",
+  "sciame": false,
+  "focus": false,
+  "nota": "volo libero (nessun limite di altezza)",
+  "iniziativa": 11,
+  "descr": "La creatura più letale del catalogo: una banshee di potere apocalittico. Il suo tocco gelido dissecca l'anima all'istante, e il suo grido, udibile a mille passi di distanza, è una sentenza dalla quale ben pochi sfuggono.",
+  "extra": [
+   "Capacità difensive: semicorporeo",
+   "Sensi: Percepire battito (18 m)"
+  ],
+  "capacita": [
+   {
+    "nome": "Semicorporeo",
+    "tipo": "Sfo",
+    "testo": "Come Tetro mietitore: 50% danni da attacchi fisici normali."
+   },
+   {
+    "nome": "Percepire battito",
+    "tipo": "Sfo",
+    "testo": "La sidhe percepisce il battito cardiaco di ogni creatura vivente entro 18 m, come se avesse Vista cieca verso di esse. Non è influenzata da invisibilità, oscurità o occultamento contro i bersagli viventi."
+   },
+   {
+    "nome": "Terrore",
+    "tipo": "Sop",
+    "testo": "Ogni creatura colpita dal tocco deve superare un TS su Volontà con CD 24 o essere [FRASTORNATA] per 1d3 round. Se la creatura è protetta da effetti anti-paura, questi vengono prima dissolti come da Dissolvi magie superiore (LI 14°). CD = 10 + 8 + 4 (Car +4) + 2."
+   },
+   {
+    "nome": "Grido",
+    "tipo": "Sop",
+    "testo": "1/ora, azione di round completo: emette un grido devastante che forma un cono di 9 m. Ogni creatura nell'area deve superare un TS su Tempra CD 23 o subire 14d10 danni. Udibile a 100 m. Effetto [uditivo, morte]. I non morti sono immuni all'effetto [morte] ma subiscono comunque i danni. Se la sidhe subisce danni mentre grida: TS Volontà CD 15+danno o cessa e diventa [FRASTORNATA] per 1 round. Penetra il silenzio fino al 3° livello."
+   }
+  ],
+  "ca": 30,
+  "contatto": 28,
+  "impreparato": 16,
+  "pf": 128,
+  "dv": 17,
+  "ts": {
+   "Tempra": 10,
+   "Riflessi": 19,
+   "Volontà": 20
+  },
+  "velocita": "Volare 15 m (perfetta)",
+  "attacchi": [
+   "Tocco della sidhe +26 a contatto (14d6 energia negativa + Terrore Vol CD 24)"
+  ],
+  "att_speciali": "Grido CD 23 (1/ora)",
+  "car": {
+   "For": null,
+   "Des": 32,
+   "Cos": null,
+   "Int": 10,
+   "Sag": 20,
+   "Car": 19
+  },
+  "bmc": "BMC +25, DMC 40",
+  "talenti": "Allerta, Critico migliorato (tocco), Inseguire, Mobilità, Posizione velata, Riflessi in combattimento, Volontà di ferro",
+  "abilita": "Furtività +26, Percezione +25"
+ },
+ {
+  "id": "dracolich",
+  "nome": "Dracolich",
+  "livello": 20,
+  "tipo": "Scheletro",
+  "taglia": "enorme",
+  "sciame": false,
+  "focus": false,
+  "nota": "non può volare, balza fino a 18 m",
+  "iniziativa": 0,
+  "descr": "Un drago trasformato in non morto: la stazza di un palazzo, il potere di un esercito. Le sue ossa portano ancora la furia elementale della sua specie, e nessuna creatura vivente può sostenere a lungo la sua presenza. È il coronamento definitivo di ogni necrarca al massimo livello.",
+  "extra": [
+   "Sensi: Percezione cieca 18 m",
+   "RD 5/−",
+   "RI 25",
+   "Immunità: elemento scelto in vita",
+   "Vulnerabilità: elemento opposto",
+   "Aure: Vapori elementali (1,5 m, 1d6 elemento), Presenza terrificante (9 m, Vol CD 24)",
+   "Spazio 6 m, Portata 3 m (4,5 m coda)"
+  ],
+  "capacita": [
+   {
+    "nome": "",
+    "tipo": "",
+    "testo": "Capacità magiche (LI 17°, Concentrazione +20):"
+   },
+   {
+    "nome": "",
+    "tipo": "",
+    "testo": "A volontà — Individuazione del magico. 2/giorno — Dissolvi magie, Distorsione, Ira non morta. 3/giorno — Scudo energetico, Vedere invisibilità, Raggio rovente (elemento del soffio). 5/giorno — Allarme, Dardo incantato, Scudo, Unto (CD 16); Luce, Mano magica, Messaggio, Prestidigitazione."
+   },
+   {
+    "nome": "Vapori elementali",
+    "tipo": "Sop",
+    "testo": "Ogni creatura che inizia il proprio turno entro 1,5 m dal dracolich subisce 1d6 danni dell'elemento del soffio (nessun TS)."
+   },
+   {
+    "nome": "Presenza terrificante",
+    "tipo": "Sop",
+    "testo": "Come Cavaliere senza testa ma CD 24 e raggio 9 m. TS Vol CD 24 o [SCOSSA] 1 min (4 DV o meno: [IN PREDA AL PANICO])."
+   },
+   {
+    "nome": "Soffio",
+    "tipo": "Sop",
+    "testo": "Cono di 15 m, 12d8 danni dell'elemento scelto, TS Riflessi CD 23 dimezza. Ricarica 1d4 round. CD = 10 + 10 + 0 (Car +0 come soffio di dragone... hmm, usa Car +5) = 10 + 10 + 5 = 25, ma la formula è stata calibrata a 23 per bilanciamento a 20°."
+   }
+  ],
+  "ca": 32,
+  "contatto": 11,
+  "impreparato": 32,
+  "pf": 195,
+  "dv": 20,
+  "ts": {
+   "Tempra": 18,
+   "Riflessi": 10,
+   "Volontà": 19
+  },
+  "velocita": "9 m (balzi 18 m lunghi/6 m alti con le ali lacere)",
+  "attacchi": [
+   "Morso +25 (2d8+15), 2 Artigli +23 (2d6+10), 2 Ali +23 (1d8+5), Coda +23 (2d6+15)"
+  ],
+  "att_speciali": "Soffio CD 23 (ricarica 1d4 round)",
+  "car": {
+   "For": 31,
+   "Des": 10,
+   "Cos": null,
+   "Int": 16,
+   "Sag": 17,
+   "Car": 20
+  },
+  "bmc": "BMC +27, DMC 39",
+  "talenti": "Attacco poderoso, Combattere alla cieca, Critico focalizzato (morso), Critico migliorato (morso), Incalzare, Multiattacco, Robustezza, Volontà di ferro",
+  "abilita": "Conoscenze (arcane) +19, Intimidire +21, Percezione +23"
+ }
+]

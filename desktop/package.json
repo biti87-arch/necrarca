@@ -1,0 +1,21 @@
+{
+  "name": "necrarca",
+  "productName": "Grimorio del Necrarca",
+  "version": "1.0.0",
+  "description": "Evocazioni e Forme non morte del Necrarca (Collana v2.4)",
+  "author": "Collana",
+  "main": "main.js",
+  "devDependencies": {
+    "electron": "^31.7.7",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "it.collana.necrarca",
+    "productName": "Grimorio del Necrarca",
+    "files": ["main.js", "icon.png", "www/**/*"],
+    "win": { "target": ["portable", "nsis"], "icon": "icon.png" },
+    "portable": { "artifactName": "Necrarca-${version}-portatile.exe" },
+    "nsis": { "artifactName": "Necrarca-${version}-installazione.exe", "oneClick": false, "allowToChangeInstallationDirectory": true },
+    "publish": null
+  }
+}

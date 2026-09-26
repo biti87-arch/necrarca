@@ -1,0 +1,501 @@
+<title>Grimorio del Necrarca</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral+SC:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#ECE9E4; --surface:#F7F5F1; --surface2:#E2DED7; --line:#CFC9BF;
+  --ink:#211E24; --muted:#6A6470; --accent:#6B4E8C; --accent-ink:#FFFFFF;
+  --bronze:#8A6A2E; --cond:#B3121B; --good:#2E6B4A; --warn:#9A5B12;
+  --mark:#E7DDF1;
+  --f-display:"Spectral SC", Georgia, "Times New Roman", serif;
+  --f-body:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#15141A; --surface:#1F1D25; --surface2:#2A2731; --line:#3A3642;
+    --ink:#ECE7DF; --muted:#A39CA8; --accent:#B79BD8; --accent-ink:#1A1520;
+    --bronze:#D0AE6B; --cond:#FF6B6B; --good:#7CC79B; --warn:#E3A55A;
+    --mark:#3B2F4B; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#15141A; --surface:#1F1D25; --surface2:#2A2731; --line:#3A3642;
+  --ink:#ECE7DF; --muted:#A39CA8; --accent:#B79BD8; --accent-ink:#1A1520;
+  --bronze:#D0AE6B; --cond:#FF6B6B; --good:#7CC79B; --warn:#E3A55A;
+  --mark:#3B2F4B; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.45;padding:0 16px 80px}
+.wrap{max-width:760px;margin:0 auto}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:12px 8px;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
+h1{font-family:var(--f-display);font-weight:700;font-size:1.45rem;margin:0;letter-spacing:.02em;text-wrap:balance}
+.sub{color:var(--muted);font-size:.8rem}
+nav.tabs{display:flex;gap:6px;margin-top:10px}
+nav.tabs button{flex:1;padding:9px 6px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;font:600 .9rem var(--f-body);cursor:pointer}
+nav.tabs button[aria-selected="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+section.panel{display:grid;gap:18px;padding-top:16px}
+h2{font-family:var(--f-display);font-weight:500;font-size:1.15rem;margin:0 0 8px;letter-spacing:.03em;color:var(--bronze)}
+h3{font-size:.95rem;margin:0}
+.label{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px}
+.grid{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(110px,1fr))}
+.field{display:grid;gap:3px}
+.field input,.field select{width:100%;padding:7px 8px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);font:500 .95rem var(--f-mono)}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.check{display:flex;gap:8px;align-items:center;font-size:.9rem}
+.check input{width:18px;height:18px;accent-color:var(--accent)}
+.banner{background:var(--mark);border-radius:8px;padding:8px 12px;font-size:.85rem}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px;display:grid;gap:2px}
+.stat b{font:500 1.3rem var(--f-mono);font-variant-numeric:tabular-nums}
+.stat .ctr{display:flex;gap:6px;margin-top:4px}
+.btn{padding:7px 12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:7px;font:600 .85rem var(--f-body);cursor:pointer}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn.sm{padding:4px 9px;font-size:.8rem}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{padding:5px 10px;border-radius:999px;border:1px solid var(--line);background:var(--surface);font-size:.8rem;cursor:pointer;color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.list{display:grid;gap:6px}
+.item{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 12px;background:var(--surface);border:1px solid var(--line);border-radius:8px;cursor:pointer;text-align:left;width:100%;color:var(--ink);font:inherit}
+.item.locked{opacity:.45;cursor:default}
+.item>.row{flex-wrap:nowrap;flex-shrink:0}
+.item .meta{color:var(--muted);font-size:.8rem}
+.tag{font:500 .7rem var(--f-mono);padding:2px 6px;border-radius:4px;background:var(--surface2);color:var(--muted);white-space:nowrap}
+.tag.cb{background:var(--bronze);color:var(--surface)}
+.catHead{display:flex;justify-content:space-between;align-items:baseline;margin:6px 0 4px}
+.sheet{display:grid;gap:12px}
+.sheetHead{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.sheet h2{margin:0;font-size:1.35rem;color:var(--ink)}
+.kv{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:8px}
+.kv div{background:var(--bg);border-radius:8px;padding:8px 10px}
+.kv b{display:block;font:500 1.1rem var(--f-mono);font-variant-numeric:tabular-nums}
+.txt{font-size:.9rem}
+.txt p{margin:4px 0}
+.atk{display:grid;gap:4px;font-size:.9rem}
+.atk .l{display:flex;justify-content:space-between;gap:10px;border-bottom:1px dashed var(--line);padding-block:4px}
+.atk .l span:last-child{font-family:var(--f-mono);text-align:right}
+.note{font-size:.82rem;color:var(--muted)}
+.warn{color:var(--warn)}
+mark{background:var(--mark);color:inherit;padding:0 2px;border-radius:3px;font-weight:600}
+.cond{color:var(--cond);font-weight:600}
+.overlay{position:fixed;inset:0;background:rgba(10,8,14,.55);z-index:20;display:flex;justify-content:center;align-items:flex-end}
+.overlay .card{width:100%;max-width:760px;max-height:88vh;overflow:auto;border-radius:14px 14px 0 0;padding:16px 16px calc(16px + env(safe-area-inset-bottom,0px))}
+.hp{display:flex;align-items:center;gap:6px}
+.hp input{width:64px;padding:5px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);font:500 .95rem var(--f-mono);text-align:center}
+.bar{height:6px;border-radius:3px;background:var(--surface2);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--good)}
+.bar i.low{background:var(--cond)}
+.active{display:grid;gap:8px;padding:10px 12px;background:var(--surface);border:1px solid var(--line);border-radius:8px}
+.active.focal{border-style:dashed}
+.search{width:100%;padding:9px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);font:inherit}
+details summary{cursor:pointer;font-weight:600}
+@media (prefers-reduced-motion: no-preference){.overlay .card{animation:up .18s ease-out}@keyframes up{from{transform:translateY(20px);opacity:.6}to{transform:none;opacity:1}}}
+</style>
+
+<div class="wrap">
+<header class="top">
+  <div class="brand">
+    <h1>Grimorio del Necrarca</h1>
+    <span class="sub" id="hdrSub"></span>
+  </div>
+  <nav class="tabs" role="tablist">
+    <button role="tab" id="tab-profilo" aria-selected="true" data-tab="profilo">Profilo</button>
+    <button role="tab" id="tab-evoca" aria-selected="false" data-tab="evoca">Evocazioni</button>
+    <button role="tab" id="tab-forme" aria-selected="false" data-tab="forme">Forme</button>
+  </nav>
+</header>
+<main id="main"></main>
+</div>
+<div id="modal"></div>
+
+<script>
+const MORTI = __MORTI__;
+const FORME = __FORME__;
+
+/* ---------- regole ---------- */
+const TIPI=['Scheletro','Zombie','Ghoul','Spirito','Disarticolato'];
+const FAM={Scheletro:'Scheletri',Zombie:'Zombie',Ghoul:'Ghoul',Spirito:'Spiriti',Disarticolato:'Disarticolati'};
+const SPECIALE={Scheletro:'lich',Zombie:'tarrasque_putrescente',Ghoul:'vampiro',Spirito:'tenebra_camminante',Disarticolato:'legione_sciolta'};
+const CATS=['I','II','III','IV','V','VI','Speciale'];
+const CAT_LV={I:4,II:7,III:10,IV:13,V:16,VI:19,Speciale:20};
+const CAT_B={I:0,II:1,III:2,IV:3,V:4,VI:5,Speciale:6};
+const TAGLIA={Minuscola:{txc:2,ca:2,bmc:-3,furt:4,port:'0 m'},Piccola:{txc:1,ca:1,bmc:-2,furt:2,port:'1,5 m'},Media:{txc:0,ca:0,bmc:0,furt:0,port:'1,5 m'},Grande:{txc:-1,ca:-1,bmc:2,furt:-2,port:'3 m'},Enorme:{txc:-2,ca:-2,bmc:3,furt:-4,port:'4,5 m'}};
+const CONDIZIONI=['Azzoppat','Colt[oaie] alla sprovvista','Offuscat','Affaticat','Abbagliat','Accecat','Accovacciat','Affascinat','Assordat','Barcollant','Confus','Esaust','Frastornat','Immobilizzat','Impreparat','In Lotta','Inabil','Indifes','Infermo','Intralciat','Invisibil','Morent','Nauseat','Paralizzat','Scoss','Spaventat','In Preda al Panico','Pietrificat','Privo di Sensi','Pron[oaie]','Sanguinant','Stordit','Dominat','Indebolit'];
+const COND_RE=new RegExp('\\b('+CONDIZIONI.join('|')+')([a-z]*)\\b','g');
+
+const DEFAULT={esempio:true,livello:10,archetipo:'carnaio',carnaio:true,famPf:null,usiOrda:0,legPf:null,dominio:'Ghoul',gradi:{Scheletro:0,Zombie:0,Ghoul:0,Spirito:0,Disarticolato:0},
+  For:10,Des:14,Car:18,babOverride:'',pf:62,tsT:5,tsR:5,tsV:9,armatura:4,scudo:0,deviazione:1,naturale:0,schivare:0,caAltro:0,iniAltro:0,
+  doti:{esplosione:true,banchetto:false,sacrificio:true,rapida:true,falange:false},
+  usiEvoca:0,usiForma:0,schierati:[],formaAttiva:null,pfTemp:0,extraSpeciali:[],tab:'profilo'};
+let S=load();
+function load(){try{const r=localStorage.getItem('grimorio-necrarca-v1');if(r){return Object.assign(JSON.parse(JSON.stringify(DEFAULT)),JSON.parse(r));}}catch(e){}return JSON.parse(JSON.stringify(DEFAULT));}
+function norm(){if(!S.archetipo)S.archetipo=S.carnaio?'carnaio':'nessuno';S.carnaio=S.archetipo==='carnaio';}
+norm();
+function save(){try{localStorage.setItem('grimorio-necrarca-v1',JSON.stringify(S));}catch(e){}}
+
+const mod=v=>Math.floor((v-10)/2);
+const sg=n=>(n>=0?'+':'')+n;
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fmt=s=>esc(s).replace(/\[([^\]]+)\]/g,(m,x)=>'['+x.toUpperCase()+']').replace(COND_RE,'<span class="cond">$1$2</span>');
+const bab=()=>S.babOverride!==''&&!isNaN(+S.babOverride)?+S.babOverride:Math.floor(S.livello/2);
+const carMod=()=>mod(S.Car);
+function gradoCarnaio(){const l=S.livello;return l>=17?5:l>=13?4:l>=9?3:l>=5?2:1;}
+function grado(tipo){let g=+S.gradi[tipo]||0;if(S.carnaio&&S.dominio===tipo)g=Math.max(g,gradoCarnaio());return g;}
+function iter(b){const a=[];for(let x=b;a.length<4&&(x>0||a.length===0);x-=5)a.push(x);return a;}
+
+const ARCH_NOME={nessuno:'Necrarca',carnaio:'Carnaio',imbalsamatore:'Imbalsamatore',hunga:'Hunga-mate',necromante:'Necromante'};
+const ARCH_NOTE={imbalsamatore:'Il famiglio ricucito compare nella scheda Evocazioni. Sostituisce la dote necromantica al 1°, 3° e 11° livello.',
+ hunga:'Dal 10° livello l\u2019Orda di feticci compare nella scheda Evocazioni.',
+ necromante:'Nessun calcolo in più: i non morti non portano il segno sacro e al 2° livello si ottiene una dote necromantica bonus.'};
+const FAM_TAB=[[1,0,'Indipendente, Legame empatico, Allerta, Vantaggio arcano'],[2,1,'Sfuggevole, Eludere migliorato, Condividere incantesimi'],[3,2,'Trasmettere incantesimi a contatto'],[5,3,'RD 2/−, Resistenza all\u2019energia positiva'],[7,4,'Secondo vantaggio arcano'],[9,5,'RD 5/−'],[11,6,'RI pari al livello +5'],[13,7,'Vettore necrotico'],[15,8,'Reliquiario animato'],[17,9,'Terzo vantaggio arcano, RD 10/−'],[19,10,'RI pari al livello +8'],[20,10,'Legame indissolubile']];
+function famiglio(){
+  const l=S.livello,rows=FAM_TAB.filter(r=>r[0]<=l),nat=rows.length?rows[rows.length-1][1]:0,g=grado('Zombie'),g2=g>=5?2:1;
+  const txcDom=g>=2?g2:0,tsDom=g>=4?g2:0,pfDom=g>=3?l:0;
+  const rd=l>=17?'10/−':l>=9?'5/−':l>=5?'2/−':'—',ri=l>=19?l+8:l>=11?l+5:'—';
+  return {dv:l,pf:Math.floor(S.pf/2)+pfDom,ca:18+nat,cont:16,impr:10+nat,nat,txc:bab()+6+1+2+txcDom,int:Math.min(16,12+Math.floor(l/5)),
+    ts:{Tempra:+S.tsT+tsDom,Riflessi:+S.tsR+tsDom,'Volontà':+S.tsV+tsDom},abil:Math.floor(l/2),rd,ri,cap:rows.map(r=>`${r[0]}°: ${r[2]}`),
+    vantaggi:l>=17?3:l>=7?2:1,dom:domNoteEvoca('Zombie',g)};
+}
+function vFamiglio(){
+  const f=famiglio();if(S.famPf==null)S.famPf=f.pf;const pct=Math.max(0,Math.min(100,S.famPf/f.pf*100));
+  return `<div class="card"><div class="row" style="justify-content:space-between"><span><span class="label">Imbalsamatore · non conta nel limite</span><h3>Famiglio ricucito</h3></span><span class="tag">${f.dv} DV</span></div>
+  <div class="hp" style="margin-top:8px"><button class="btn sm" data-fp="-5">−5</button><button class="btn sm" data-fp="-1">−1</button><input type="number" id="famPf" value="${S.famPf}"><span class="note">/ ${f.pf}</span><button class="btn sm" data-fp="1">+1</button><button class="btn sm" data-fp="full">Pieni</button></div>
+  <div class="bar" style="margin-top:6px"><i class="${pct<34?'low':''}" style="width:${pct}%"></i></div>
+  <div class="kv" style="margin-top:10px"><div><span class="label">CA</span><b>${f.ca}</b><span class="note">contatto ${f.cont} · impr. ${f.impr}</span></div>
+   <div><span class="label">Attacco generico</span><b>${sg(f.txc)}</b><span class="note">1 danno</span></div>
+   <div><span class="label">Velocità</span><b style="font-size:.95rem">12 m</b><span class="note">taglia minuscola</span></div>
+   <div><span class="label">TS</span><b style="font-size:.95rem">${sg(f.ts.Tempra)} / ${sg(f.ts.Riflessi)} / ${sg(f.ts['Volontà'])}</b><span class="note">Temp / Rifl / Vol</span></div>
+   <div><span class="label">RD · RI</span><b style="font-size:.95rem">${f.rd} · ${f.ri}</b></div></div>
+  <details style="margin-top:8px"><summary>Dettagli e capacità</summary><div class="txt">
+   <p><b>Caratteristiche:</b> For 3, Des 22, Cos —, Int ${f.int}, Sag 12, Car 7 · CA naturale ${sg(f.nat)}</p>
+   <p><b>Abilità:</b> Furtività, Percezione e Scalare +${f.abil} oltre ai modificatori. Abilità di classe: Acrobazia, Furtività, Nuotare, Percezione, Scalare.</p>
+   <p><b>Talenti:</b> Arma focalizzata (Attacco generico), Schivare. Vantaggi arcani scelti all'alba: ${f.vantaggi}.</p>
+   ${f.cap.map(c=>`<p>${esc(c)}</p>`).join('')}
+   <p class="note">Senza famiglio: −2 al livello di incantatore e alla CD degli incantesimi. Rianimarlo richiede 24 ore, un cadavere di animale e ${100*S.livello} mo.</p>
+   ${f.dom.length?`<p class="note">Dominio degli Zombie già incluso: ${f.dom.map(esc).join('; ')}</p>`:''}</div></details></div>`;
+}
+function vOrda(){
+  const l=S.livello,usi=1+Math.floor((l-10)/5),cd=10+Math.floor(l/2)+carMod();
+  return `<div class="card"><div class="row" style="justify-content:space-between"><span><span class="label">Hunga-mate · capacità magica, 1 minuto</span><h3>Orda di feticci</h3></span><span class="row"><span class="tag">${usi-S.usiOrda}/${usi} oggi</span><button class="btn sm" id="ordaUsa" ${S.usiOrda>=usi?'disabled':''}>Evoca</button></span></div>
+  <details style="margin-top:8px"><summary>Scheda dell'orda</summary><div class="txt">
+   <p>Umanoidi, sciame minuscolo · Fiuto, Scurovisione 18 m, Percezione +4</p>
+   <p><b>CA</b> 20, contatto 20, impreparata 18 · <b>PF</b> 90 (18d8) · <b>TS</b> Tempra +7, Riflessi +5, Volontà +3 · tratti degli sciami</p>
+   <p><b>Velocità</b> 9 m · <b>Mischia</b> sciame 3d6 · spazio 3 m, portata 0 m · BAB +8</p>
+   <p><b>Tallonare:</b> chi lascia l'orda le infligge 2d6 danni; con i feticci alle calcagna subisce 3d6 a fine turno; scacciarli: round completo, Rifl CD 17.</p>
+   <p><b>Infierire:</b> contro un bersaglio ${fmt('Indifeso')} o ${fmt('Nauseato')}, 6d6 invece di 3d6.</p>
+   <p><b>Distrazione:</b> Tempra CD 15 o ${fmt('Nauseato')} 1 round.</p>
+   <p><b>Sciamano feticcio:</b> ogni 1d3 turni, lingua di fuoco 6 m, 5d4 fuoco, Rifl CD ${cd} dimezza.</p>
+   <p><b>Orda sfrenata:</b> immune agli effetti che bersagliano un numero specifico di creature.</p></div></details></div>`;
+}
+/* ---------- Legione Sciolta ---------- */
+const LEGIONE=[
+ {id:'testa',nome:'Testa alata',taglia:'Minuscola',for:null,des:0,nat:0,vel:'volo 18 m perfetto (libero)',armi:[{n:1,nome:'morso',dado:'1d4'}],
+  note:'Unica parte che può lanciare incantesimi. Urlo della legione (1/incontro, raggio 9 m): TS Volontà o Scosso 1d4 round. Scurovisione 18 m, Percezione dei vivi 18 m.'},
+ {id:'torso',nome:'Torso rampante',taglia:'Media',for:6,des:0,nat:6,vel:'9 m',armi:[{n:2,nome:'schianti',dado:'2d6+For'}],
+  note:'RD 10/— (pura). Guardia del corpo: se la Testa è entro 9 m, i danni che la Testa subirebbe possono essere reindirizzati al Torso (nessuna azione, illimitato).'},
+ {id:'sciame',nome:'Sciame d\u2019arti',taglia:'Minuscola',for:null,des:6,nat:0,vel:'9 m + scalata 9 m',armi:[{sciame:true,dado:'4d6'}],sciame:true,
+  note:'Danni automatici + TS Tempra o Sanguinamento 1d6; Distrazione (TS Tempra o Nauseato 1 round); Disarmare di massa (manovra di forma). Immune a critici e danni di precisione; +50% danni da area. Occupa 2 caselle.'}];
+function calcParte(p,pfT){
+  const f={id:'legione_sciolta',for:p.for,des:p.des,taglia:p.taglia,armi:p.armi,ca:p.nat,ca_tipo:'naturale',combattente:false,semicorporeo:false,incorporeo:false,umanoide:false,velocita:p.vel,cat:'Speciale'};
+  const c=calcForma(f);const pf=Math.floor(S.pf*0.4)+Math.floor(pfT/3);return {...c,pf};
+}
+function vLegione(pfT){
+  return `<div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(200px,1fr))">${LEGIONE.map(p=>{const c=calcParte(p,pfT);return `<div class="card" style="background:var(--bg)"><span class="label">${p.taglia}${p.sciame?' · sciame':''}</span><h3>${esc(p.nome)}</h3>
+   <div class="kv" style="margin-top:6px"><div><span class="label">PF</span><b>${c.pf}</b></div><div><span class="label">CA</span><b>${c.CA}</b><span class="note">contatto ${c.cont}</span></div></div>
+   <div class="atk" style="margin-top:6px">${c.armi.map(a=>`<div class="l"><span>${esc(a.nome)}</span><span>${esc(a.txt)}</span></div>`).join('')}</div>
+   <p class="note">Velocità ${esc(c.vel)}</p><p class="txt">${fmt(p.note)}</p></div>`;}).join('')}</div>
+   <p class="note">PF di ogni parte: 40% dei PF massimi (${Math.floor(S.pf*0.4)}) più un terzo dei PF temporanei di categoria (${Math.floor(pfT/3)}).</p>`;
+}
+/* ---------- navigazione ---------- */
+document.querySelectorAll('nav.tabs button').forEach(b=>b.onclick=()=>{S.tab=b.dataset.tab;save();render();});
+function render(){
+  document.querySelectorAll('nav.tabs button').forEach(b=>b.setAttribute('aria-selected',b.dataset.tab===S.tab));
+  document.getElementById('hdrSub').textContent=`Liv. ${S.livello} · ${S.carnaio?'Carnaio · Dominio '+FAM[S.dominio]:ARCH_NOME[S.archetipo]}`;
+  const m=document.getElementById('main');
+  m.innerHTML=S.tab==='profilo'?vProfilo():S.tab==='evoca'?vEvoca():vForme();
+  bind();
+}
+
+/* ---------- PROFILO ---------- */
+function num(id,label,v,min,max){return `<label class="field"><span class="label">${label}</span><input id="${id}" data-k="${id}" type="number" inputmode="numeric" value="${esc(v)}" ${min!=null?`min="${min}"`:''} ${max!=null?`max="${max}"`:''}></label>`;}
+function vProfilo(){
+  const b=bab();
+  return `<section class="panel">
+  ${S.esempio?`<div class="banner">Valori d'esempio: sostituiscili con quelli del tuo personaggio. Vengono salvati su questo dispositivo.</div>`:''}
+  <div class="card"><h2>Personaggio</h2>
+   <div class="grid">
+    ${num('livello','Livello necrarca',S.livello,1,20)}
+    ${num('For','Forza',S.For)}${num('Des','Destrezza',S.Des)}${num('Car','Carisma',S.Car)}
+    <label class="field"><span class="label">BAB (auto ${sg(Math.floor(S.livello/2))})</span><input id="babOverride" data-k="babOverride" type="number" inputmode="numeric" placeholder="auto" value="${esc(S.babOverride)}"></label>
+    ${num('pf','PF massimi',S.pf,1)}
+   </div>
+   <p class="note">Car ${sg(carMod())} · BAB usato ${sg(b)}. Compila il BAB solo se hai livelli in altre classi.</p>
+  </div>
+  <div class="card"><h2>Tiri salvezza e difese</h2>
+   <div class="grid">
+    ${num('tsT','Tempra',S.tsT)}${num('tsR','Riflessi',S.tsR)}${num('tsV','Volontà',S.tsV)}
+    ${num('armatura','CA armatura',S.armatura,0)}${num('scudo','CA scudo',S.scudo,0)}${num('deviazione','CA deviazione',S.deviazione,0)}
+    ${num('naturale','CA naturale',S.naturale,0)}${num('schivare','CA schivare',S.schivare,0)}${num('caAltro','CA altro',S.caAltro)}${num('iniAltro','Iniziativa altro',S.iniAltro)}
+   </div>
+   <p class="note">TS totali del personaggio senza bonus di forma. La Destrezza e la taglia vengono ricalcolate dall'app.</p>
+  </div>
+  <div class="card"><h2>Archetipo e dominio</h2>
+   <label class="field"><span class="label">Archetipo</span><select id="archetipo" data-k="archetipo">${[['nessuno','Nessuno'],['carnaio','Carnaio'],['imbalsamatore','Imbalsamatore'],['hunga','Hunga-mate'],['necromante','Necromante']].map(([v,t])=>`<option value="${v}" ${S.archetipo===v?'selected':''}>${t}</option>`).join('')}</select></label>
+   ${ARCH_NOTE[S.archetipo]?`<p class="note">${ARCH_NOTE[S.archetipo]}</p>`:''}
+   ${S.carnaio?`<div class="grid" style="margin-top:10px"><label class="field"><span class="label">Dominio del carnaio</span><select id="dominio" data-k="dominio">${TIPI.map(t=>`<option value="${t}" ${S.dominio===t?'selected':''}>${FAM[t]}</option>`).join('')}</select></label></div>
+   <p class="note">Grado automatico al livello ${S.livello}: ${['','I','II','III','IV','V'][gradoCarnaio()]}. I bonus valgono sia per il carnaio in qualsiasi forma sia per i non morti evocati di quel tipo.</p>`:''}
+   <h3 style="margin-top:12px">Doti di dominio prese (grado più alto)</h3>
+   <div class="grid" style="margin-top:6px">${TIPI.map(t=>`<label class="field"><span class="label">${FAM[t]}</span><select id="g_${t}" data-g="${t}">${[0,1,2,3,4,5].map(g=>`<option value="${g}" ${(+S.gradi[t]||0)===g?'selected':''}>${g?['','I','II','III','IV','V'][g]:'—'}</option>`).join('')}</select></label>`).join('')}</div>
+   <p class="note">Il grado V richiede il 9° livello. Le doti di altre famiglie valgono solo per i non morti evocati.</p>
+   <h3 style="margin-top:12px">Doti singole usate dall'app</h3>
+   <div class="list" style="margin-top:6px">
+    ${[['esplosione','Esplosione del cadavere (3°)'],['banchetto','Banchetto del padrone'],['sacrificio','Sacrificio del servo'],['rapida','Evocazione rapida (9°)'],['falange','Comandare la falange (3°)']].map(([k,l])=>`<label class="check"><input type="checkbox" id="d_${k}" data-d="${k}" ${S.doti[k]?'checked':''}> ${l}</label>`).join('')}
+   </div>
+  </div>
+  <div class="card"><h2>Giornata</h2><div class="row"><button class="btn" id="riposo">Nuovo giorno: ripristina gli usi</button></div><p class="note">Azzera gli usi di Evoca non morti, Forma non morta e Orda di feticci. I non morti schierati restano.</p></div>
+  </section>`;
+}
+
+/* ---------- EVOCAZIONI ---------- */
+function domNoteEvoca(tipo,g){
+  const n=[];if(!g)return n;const g2=g>=5?2:1;
+  const T={Scheletro:[`+2 Iniziativa`,`+${g2} TxC (sciami: +${g2} CD Distrazione)`,`+1 PF per DV`,`+${g2} TS`,`25% di ignorare i critici`],
+   Spirito:[`Schivare e Mobilità`,`+1 PF per DV`,`Attacco rapido`,`livelli negativi inflitti entro 18 m: 10 PF temp. al necrarca e +1 LI per 10 min`,`+1 livello negativo extra`],
+   Zombie:[`Passo leggero`,`+${g2} TxC (sciami: +${g2} CD Distrazione)`,`+1 PF per DV`,`+${g2} TS`,`minaccia di critico +1 sugli attacchi naturali`],
+   Disarticolato:[`+3 m velocità su terreno`,`+${g2} CD capacità Str/Sop`,`+1 PF per DV`,`+${g2} TS`,`+1 schivare alla CA`],
+   Ghoul:[`Banchetto sanguinario`,`+${g2} TxC (sciami: +${g2} CD Distrazione)`,`+1 PF per DV`,`+${g2} TS`,`+1 CD capacità Str/Sop`]}[tipo];
+  for(let i=0;i<g;i++)n.push(`${['I','II','III','IV','V'][i]}: ${T[i]}`);return n;
+}
+function applyDom(c){
+  const g=grado(c.tipo),g2=g>=5?2:1,o=JSON.parse(JSON.stringify(c));o.mod={};
+  const noCombat=c.id==='mezzo_ghoul_servitore';
+  const addTxc=(s,k)=>s.replace(/([+−-])(\d+)(?=( a contatto| di contatto| a distanza| con [^()]{1,20})? \()/g,(m,sgn,d)=>{const v=(sgn==='+'?1:-1)*+d+k;return `\u0001${sg(v)}\u0002`;});
+  const addCd=(s,k)=>s.replace(/CD (\d+)/g,(m,d)=>`CD \u0001${+d+k}\u0002`);
+  const txc=(['Scheletro','Zombie','Ghoul'].includes(c.tipo)&&g>=2&&!noCombat)?g2:0;
+  let cd=0;if(c.tipo==='Disarticolato'&&g>=2)cd+=g2;if(c.tipo==='Ghoul'&&g>=5)cd+=1;
+  if(txc){if(c.sciame){cd+=g2;}else o.attacchi=o.attacchi.map(a=>addTxc(a,txc));}
+  if(cd){o.att_speciali=addCd(o.att_speciali,cd);o.attacchi=o.attacchi.map(a=>addCd(a,cd));o.capacita=o.capacita.map(x=>(x.tipo==='Sop'||x.tipo==='Sfo')?{...x,testo:addCd(x.testo,cd)}:x);}
+  if(g>=3){o.pf+=c.dv;o.mod.pf=1;}
+  if(g>=4&&c.tipo!=='Spirito'&&!noCombat){for(const k in o.ts)o.ts[k]+=g2;o.mod.ts=1;}
+  if(c.tipo==='Scheletro'&&g>=1){o.iniziativa+=2;o.mod.ini=1;}
+  let dodge=0;if(c.tipo==='Spirito'&&g>=1)dodge++;if(c.tipo==='Disarticolato'&&g>=5)dodge++;
+  if(dodge){o.ca+=dodge;o.contatto+=dodge;o.mod.ca=1;}
+  if(c.tipo==='Disarticolato'&&g>=1){o.velocita=o.velocita.replace(/^(\d+) m/,(m,d)=>`${+d+3} m`);o.mod.vel=1;}
+  o.dom=domNoteEvoca(c.tipo,g);return o;
+}
+const hl=s=>fmt(s).replace(/\u0001/g,'<mark>').replace(/\u0002/g,'</mark>');
+const mk=(o,k,v)=>o.mod&&o.mod[k]?`<mark>${v}</mark>`:v;
+function contaControllo(){let n=0,f=0;for(const a of S.schierati){const c=MORTI.find(x=>x.id===a.id);if(a.focale&&c.focus){f++;continue;}n++;}return {n,f};}
+function vEvoca(){
+  const usi=Math.max(1,2+carMod()),budget=3*S.livello,{n,f}=contaControllo();
+  const q=(S.cerca||'').toLowerCase(),ft=S.filtroTipo||'';
+  const disp=MORTI.filter(c=>(!ft||c.tipo===ft)&&(!q||c.nome.toLowerCase().includes(q)));
+  const rit=S.rituale||[];const dvRit=rit.reduce((s,id)=>s+MORTI.find(c=>c.id===id).dv,0);
+  return `<section class="panel">
+   <div class="stats">
+    <div class="stat"><span class="label">Evocazioni oggi</span><b>${usi-S.usiEvoca}/${usi}</b><div class="ctr"><button class="btn sm" id="evUsa" ${S.usiEvoca>=usi?'disabled':''}>−1</button><button class="btn sm" id="evRid" ${S.usiEvoca<=0?'disabled':''}>+1</button></div></div>
+    <div class="stat"><span class="label">DV per rituale</span><b>${budget}</b><span class="note">3 × livello</span></div>
+    <div class="stat"><span class="label">Sotto controllo</span><b style="color:${n>3?'var(--cond)':'inherit'}">${n}/3</b><span class="note">${f?`+${f} focus semplice`:'parti focali incluse'}</span></div>
+   </div>
+   ${rit.length?`<div class="card"><h2>Rituale in preparazione</h2>
+     <div class="list">${rit.map((id,i)=>{const c=MORTI.find(x=>x.id===id);return `<div class="row" style="justify-content:space-between"><span>${esc(c.nome)} <span class="tag">${c.dv} DV</span></span><button class="btn sm" data-rrm="${i}">Togli</button></div>`}).join('')}</div>
+     <p class="note" style="margin-top:8px">DV usati ${dvRit}/${budget}${dvRit>budget?' — <span class="warn">oltre il limite</span>':''}. Dopo il rituale avrai ${n+rit.length} non morti sotto controllo${n+rit.length>3?' — <span class="warn">oltre il limite di 3</span>':''}.</p>
+     <div class="row" style="margin-top:8px"><button class="btn pri" id="ritOk" ${dvRit>budget||S.usiEvoca>=usi?'disabled':''}>Completa il rituale (1 minuto)</button><button class="btn" id="ritX">Annulla</button></div>
+     ${S.doti.rapida&&S.livello>=9?`<p class="note">Evocazione rapida: 1 volta al giorno il rituale richiede un'azione di round completo.</p>`:''}
+   </div>`:''}
+   ${S.archetipo==='imbalsamatore'?vFamiglio():''}${S.archetipo==='hunga'&&S.livello>=10?vOrda():''}
+   <div><h2>Schierati</h2>${S.schierati.length?`<div class="list">${S.schierati.map((a,i)=>vAttivo(a,i)).join('')}</div>`:`<p class="note">Nessun non morto sotto controllo. Aggiungili dal catalogo qui sotto a un rituale.</p>`}</div>
+   <div><h2>Catalogo · Libro dei morti</h2>
+    <input class="search" id="cerca" placeholder="Cerca un non morto" value="${esc(S.cerca||'')}">
+    <div class="chips" style="margin:8px 0">${['',...TIPI].map(t=>`<button class="chip" data-ft="${t}" aria-pressed="${ft===t}">${t?FAM[t]:'Tutti'}</button>`).join('')}</div>
+    <div class="list">${disp.map(c=>{const ok=c.livello<=S.livello;return `<button class="item ${ok?'':'locked'}" data-mo="${c.id}"><span><h3>${esc(c.nome)}</h3><span class="meta">${c.tipo} · ${c.taglia}${c.focus?' · focus semplice':''}</span></span><span class="row" style="gap:4px"><span class="tag">${c.dv} DV</span><span class="tag ${ok?'':'cb'}">${c.livello}°</span></span></button>`}).join('')}</div>
+   </div></section>`;
+}
+function vAttivo(a,i){
+  const c=applyDom(MORTI.find(x=>x.id===a.id));const pct=Math.max(0,Math.min(100,a.pf/c.pf*100));
+  const esp=S.doti.esplosione&&S.livello>=3?`<span class="note">Esplosione: ${Math.min(10,Math.floor(c.dv/2))}d6, Rifl CD ${10+Math.floor(S.livello/2)+carMod()}</span>`:'';
+  return `<div class="active ${a.focale?'focal':''}"><div class="row" style="justify-content:space-between"><button class="btn sm" data-mo="${c.id}" style="border:none;background:none;padding:0;font-weight:600;font-size:.95rem">${esc(c.nome)}${a.focale?' · parte focale':''}</button><span class="tag">${c.dv} DV</span></div>
+  <div class="hp"><button class="btn sm" data-hp="${i}" data-v="-5">−5</button><button class="btn sm" data-hp="${i}" data-v="-1">−1</button><input type="number" id="hp${i}" data-hpset="${i}" value="${a.pf}"><span class="note">/ ${c.pf}</span><button class="btn sm" data-hp="${i}" data-v="1">+1</button></div>
+  <div class="bar"><i class="${pct<34?'low':''}" style="width:${pct}%"></i></div>
+  <div class="row"><button class="btn sm" data-foc="${i}">${a.focale?'Ricrea dal focus':'Riduci a parte focale'}</button><button class="btn sm" data-rm="${i}">Distruggi</button>${esp}</div></div>`;
+}
+function schedaMorto(id){
+  const c0=MORTI.find(x=>x.id===id),c=applyDom(c0);const ok=c.livello<=S.livello;
+  return `<div class="sheet"><div class="sheetHead"><div><span class="label">${c.tipo} · ${c.taglia} · livello ${c.livello}°</span><h2>${esc(c.nome)}</h2></div><button class="btn" data-close>Chiudi</button></div>
+  <p class="txt" style="font-style:italic;margin:0">${esc(c.descr)}</p>
+  ${c.nota?`<p class="note">${esc(c.nota)}</p>`:''}
+  <div class="kv"><div><span class="label">CA</span><b>${mk(c,'ca',c.ca)}</b><span class="note">contatto ${mk(c,'ca',c.contatto)} · impr. ${c.impreparato}</span></div>
+   <div><span class="label">PF</span><b>${mk(c,'pf',c.pf)}</b><span class="note">${c.dv} DV</span></div>
+   <div><span class="label">Iniziativa</span><b>${mk(c,'ini',sg(c.iniziativa))}</b></div>
+   <div><span class="label">Velocità</span><b style="font-size:.95rem">${mk(c,'vel',esc(c.velocita))}</b></div></div>
+  <div class="kv">${Object.entries(c.ts).map(([k,v])=>`<div><span class="label">${k}</span><b>${mk(c,'ts',sg(v))}</b></div>`).join('')}</div>
+  <div class="atk"><span class="label">Attacchi</span>${c.attacchi.map(a=>`<div>${hl(a)}</div>`).join('')}${c.att_speciali?`<div><b>Speciali:</b> ${hl(c.att_speciali)}</div>`:''}</div>
+  <div class="txt"><p><b>Caratteristiche:</b> ${Object.entries(c.car).map(([k,v])=>`${k} ${v??'—'}`).join(', ')} · ${esc(c.bmc)}</p><p><b>Talenti:</b> ${esc(c.talenti)}</p><p><b>Abilità:</b> ${esc(c.abilita)}</p>${c.extra.map(e=>`<p>${fmt(e)}</p>`).join('')}</div>
+  <div class="txt">${c.capacita.map(x=>`<p>${x.nome?`<b>${esc(x.nome)} (${x.tipo}):</b> `:''}${hl(x.testo)}</p>`).join('')}</div>
+  ${c.dom.length?`<div class="banner"><b>Dominio dei ${FAM[c.tipo]}</b> (valori evidenziati già inclusi):<br>${c.dom.map(esc).join('<br>')}</div>`:''}
+  <div class="row"><button class="btn pri" data-add="${c.id}" ${ok?'':'disabled'}>Aggiungi al rituale</button>${ok?'':`<span class="note">Disponibile dal ${c.livello}° livello</span>`}</div></div>`;
+}
+
+/* ---------- FORME ---------- */
+function formaSbloccata(f){if(!S.carnaio)return false;if(f.cat==='Speciale')return (S.livello>=20&&SPECIALE[S.dominio]===f.id)||S.extraSpeciali.includes(f.id);return S.livello>=CAT_LV[f.cat];}
+function vForme(){
+  if(!S.carnaio)return `<section class="panel"><div class="card"><h2>Forme non morte</h2><p>Le forme sono un privilegio dell'archetipo Carnaio. Attivalo nel Profilo per vederle.</p><button class="btn pri" id="goProf">Vai al Profilo</button></div></section>`;
+  const l=S.livello,usi=l>=20?Infinity:1+Math.floor(l/2);
+  const dur=l>=10?'1 ora':l>=7?'10 minuti':l>=4?'1 minuto':'—';
+  const fa=S.formaAttiva?FORME.find(f=>f.id===S.formaAttiva):null;
+  return `<section class="panel">
+  <div class="stats">
+   <div class="stat"><span class="label">Usi oggi</span><b>${l<4?'—':usi===Infinity?'∞':(usi-S.usiForma)+'/'+usi}</b><div class="ctr"><button class="btn sm" id="fmRid" ${S.usiForma<=0?'disabled':''}>+1</button></div></div>
+   <div class="stat"><span class="label">Durata</span><b style="font-size:1.05rem">${dur}</b><span class="note">azione standard</span></div>
+   <div class="stat"><span class="label">Dominio</span><b style="font-size:1.05rem">${FAM[S.dominio]} ${['','I','II','III','IV','V'][gradoCarnaio()]}</b></div>
+  </div>
+  ${l<4?`<div class="banner">Forma non morta si ottiene al 4° livello.</div>`:''}
+  ${fa?`<div class="card"><div class="row" style="justify-content:space-between"><span><span class="label">Forma attiva</span><h3>${esc(fa.nome)}</h3></span><span class="row"><button class="btn sm" data-fo="${fa.id}">Scheda</button><button class="btn sm" id="fmEnd">Torna normale</button></span></div>
+   ${fa.id==='legione_sciolta'&&S.legPf?LEGIONE.map((p,i)=>`<div class="hp" style="margin-top:8px"><span class="label" style="min-width:92px">${esc(p.nome)}</span><button class="btn sm" data-lp="${i}" data-v="-5">−5</button><button class="btn sm" data-lp="${i}" data-v="-1">−1</button><input type="number" data-lpset="${i}" id="lp${i}" value="${S.legPf[i]}"><button class="btn sm" data-lp="${i}" data-v="1">+1</button></div>`).join('')+`<p class="note">A 0 PF una parte è inerte. Se la Testa va a 0 la trasformazione termina.</p>`:`<div class="hp" style="margin-top:8px"><span class="label">PF temporanei</span><button class="btn sm" data-tp="-5">−5</button><button class="btn sm" data-tp="-1">−1</button><input type="number" id="tpSet" value="${S.pfTemp}"><button class="btn sm" data-tp="1">+1</button></div>`}</div>`:''}
+  ${CATS.map(cat=>{const fs=FORME.filter(f=>f.cat===cat);const open=cat==='Speciale'?l>=20:l>=CAT_LV[cat];
+    return `<div><div class="catHead"><h2 style="margin:0">Categoria ${cat}</h2><span class="note">${CAT_LV[cat]}° liv.${CAT_B[cat]?` · +${CAT_B[cat]} PF/DV · +${CAT_B[cat]} TS`:''}</span></div>
+    <div class="list">${fs.map(f=>{const ok=formaSbloccata(f);return `<button class="item ${ok?'':'locked'}" data-fo="${f.id}"><span><h3>${f.combattente?'⚔ ':''}${esc(f.nome)}</h3><span class="meta">${f.tipo} · ${f.taglia}${f.sciame?' · sciame':''}${f.umanoide?' · umanoide':''}${f.semicorporeo?' · semicorporeo':''}${f.incorporeo?' · incorporeo':''}</span></span>${cat==='Speciale'&&SPECIALE[S.dominio]===f.id?'<span class="tag cb">del tuo dominio</span>':''}</button>`}).join('')}</div>
+    ${cat==='Speciale'?`<p class="note" style="margin-top:6px">Al 20° livello ottieni la forma del tuo dominio. Le altre possono arrivare come ricompense narrative:</p><div class="chips">${fs.filter(f=>SPECIALE[S.dominio]!==f.id).map(f=>`<button class="chip" data-xs="${f.id}" aria-pressed="${S.extraSpeciali.includes(f.id)}">${esc(f.nome)}</button>`).join('')}</div>`:''}</div>`;}).join('')}
+  </section>`;
+}
+function calcForma(f){
+  const l=S.livello,t=TAGLIA[f.taglia],cb=CAT_B[f.cat],gC=gradoCarnaio(),dom=S.dominio,g2=gC>=5?2:1;
+  const For=f.for==null?null:S.For+f.for,Des=S.Des+f.des,fm=For==null?null:mod(For),dm=mod(Des);
+  let B=bab(),babNota='';
+  if(f.combattente){B=l;babNota='forma da combattente: BAB pari al livello';}
+  if(f.id==='tarrasque_putrescente'){B=Math.floor(l*3/4);babNota='BAB ¾ del livello';}
+  const accurata=['Minuscola','Piccola'].includes(f.taglia)||f.semicorporeo||f.incorporeo;
+  let domTxc=0;if(['Scheletro','Zombie','Ghoul'].includes(dom)&&gC>=2)domTxc=g2;
+  const it=iter(B);
+  const armi=f.armi.map(a=>{
+    if(a.arma)return {nome:'Arma impugnata',txt:'usa l’arma del personaggio (TxC e danni del personaggio)'};
+    if(a.sciame)return {nome:'Danni da sciame',txt:`${a.dado} automatici${f.id!=='legione_sciolta'&&domTxc?'':''}`};
+    const useDes=fm==null||a.des||(a.contatto&&accurata)||(accurata&&dm>fm);
+    const st=useDes?dm:fm;const m=st+t.txc+domTxc-(a.secondario?5:0);
+    let dmg=a.dado,bon=0;
+    if(/\+For$/.test(dmg)){dmg=dmg.replace('+For','');bon=fm||0;}
+    else if(!/\+\d+$/.test(dmg)&&!a.contatto&&fm!=null){bon=a.secondario?Math.floor(fm/2):fm;}
+    return {nome:(a.n>1?a.n+' ':'')+a.nome+(a.contatto?' (contatto)':'')+(a.secondario?' (secondario)':''),
+      txt:`${it.map(b=>sg(b+m)).join('/')} · ${dmg}${bon?sg(bon):''}`,stat:useDes?'Des':'For'};
+  });
+  const humanoid=f.umanoide;
+  let arm=humanoid?(+S.armatura||0)+(+S.scudo||0):0;if(f.id==='cavaliere_della_tomba')arm=Math.max(9,+S.scudo||0)+0;
+  let dev=+S.deviazione||0,nat=+S.naturale||0;
+  if(f.ca_tipo==='deviazione')dev=Math.max(dev,f.ca);else nat=Math.max(nat,f.ca);
+  let dodge=+S.schivare||0;if(dom==='Spirito')dodge+=1;if(dom==='Disarticolato'&&gC>=5)dodge+=1;
+  const altro=+S.caAltro||0;
+  const CA=10+dm+t.ca+arm+dev+nat+dodge+altro, cont=10+dm+t.ca+dev+dodge+altro, impr=CA-Math.max(0,dm)-dodge;
+  let pfT=cb*l+(f.combattente?l:0)+(gC>=3?l:0);if(f.id==='tarrasque_putrescente')pfT+=2*l;
+  let tsB=gC>=4?g2:0;
+  let ini=dm+(+S.iniAltro||0)+(dom==='Scheletro'?2:0);
+  const bmcStat=['Minuscola','Piccola'].includes(f.taglia)||fm==null?dm:fm;
+  const BMC=B+bmcStat+t.bmc, DMC=10+B+(fm??0)+dm+t.bmc+dodge+dev;
+  const cm=carMod(),manF=l+cm+4;
+  let cd=10+Math.floor(l/2)+cm;if(dom==='Disarticolato'&&gC>=2)cd+=g2;if(dom==='Ghoul'&&gC>=5)cd+=1;
+  let vel=f.velocita.replace(/\(max 1 m[^)]*\)/,l>=17?'(altezza libera)':'(max 1 m)').replace(/\(sez\. 4\.6\)/,l>=17?'(altezza libera)':'(max 1 m dal suolo)');
+  if(dom==='Disarticolato')vel+=' · +3 m su terreno (Dominio I)';
+  return {For,Des,fm,dm,B,babNota,it,armi,CA,cont,impr,pfT,tsB,ini,BMC,DMC,manF,cd,vel,arm,dev,nat,dodge,humanoid,accurata};
+}
+function domNoteForma(){
+  const g=gradoCarnaio(),d=S.dominio,g2=g>=5?2:1,n=[];
+  const T={Scheletro:['+2 Iniziativa',`+${g2} TxC`,'+1 PF temp. per DV',`+${g2} TS`,'25% di ignorare i critici'],
+   Spirito:['Schivare e Mobilità (+1 CA schivare)','+1 PF temp. per DV (non applicato: solo evocazioni)','Attacco rapido','livelli negativi inflitti: 10 PF temp. e +1 LI per 10 min','+1 livello negativo extra'],
+   Zombie:['Passo leggero',`+${g2} TxC`,'+1 PF temp. per DV',`+${g2} TS`,'minaccia di critico +1 sugli attacchi naturali'],
+   Disarticolato:['+3 m velocità su terreno',`+${g2} CD capacità della forma`,'+1 PF temp. per DV',`+${g2} TS`,'+1 CA schivare'],
+   Ghoul:['Banchetto sanguinario',`+${g2} TxC`,'+1 PF temp. per DV',`+${g2} TS`,'+1 CD capacità della forma']}[d];
+  for(let i=0;i<g;i++)n.push(`${['I','II','III','IV','V'][i]}: ${T[i]}`);return n;
+}
+function schedaForma(id){
+  const f=FORME.find(x=>x.id===id),c=calcForma(f),ok=formaSbloccata(f),l=S.livello,cb=CAT_B[f.cat];
+  const usi=l>=20?Infinity:1+Math.floor(l/2);
+  const incant=f.combattente?'Vietati in questa forma (forma da combattente).':f.umanoide?'Può parlare e lanciare incantesimi con componenti verbali e somatiche.':'Non può parlare né lanciare incantesimi con componenti verbali o somatiche. L’oro reagente resta utilizzabile.';
+  const equip=f.umanoide?'Mantiene e usa l’equipaggiamento indossato e impugnato.':'L’equipaggiamento si fonde nel corpo; funzionano solo gli oggetti a bonus costante o ad attivazione mentale.';
+  const campi=f.campi;
+  return `<div class="sheet"><div class="sheetHead"><div><span class="label">Categoria ${f.cat} · ${f.tipo} · ${f.taglia}${f.combattente?' · forma da combattente':''}</span><h2>${esc(f.nome)}</h2></div><button class="btn" data-close>Chiudi</button></div>
+  <p class="txt" style="font-style:italic;margin:0">${esc(f.descr)}</p>
+  ${f.note.map(n=>`<p class="note" style="margin:0">${fmt(n)}</p>`).join('')}
+  ${f.id==='legione_sciolta'?`<div class="banner">Forma in tre parti autonome, ognuna con PF, CA e attacchi propri.</div>${vLegione(c.pfT)}`:''}
+  ${f.id==='legione_sciolta'?`<div class="kv"><div><span class="label">PF temporanei</span><b>+${c.pfT}</b><span class="note">divisi tra le parti</span></div><div><span class="label">BAB</span><b>${sg(c.B)}</b></div><div><span class="label">CD capacità</span><b>${c.cd}</b></div><div><span class="label">Manovre di forma</span><b>${sg(c.manF)} / ${10+c.manF}</b></div></div>`:`<div class="kv">
+   <div><span class="label">CA</span><b>${c.CA}</b><span class="note">contatto ${c.cont} · impr. ${c.impr}</span></div>
+   <div><span class="label">PF temporanei</span><b>+${c.pfT}</b><span class="note">${cb}×${l}${f.combattente?` +${l} comb.`:''}${gradoCarnaio()>=3?` +${l} dominio`:''}</span></div>
+   <div><span class="label">Iniziativa</span><b>${sg(c.ini)}</b></div>
+   <div><span class="label">BAB</span><b>${sg(c.B)}</b><span class="note">${c.babNota||'del personaggio'}</span></div>
+   <div><span class="label">Forza</span><b>${c.For==null?'—':c.For}</b><span class="note">${c.fm==null?'irrilevante':sg(c.fm)} (${f.for==null?'—':sg(f.for)})</span></div>
+   <div><span class="label">Destrezza</span><b>${c.Des}</b><span class="note">${sg(c.dm)} (${sg(f.des)})</span></div>
+  </div>
+  <div class="kv">
+   <div><span class="label">Tempra</span><b>${sg((+S.tsT)+c.tsB)}</b></div><div><span class="label">Riflessi</span><b>${sg((+S.tsR)+c.tsB+(c.dm-mod(S.Des)))}</b></div><div><span class="label">Volontà</span><b>${sg((+S.tsV)+c.tsB)}</b></div>
+   <div><span class="label">CD capacità</span><b>${c.cd}</b></div><div><span class="label">BMC / DMC</span><b>${sg(c.BMC)} / ${c.DMC}</b></div><div><span class="label">Manovre di forma</span><b>${sg(c.manF)} / ${10+c.manF}</b></div>
+  </div>
+  ${cb?`<p class="note" style="margin:0">+${cb} circostanziale ai TS contro influenza mentale, malattia, sonno, stordimento e veleno.${c.tsB?` TS già inclusi +${c.tsB} di dominio.`:''}</p>`:''}
+  `}${f.id==='legione_sciolta'?'':`<div class="atk"><span class="label">Attacco completo: ${c.it.length} attacc${c.it.length>1?'hi':'o'} a scelta (${c.it.map(sg).join('/')})</span>
+   ${c.armi.map(a=>`<div class="l"><span>${esc(a.nome)}</span><span>${esc(a.txt)}</span></div>`).join('')||'<span class="note">Nessun attacco calcolabile: vedi il testo.</span>'}
+   <div class="txt" style="margin-top:4px">${fmt(campi['Attacchi']||'')}</div>
+   ${campi['BAB pieno']?`<p class="note">${fmt(campi['BAB pieno'])}</p>`:''}${campi['BAB ¾']?`<p class="note">${fmt(campi['BAB ¾'])}</p>`:''}
+   <p class="note">Attacchi secondari −5. ${c.accurata?'Arma Accurata: usa la Destrezza se più alta. ':''}${l>=17?'Gli attacchi naturali superano qualsiasi RD.':l>=8?'Attacchi naturali magici.':''}</p>
+  </div>`}
+  <div class="txt">
+   ${f.id==='legione_sciolta'?'':`<p><b>Velocità:</b> ${fmt(c.vel)}</p>`}
+   ${f.id==='legione_sciolta'?'':`<p><b>CA:</b> ${f.ca_tipo==='deviazione'?`deviazione ${sg(f.ca)}`:`naturale ${sg(f.ca)}`} · taglia ${sg(TAGLIA[f.taglia].ca)}${c.arm?` · armatura/scudo ${sg(c.arm)}`:''}${c.dodge?` · schivare ${sg(c.dodge)}`:''} · portata ${TAGLIA[f.taglia].port}</p>`}
+   ${campi['Sensi']?`<p><b>Sensi:</b> ${fmt(campi['Sensi'])}</p>`:''}
+   ${campi['Qualità']?`<p><b>Qualità:</b> ${fmt(campi['Qualità'])}</p>`:''}
+   ${campi['Bonus abilità']?`<p><b>Bonus abilità:</b> ${fmt(campi['Bonus abilità'])}${TAGLIA[f.taglia].furt?` · Furtività ${sg(TAGLIA[f.taglia].furt)} da taglia`:''}</p>`:''}
+   <p><b>RD:</b> ${fmt(f.rd||'—')} · <b>Vulnerabilità:</b> ${fmt(f.vuln||'—')}</p>
+   ${f.extra.map(e=>`<p>${fmt(e)}</p>`).join('')}
+   ${f.semicorporeo?`<p><b>Semicorporeo:</b> 50% dei danni da fonti non magiche, 75% da fonti magiche; attraversa oggetti e creature solide; non è invisibile.</p>`:''}
+   ${f.incorporeo?`<p><b>Incorporeo:</b> immune ai danni non magici, 50% da fonti magiche (forza: danno pieno); attacchi di contatto.</p>`:''}
+   <p><b>Equipaggiamento:</b> ${equip}</p><p><b>Incantesimi:</b> ${incant}</p>
+   <p class="note">Subisce le vulnerabilità della forma ma non ne ottiene le immunità. Individuato come non morto.</p>
+  </div>
+  ${domNoteForma().length?`<div class="banner"><b>Dominio dei ${FAM[S.dominio]}</b> (già inclusi nei valori):<br>${domNoteForma().map(esc).join('<br>')}</div>`:''}
+  <div class="row"><button class="btn pri" data-trasf="${f.id}" ${ok&&l>=4&&(usi===Infinity||S.usiForma<usi)?'':'disabled'}>Trasformati (1 uso)</button>${ok?'':`<span class="note">${f.cat==='Speciale'?'Forma speciale non disponibile':'Disponibile dal '+CAT_LV[f.cat]+'° livello'}</span>`}</div></div>`;
+}
+
+/* ---------- eventi ---------- */
+function openModal(html){const m=document.getElementById('modal');m.innerHTML=`<div class="overlay" id="ov"><div class="card">${html}</div></div>`;
+  m.querySelector('#ov').onclick=e=>{if(e.target.id==='ov')closeModal();};bindModal(m);}
+function closeModal(){document.getElementById('modal').innerHTML='';}
+function bindModal(m){
+  m.querySelectorAll('[data-close]').forEach(b=>b.onclick=closeModal);
+  m.querySelectorAll('[data-add]').forEach(b=>b.onclick=()=>{S.rituale=[...(S.rituale||[]),b.dataset.add];save();closeModal();render();});
+  m.querySelectorAll('[data-trasf]').forEach(b=>b.onclick=()=>{const f=FORME.find(x=>x.id===b.dataset.trasf);S.formaAttiva=f.id;S.pfTemp=calcForma(f).pfT;if(f.id==='legione_sciolta')S.legPf=LEGIONE.map(p=>calcParte(p,S.pfTemp).pf);if(S.livello<20)S.usiForma++;save();closeModal();render();});
+}
+function bind(){
+  const m=document.getElementById('main');
+  m.querySelectorAll('[data-k]').forEach(el=>el.onchange=()=>{const k=el.dataset.k;let v=el.type==='checkbox'?el.checked:el.value;
+    if(el.type==='number'&&k!=='babOverride')v=v===''?0:+v;if(k==='livello')v=Math.max(1,Math.min(20,v));S[k]=v;if(k==='archetipo'){S.carnaio=v==='carnaio';if(!S.carnaio){S.formaAttiva=null;S.pfTemp=0;}}S.esempio=false;save();render();});
+  m.querySelectorAll('[data-g]').forEach(el=>el.onchange=()=>{S.gradi[el.dataset.g]=+el.value;S.esempio=false;save();render();});
+  m.querySelectorAll('[data-d]').forEach(el=>el.onchange=()=>{S.doti[el.dataset.d]=el.checked;save();render();});
+  const q=(id,fn)=>{const e=m.querySelector('#'+id);if(e)e.onclick=fn;};
+  q('riposo',()=>{S.usiEvoca=0;S.usiForma=0;S.usiOrda=0;save();render();});
+  q('evUsa',()=>{S.usiEvoca++;save();render();});q('evRid',()=>{S.usiEvoca=Math.max(0,S.usiEvoca-1);save();render();});
+  q('fmRid',()=>{S.usiForma=Math.max(0,S.usiForma-1);save();render();});
+  q('fmEnd',()=>{S.formaAttiva=null;S.pfTemp=0;S.legPf=null;save();render();});
+  q('goProf',()=>{S.tab='profilo';save();render();});
+  q('ritX',()=>{S.rituale=[];save();render();});
+  q('ritOk',()=>{for(const id of S.rituale){const c=applyDom(MORTI.find(x=>x.id===id));S.schierati.push({id,pf:c.pf,focale:false});}S.rituale=[];S.usiEvoca++;save();render();});
+  m.querySelectorAll('[data-rrm]').forEach(b=>b.onclick=()=>{S.rituale.splice(+b.dataset.rrm,1);save();render();});
+  const cerca=m.querySelector('#cerca');if(cerca)cerca.oninput=()=>{S.cerca=cerca.value;const p=cerca.selectionStart;render();const c2=document.getElementById('cerca');c2.focus();c2.setSelectionRange(p,p);};
+  m.querySelectorAll('[data-ft]').forEach(b=>b.onclick=()=>{S.filtroTipo=b.dataset.ft;save();render();});
+  m.querySelectorAll('[data-mo]').forEach(b=>b.onclick=()=>openModal(schedaMorto(b.dataset.mo)));
+  m.querySelectorAll('[data-fo]').forEach(b=>b.onclick=()=>openModal(schedaForma(b.dataset.fo)));
+  m.querySelectorAll('[data-xs]').forEach(b=>b.onclick=()=>{const id=b.dataset.xs;S.extraSpeciali=S.extraSpeciali.includes(id)?S.extraSpeciali.filter(x=>x!==id):[...S.extraSpeciali,id];save();render();});
+  m.querySelectorAll('[data-hp]').forEach(b=>b.onclick=()=>{const a=S.schierati[+b.dataset.hp];a.pf+=+b.dataset.v;save();render();});
+  m.querySelectorAll('[data-hpset]').forEach(el=>el.onchange=()=>{S.schierati[+el.dataset.hpset].pf=+el.value||0;save();render();});
+  m.querySelectorAll('[data-rm]').forEach(b=>b.onclick=()=>{S.schierati.splice(+b.dataset.rm,1);save();render();});
+  m.querySelectorAll('[data-foc]').forEach(b=>b.onclick=()=>{const a=S.schierati[+b.dataset.foc];a.focale=!a.focale;save();render();});
+  m.querySelectorAll('[data-tp]').forEach(b=>b.onclick=()=>{S.pfTemp=Math.max(0,S.pfTemp+ +b.dataset.tp);save();render();});
+  m.querySelectorAll('[data-lp]').forEach(b=>b.onclick=()=>{S.legPf[+b.dataset.lp]+=+b.dataset.v;save();render();});
+  m.querySelectorAll('[data-lpset]').forEach(el=>el.onchange=()=>{S.legPf[+el.dataset.lpset]=+el.value||0;save();render();});
+  m.querySelectorAll('[data-fp]').forEach(b=>b.onclick=()=>{const f=famiglio();S.famPf=b.dataset.fp==='full'?f.pf:S.famPf+ +b.dataset.fp;save();render();});
+  const fp=m.querySelector('#famPf');if(fp)fp.onchange=()=>{S.famPf=+fp.value||0;save();render();};
+  q('ordaUsa',()=>{S.usiOrda++;save();render();});
+  const tp=m.querySelector('#tpSet');if(tp)tp.onchange=()=>{S.pfTemp=Math.max(0,+tp.value||0);save();render();};
+}
+render();
+</script>

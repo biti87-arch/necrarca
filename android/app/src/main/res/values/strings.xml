@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Grimorio del Necrarca</string>
+    <string name="title_activity_main">Grimorio del Necrarca</string>
+    <string name="package_name">it.collana.necrarca</string>
+    <string name="custom_url_scheme">it.collana.necrarca</string>
+</resources>
