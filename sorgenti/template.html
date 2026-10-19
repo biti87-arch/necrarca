@@ -435,7 +435,7 @@ function domNoteForma(){
 function schedaForma(id){
   const f=FORME.find(x=>x.id===id),c=calcForma(f),ok=formaSbloccata(f),l=S.livello,cb=CAT_B[f.cat];
   const usi=l>=20?Infinity:1+Math.floor(l/2);
-  const incant=f.combattente?'Vietati in questa forma (forma da combattente).':f.umanoide?'Può parlare e lanciare incantesimi con componenti verbali e somatiche.':'Non può parlare né lanciare incantesimi con componenti verbali o somatiche. L’oro reagente resta utilizzabile.';
+  const incant=f.combattente?'Vietati in questa forma (forma da combattente).':f.id==='legione_sciolta'?'Solo dalla Testa alata, anche con componenti verbali e somatiche (eccezione voluta alla regola delle forme non umanoidi). L’oro reagente resta utilizzabile.':f.umanoide?'Può parlare e lanciare incantesimi con componenti verbali e somatiche.':'Non può parlare né lanciare incantesimi con componenti verbali o somatiche. L’oro reagente resta utilizzabile.';
   const equip=f.umanoide?'Mantiene e usa l’equipaggiamento indossato e impugnato.':'L’equipaggiamento si fonde nel corpo; funzionano solo gli oggetti a bonus costante o ad attivazione mentale.';
   const campi=f.campi;
   return `<div class="sheet"><div class="sheetHead"><div><span class="label">Categoria ${f.cat} · ${f.tipo} · ${f.taglia}${f.combattente?' · forma da combattente':''}</span><h2>${esc(f.nome)}</h2></div><button class="btn" data-close>Chiudi</button></div>

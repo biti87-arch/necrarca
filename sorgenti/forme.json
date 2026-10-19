@@ -55,7 +55,7 @@
   "ca_tipo": "naturale",
   "ca": 2,
   "campi": {
-   "Attacchi": "morso 1d6 + Atterramento gratuito su morso (manovra di forma, sez. 4.14)",
+   "Attacchi": "morso 1d6 + Atterramento gratuito su morso (manovra di forma)",
    "Sensi": "Scurovisione 18 m, Olfatto",
    "Bonus abilità": "+4 Percezione, +2 Sopravvivenza"
   },
@@ -340,7 +340,7 @@
   "sciame": false,
   "descr": "Cinque dita, nessun polso, e una volontà che non dovrebbe esistere. Striscia sulle nocche come un ragno con troppe poche zampe, e la sua unica ossessione è quella di stringere — qualcosa, qualsiasi cosa. Preferisce i colli degli incantatori: capisce, a modo suo, dove risiede il potere.",
   "note": [
-   "Talenti automatici (sez. 4.13): Arma Accurata + Manovre Agili. Modificatori taglia Minuscola: +2 TxC, +2 CA, +4 Furtività e Volare, −3 BCM/DMC."
+   "Talenti automatici: Arma Accurata + Manovre Agili. Modificatori taglia Minuscola: +2 TxC, +2 CA, +4 Furtività e Volare, −3 BCM/DMC."
   ],
   "for": -2,
   "des": 4,
@@ -348,7 +348,7 @@
   "ca_tipo": "naturale",
   "ca": 0,
   "campi": {
-   "Attacchi": "artiglio 1d2 + Aggrappare migliorato (manovra di forma, sez. 4.14, non provoca AdO). Se il collo di un incantatore viene afferrato, il bersaglio non può pronunciare componenti verbali ed è considerato In Lotta.",
+   "Attacchi": "artiglio 1d2 + Aggrappare migliorato (manovra di forma, non provoca AdO). Se il collo di un incantatore viene afferrato, il bersaglio non può pronunciare componenti verbali ed è considerato In Lotta.",
    "Sensi": "Vista cieca 9 m",
    "Bonus abilità": "+8 Furtività (totale +12 con taglia Minuscola), +4 Scalare"
   },
@@ -381,7 +381,7 @@
   "sciame": false,
   "descr": "Si è staccato dal resto tanto tempo fa, e non ha mai smesso di rotolare. Urla con una voce che esce da denti ancora serrati, un suono cavo che rimbalza tra le pareti dei dungeon come un'eco che non trova pace. Piccolo, veloce, quasi impossibile da ignorare.",
   "note": [
-   "Talenti automatici (sez. 4.13): Arma Accurata + Manovre Agili. Modificatori taglia Minuscola: +2 TxC, +2 CA, +4 Furtività e Volare, −3 BCM/DMC."
+   "Talenti automatici: Arma Accurata + Manovre Agili. Modificatori taglia Minuscola: +2 TxC, +2 CA, +4 Furtività e Volare, −3 BCM/DMC."
   ],
   "for": -4,
   "des": 4,
@@ -432,7 +432,7 @@
   "campi": {
    "Attacchi": "2 artigli 1d4 + 1d6 danni del tipo scelto",
    "Sensi": "Scurovisione 18 m",
-   "Qualità": "Aura elementale (raggio 3 m): ogni round, chi si trova nell'aura subisce danni del tipo scelto; TS Riflessi dimezza. Scala: 1d6 al 6° livello, +1d6 ogni 2 livelli (8°: 2d6, 10°: 3d6 … 20°: 8d6). Anche gli alleati del Carnaio sono soggetti. Resistenza 10 al tipo scelto."
+   "Qualità": "Aura elementale (raggio 3 m): ogni round, chi si trova nell'aura subisce danni del tipo scelto; TS Riflessi dimezza. Scala: 1d6 al 7° livello, +1d6 ogni 2 livelli (9°: 2d6, 11°: 3d6 … 19°: 7d6), 8d6 al 20°. Anche gli alleati del Carnaio sono soggetti. Resistenza 10 al tipo scelto."
   },
   "extra": [],
   "rd": "5/contundenti",
@@ -471,7 +471,7 @@
   "campi": {
    "Attacchi": "2 artigli 1d4 (o arma a 1 mano se umanoide armato)",
    "Sensi": "Scurovisione 18 m",
-   "Qualità": "Aura tattica (raggio 9 m): i non morti evocati dal Necrarca nell'aura ottengono +1 TxC e +1 danno al 6° livello, +1 ogni 3 livelli oltre il 6° (9°: +2, 12°: +3, 15°: +4, 18°: +5, 20°: +5). Cumulativo con i bonus delle Doti Dominio. Coordinamento tattico: i non morti evocati nell'aura possono riposizionarsi di 1,5 m come azione gratuita senza provocare AdO."
+   "Qualità": "Aura tattica (raggio 9 m): i non morti evocati dal Necrarca nell'aura ottengono +1 TxC e +1 danno al 7° livello, +1 ogni 3 livelli oltre il 7° (10°: +2, 13°: +3, 16°: +4, 19°: +5, 20°: +5). Cumulativo con i bonus delle Doti Dominio. Coordinamento tattico: i non morti evocati nell'aura possono riposizionarsi di 1,5 m come azione gratuita senza provocare AdO."
   },
   "extra": [],
   "rd": "5/contundenti",
@@ -678,16 +678,16 @@
   "tipo": "Spirito",
   "taglia_raw": "Media",
   "combattente": false,
-  "stat": "For −4, Des +4 — Velocità: volo 12 m (max 1 m — sez. 4.6) — Deviazione: +2",
+  "stat": "For −4, Des +4 — Velocità: volo 12 m (max 1 m fino al 16° livello) — Deviazione: +2",
   "taglia": "Media",
   "sciame": false,
   "descr": "Non ha una forma precisa: si estende lungo le superfici come un'ombra proiettata da una luce che non c'è, e si addensa dove vuole colpire. Il freddo che precede il suo tocco non è quello del vento: è la sensazione di qualcosa che ti attraversa e porta via un pezzo di ciò che eri.",
   "note": [
-   "Tipo Spirito → Semicorporeo (sez. 4.5): 50% danni non magici, 75% magici; attraversa solidi. Arma Accurata automatica. Bonus CA di deviazione (vale anche su CA di contatto). Volo max 1 m fino al 16° livello."
+   "Tipo Spirito → Semicorporeo (vedi Semicorporeo e Incorporeo): 50% danni non magici, 75% magici; attraversa solidi. Arma Accurata automatica. Bonus CA di deviazione (vale anche su CA di contatto). Volo max 1 m fino al 16° livello."
   ],
   "for": -4,
   "des": 4,
-  "velocita": "volo 12 m (max 1 m",
+  "velocita": "volo 12 m (max 1 m fino al 16° livello)",
   "ca_tipo": "deviazione",
   "ca": 2,
   "campi": {
@@ -720,16 +720,16 @@
   "tipo": "Spirito",
   "taglia_raw": "Media",
   "combattente": false,
-  "stat": "For −4, Des +2 — Velocità: 6 m + volo 12 m perfetto (max 1 m — sez. 4.6) — Deviazione: +2",
+  "stat": "For −4, Des +2 — Velocità: 6 m + volo 12 m perfetto (max 1 m fino al 16° livello) — Deviazione: +2",
   "taglia": "Media",
   "sciame": false,
   "descr": "Balbetta senza sosta, con una voce troppo sottile per distinguere le parole. Chi l'ha sentita da vicino dice che i suoni sembravano quasi avere senso — sembravano rispondere alle proprie domande — ma quando ci si è alzati non si ricordava nulla. Solo la stanchezza. Solo il silenzio che non se ne andava.",
   "note": [
-   "Tipo Spirito → Semicorporeo (sez. 4.5): 50% danni non magici, 75% magici; attraversa solidi. Arma Accurata automatica. Bonus CA di deviazione (vale anche su CA di contatto). Volo max 1 m fino al 16° livello."
+   "Tipo Spirito → Semicorporeo (vedi Semicorporeo e Incorporeo): 50% danni non magici, 75% magici; attraversa solidi. Arma Accurata automatica. Bonus CA di deviazione (vale anche su CA di contatto). Volo max 1 m fino al 16° livello."
   ],
   "for": -4,
   "des": 2,
-  "velocita": "6 m + volo 12 m perfetto (max 1 m",
+  "velocita": "6 m + volo 12 m perfetto (max 1 m fino al 16° livello)",
   "ca_tipo": "deviazione",
   "ca": 2,
   "campi": {
@@ -766,7 +766,7 @@
   "sciame": true,
   "descr": "Decine di mani che strisciano in formazione silenziosa. Alcune sono piccole come quelle di bambini; altre sono larghe come vanghe. Ognuna si muove da sola, ma tutte si muovono insieme verso lo stesso obiettivo. Il rumore che fanno è quello delle unghie sul legno.",
   "note": [
-   "Sciame: occupa 3 caselle, danno automatico (no TxC), immune a critici e danno di precisione. Talenti automatici (sez. 4.13): Arma Accurata + Manovre Agili. Modificatori taglia Minuscola applicati normalmente."
+   "Sciame: occupa 3 caselle, danno automatico (no TxC), immune a critici e danno di precisione. Talenti automatici: Arma Accurata + Manovre Agili. Modificatori taglia Minuscola applicati normalmente."
   ],
   "for": -4,
   "des": 4,
@@ -776,7 +776,7 @@
   "campi": {
    "Attacchi": "danni da sciame 1d6 contundenti/perforanti automatici a ogni creatura nelle 3 caselle occupate",
    "Sensi": "Vista cieca 9 m",
-   "Qualità": "Distrazione (TS Tempra o Nauseato 1 round); Disarmare di massa (az. gratuita 1/round, manovra di forma sez. 4.14): tutti gli oggetti nelle caselle del sciame; gli oggetti di taglia Piccola/Minuscola vengono trascinati di 3 m a fine round."
+   "Qualità": "Distrazione (TS Tempra o Nauseato 1 round); Disarmare di massa (az. gratuita 1/round, manovra di forma): tutti gli oggetti nelle caselle del sciame; gli oggetti di taglia Piccola/Minuscola vengono trascinati di 3 m a fine round."
   },
   "extra": [
    "Tratti sciame: immune a critici e danno di precisione; vulnerabile +50% ai danni da area; dimezzato da taglienti e perforanti; pieno da contundenti."
@@ -802,16 +802,16 @@
   "tipo": "Disarticolato",
   "taglia_raw": "Minuscola",
   "combattente": false,
-  "stat": "For −4, Des +4 — Velocità: 3 m + volo 18 m perfetto (max 1 m — sez. 4.6) — CA naturale: +0 (+2 da taglia Minuscola)",
+  "stat": "For −4, Des +4 — Velocità: 3 m + volo 18 m perfetto (max 1 m fino al 16° livello) — CA naturale: +0 (+2 da taglia Minuscola)",
   "taglia": "Minuscola",
   "sciame": false,
   "descr": "È grande come un sasso e bianco come osso, con due ali membranose che sbattono senza fare rumore. Sembra quasi un insetto — finché non apre le fauci. Il dente è ancora integro, con le radici esposte e pulsanti, e quando morde strappa qualcosa che non è solo carne.",
   "note": [
-   "Talenti automatici (sez. 4.13): Arma Accurata + Manovre Agili. Modificatori taglia Minuscola: +2 TxC, +2 CA, +4 Furtività e Volare, −3 BCM/DMC. Forma: grosso dente d'avorio (\\~15 cm) con ali ossee membranose e 2 denti laterali aguzzi."
+   "Talenti automatici: Arma Accurata + Manovre Agili. Modificatori taglia Minuscola: +2 TxC, +2 CA, +4 Furtività e Volare, −3 BCM/DMC. Forma: grosso dente d'avorio (~15 cm) con ali ossee membranose e 2 denti laterali aguzzi."
   ],
   "for": -4,
   "des": 4,
-  "velocita": "3 m + volo 18 m perfetto (max 1 m",
+  "velocita": "3 m + volo 18 m perfetto (max 1 m fino al 16° livello)",
   "ca_tipo": "naturale",
   "ca": 0,
   "campi": {
@@ -822,7 +822,7 @@
   "extra": [
    "Attacco (1): morso 1d3 + Paralisi (TS Tempra o Paralizzato 1d3 round; elfi immuni)",
    "Attacco (2): pizzico dei denti laterali (Sporco Trucco, TxC di contatto, non provoca AdO): −1 Destrezza temporanea automatica per 1 minuto, senza TS (cumulativo senza limite)",
-   "Attacco (3): estrazione dente (manovra di forma sez. 4.14, anche su bersagli svegli): −1 Carisma temporaneo per 1 minuto + Sanguinamento 1. Automatica su bersagli Indifesi o Paralizzati."
+   "Attacco (3): estrazione dente (manovra di forma, anche su bersagli svegli): −1 Carisma temporaneo per 1 minuto + Sanguinamento 1. Automatica su bersagli Indifesi o Paralizzati."
   ],
   "rd": "—",
   "vuln": "—",
@@ -862,7 +862,7 @@
   "campi": {
    "Attacchi": "arma marziale impugnata + scudo (se disponibili), oppure 2 artigli 1d4",
    "Sensi": "Scurovisione 18 m",
-   "Qualità": "Maestria spettrale: armi marziali impugnate +1 TxC e +1 danno al 9° livello (sblocco), +1 ogni 3 livelli oltre il 9° (12°: +2, 15°: +3, 18°: +4, 20°: +5); Aura di comando (raggio 9 m): tutti gli alleati del Carnaio nell'aura (PG, evocazioni, qualsiasi alleato) ottengono +1 TxC e +1 TS contro gli effetti [paura], scala come Maestria spettrale; Sentinella della tomba: +2 TS contro [paura] (auto)."
+   "Qualità": "Maestria spettrale: armi marziali impugnate +1 TxC e +1 danno al 10° livello (sblocco), +1 ogni 3 livelli oltre il 10° (13°: +2, 16°: +3, 19°: +4, 20°: +5); Aura di comando (raggio 9 m): tutti gli alleati del Carnaio nell'aura (PG, evocazioni, qualsiasi alleato) ottengono +1 TxC e +1 TS contro gli effetti [paura], scala come Maestria spettrale; Sentinella della tomba: +2 TS contro [paura] (auto)."
   },
   "extra": [
    "Competenze in forma: armi marziali (tutte), armatura leggera, scudi (no torre)"
@@ -1032,7 +1032,7 @@
   "extra": [
    "Attacchi melee: morso 1d6 + 2 artigli 1d6; ogni colpo a segno obbliga il bersaglio a superare un TS Tempra o essere Paralizzato 1d4+1 round (elfi NON immuni — origine demonica)",
    "Sputo necromantico (1/round, az. standard, raggio 9 m, TxC di contatto): 2d6 danni necrotici che curano i non morti adiacenti al bersaglio della stessa quantità; TS Tempra o −2 Costituzione temporanea per 1 minuto (cumulativo senza limite).",
-   "Capacità magiche (LI = livello del Carnaio, CD sez. 4.9): 3/giorno Suggestione."
+   "Capacità magiche (LI = livello del Carnaio, CD degli effetti speciali): 3/giorno Suggestione."
   ],
   "rd": "—",
   "vuln": "—",
@@ -1065,16 +1065,16 @@
   "tipo": "Spirito",
   "taglia_raw": "Media",
   "combattente": false,
-  "stat": "For −2, Des +6 — Velocità: volo 18 m perfetto (max 1 m — sez. 4.6) — Deviazione: +3",
+  "stat": "For −2, Des +6 — Velocità: volo 18 m perfetto (max 1 m fino al 16° livello) — Deviazione: +3",
   "taglia": "Media",
   "sciame": false,
   "descr": "Non ha peso, non ha suono, non ha presenza — finché non decide di averla. Il freddo che porta con sé non è quello dell'inverno: è il freddo di qualcosa che ti svuota dall'interno, una sottrazione lenta che non si ferma finché non hai smesso di muoverti.",
   "note": [
-   "Tipo Spirito → Semicorporeo (sez. 4.5): 50% danni non magici, 75% magici; attraversa solidi. Arma Accurata automatica. Bonus CA di deviazione (vale anche su CA di contatto). Volo max 1 m fino al 16° livello."
+   "Tipo Spirito → Semicorporeo (vedi Semicorporeo e Incorporeo): 50% danni non magici, 75% magici; attraversa solidi. Arma Accurata automatica. Bonus CA di deviazione (vale anche su CA di contatto). Volo max 1 m fino al 16° livello."
   ],
   "for": -2,
   "des": 6,
-  "velocita": "volo 18 m perfetto (max 1 m",
+  "velocita": "volo 18 m perfetto (max 1 m fino al 16° livello)",
   "ca_tipo": "deviazione",
   "ca": 3,
   "campi": {
@@ -1107,16 +1107,16 @@
   "tipo": "Spirito",
   "taglia_raw": "Media",
   "combattente": false,
-  "stat": "For −4, Des +4 — Velocità: volo 12 m perfetto (max 1 m — sez. 4.6) — Deviazione: +3",
+  "stat": "For −4, Des +4 — Velocità: volo 12 m perfetto (max 1 m fino al 16° livello) — Deviazione: +3",
   "taglia": "Media",
   "sciame": false,
   "descr": "Il lamento arriva prima della forma: un suono lungo e sottile che sale e scende senza logica, che rimbalza tra le pareti e sembra provenire da ogni direzione. Quando la si vede, è già troppo vicina — e quando urla, è già troppo tardi.",
   "note": [
-   "Tipo Spirito → Semicorporeo (sez. 4.5): 50% danni non magici, 75% magici; attraversa solidi. Arma Accurata automatica. Bonus CA di deviazione. Volo max 1 m fino al 16° livello. Il tocco cura gli altri non morti adiacenti, mai il Carnaio (ruolo esclusivo del Sanguigno, Categoria IV)."
+   "Tipo Spirito → Semicorporeo (vedi Semicorporeo e Incorporeo): 50% danni non magici, 75% magici; attraversa solidi. Arma Accurata automatica. Bonus CA di deviazione. Volo max 1 m fino al 16° livello. Il tocco cura gli altri non morti adiacenti, mai il Carnaio (ruolo esclusivo del Sanguigno, Categoria IV)."
   ],
   "for": -4,
   "des": 4,
-  "velocita": "volo 12 m perfetto (max 1 m",
+  "velocita": "volo 12 m perfetto (max 1 m fino al 16° livello)",
   "ca_tipo": "deviazione",
   "ca": 3,
   "campi": {
@@ -1148,16 +1148,16 @@
   "tipo": "Disarticolato",
   "taglia_raw": "Minuscola — sciame",
   "combattente": false,
-  "stat": "For −2, Des +6 — Velocità: 6 m + volo 9 m (max 1 m — sez. 4.6) — CA naturale: +0 (+2 da taglia Minuscola)",
+  "stat": "For −2, Des +6 — Velocità: 6 m + volo 9 m (max 1 m fino al 16° livello) — CA naturale: +0 (+2 da taglia Minuscola)",
   "taglia": "Minuscola",
   "sciame": true,
   "descr": "Non è uno sciame di insetti: il rumore è sbagliato, troppo duro, troppo secco. Centinaia di frammenti — costole spezzate, vertebre, dita disarticolate — che si muovono come un banco di pesci in cerca di carne su cui affilarsi.",
   "note": [
-   "Sciame: occupa 3 caselle, danno automatico (no TxC), immune a critici e danno di precisione. Talenti automatici (sez. 4.13): Arma Accurata + Manovre Agili. ⚠ Vulnerabilità invertite rispetto allo Sciame di mani (Categoria II)."
+   "Sciame: occupa 3 caselle, danno automatico (no TxC), immune a critici e danno di precisione. Talenti automatici: Arma Accurata + Manovre Agili. ⚠ Vulnerabilità invertite rispetto allo Sciame di mani (Categoria II)."
   ],
   "for": -2,
   "des": 6,
-  "velocita": "6 m + volo 9 m (max 1 m",
+  "velocita": "6 m + volo 9 m (max 1 m fino al 16° livello)",
   "ca_tipo": "naturale",
   "ca": 0,
   "campi": {
@@ -1194,7 +1194,7 @@
   "sciame": false,
   "descr": "Pulsa ancora, con un ritmo che non corrisponde a nessun ritmo umano. Cammina su otto zampe di osso affilato, e il sangue che trasuda dalla sua superficie non è del tutto suo. Chi viene morso da quelle fauci porta via qualcosa di più del dolore.",
   "note": [
-   "Talenti automatici (sez. 4.13): Arma Accurata + Manovre Agili. Modificatori taglia Minuscola: +2 TxC, +2 CA, +4 Furtività e Volare, −3 BCM/DMC. Forma: cuore pulsante (\\~15 cm) con 8 zampe ossee da ragno (\\~60 cm)."
+   "Talenti automatici: Arma Accurata + Manovre Agili. Modificatori taglia Minuscola: +2 TxC, +2 CA, +4 Furtività e Volare, −3 BCM/DMC. Forma: cuore pulsante (~15 cm) con 8 zampe ossee da ragno (~60 cm)."
   ],
   "for": 0,
   "des": 4,
@@ -1208,7 +1208,7 @@
   },
   "extra": [
    "Fauci seghettate: su critico confermato → 1 livello negativo (TS Tempra entro 24 ore per rimuoverlo, altrimenti permanente).",
-   "Capacità magiche (LI = livello del Carnaio, CD sez. 4.9): a volontà — Aprire/Chiudere, Immagine Silenziosa, Suono Fantasma; 3/giorno — Disperazione Opprimente, Intralciare, Vuoto di Memoria."
+   "Capacità magiche (LI = livello del Carnaio, CD degli effetti speciali): a volontà — Aprire/Chiudere, Immagine Silenziosa, Suono Fantasma; 3/giorno — Disperazione Opprimente, Intralciare, Vuoto di Memoria."
   ],
   "rd": "—",
   "vuln": "—",
@@ -1233,20 +1233,20 @@
   "tipo": "Disarticolato",
   "taglia_raw": "Piccolo",
   "combattente": false,
-  "stat": "For +0, Des +4 — Velocità: volo 12 m (manovrabilità media, max 1 m — sez. 4.6) — CA naturale: +1 (+1 da taglia Piccola)",
+  "stat": "For +0, Des +4 — Velocità: volo 12 m (manovrabilità media, max 1 m fino al 16° livello) — CA naturale: +1 (+1 da taglia Piccola)",
   "taglia": "Piccola",
   "sciame": false,
   "descr": "È una pelle senza corpo — o meglio, è una pelle che ha deciso di non averne più bisogno. Fluttua con una grazia morbida e silenziosa, e quando si drappeggia attorno a un cadavere ne assume la forma con una fedeltà che spaventa più dell'aspetto originale.",
   "note": [
-   "Talenti automatici (sez. 4.13): Arma Accurata + Manovre Agili. Modificatori taglia Piccola: +1 TxC, +1 CA, +2 Furtività e Volare, −2 BCM/DMC. Forma: pelle umanoide vuota e fluttuante, metà superiore intatta, metà inferiore a brandelli."
+   "Talenti automatici: Arma Accurata + Manovre Agili. Modificatori taglia Piccola: +1 TxC, +1 CA, +2 Furtività e Volare, −2 BCM/DMC. Forma: pelle umanoide vuota e fluttuante, metà superiore intatta, metà inferiore a brandelli."
   ],
   "for": 0,
   "des": 4,
-  "velocita": "volo 12 m (manovrabilità media, max 1 m",
+  "velocita": "volo 12 m (manovrabilità media, max 1 m fino al 16° livello)",
   "ca_tipo": "naturale",
   "ca": 1,
   "campi": {
-   "Attacchi": "morso 1d4 + 2 artigli 1d4 con Afferrare (manovra di forma, sez. 4.14); bersaglio aggrappato → Immobilizzato (il Carnaio NON è In Lotta), Stritolare 1d4 automatico/round.",
+   "Attacchi": "morso 1d4 + 2 artigli 1d4 con Afferrare (manovra di forma); bersaglio aggrappato → Immobilizzato (il Carnaio NON è In Lotta), Stritolare 1d4 automatico/round.",
    "Qualità": "Amorfo (immune a danni di precisione e critici); Comprimersi (passa per aperture di 1/4 del proprio spazio). Sensi: Individuazione dei Non Morti permanente, Scurovisione 18 m."
   },
   "extra": [
@@ -1298,7 +1298,7 @@
   "campi": {
    "Attacchi": "arma marziale impugnata (se disponibile), oppure 2 artigli 1d6",
    "Sensi": "Scurovisione 18 m (collegamento spettrale con la testa anche quando è in volo)",
-   "Qualità": "Testa fiammeggiante (1/round, az. standard, raggio 18 m, TxC di contatto): il Carnaio scaglia la propria testa avvolta in fiamme spettrali — 1d6 danni ogni 2 livelli del Carnaio (al 12°: 6d6, al 20°: 10d6), metà fuoco e metà necrotici; esplosione 1,5 m nel punto d'impatto, TS Riflessi dimezza; la testa ritorna in mano a fine round; Carica terrificante (passivo): quando il Carnaio carica, il bersaglio TS Volontà o Scosso 1d4 round (già Scosso → Spaventato 1 round). Effetto [paura]; Mai decapitabile: immune a effetti di decapitazione e armi vorpal."
+   "Qualità": "Testa fiammeggiante (1/round, az. standard, raggio 18 m, TxC di contatto): il Carnaio scaglia la propria testa avvolta in fiamme spettrali — 1d6 danni ogni 2 livelli del Carnaio (al 13°: 6d6, al 20°: 10d6), metà fuoco e metà necrotici; esplosione 1,5 m nel punto d'impatto, TS Riflessi dimezza; la testa ritorna in mano a fine round; Carica terrificante (passivo): quando il Carnaio carica, il bersaglio TS Volontà o Scosso 1d4 round (già Scosso → Spaventato 1 round). Effetto [paura]; Mai decapitabile: immune a effetti di decapitazione e armi vorpal."
   },
   "extra": [
    "Competenze in forma: armi marziali, armatura media, scudi"
@@ -1338,7 +1338,7 @@
   "sciame": false,
   "descr": "Non è un singolo scheletro: è un edificio fatto di ossa. Vertebre tenute insieme da tendini necrotici, costole che formano una gabbia vivente, braccia assemblate da dozzine di arti diversi. Si muove piano, come qualcosa che sa di non dover avere fretta. Tutto ciò che si trova nel suo percorso viene preso o rinchiuso.",
   "note": [
-   "Taglia Grande: portata 1,5 m (aggiuntiva), BCM/DMC +2, −1 TxC e −1 CA da taglia (sez. 3.1)."
+   "Taglia Grande: portata 1,5 m (aggiuntiva), BCM/DMC +2, −1 TxC e −1 CA da taglia (vedi Modificatori di taglia)."
   ],
   "for": 6,
   "des": -2,
@@ -1346,9 +1346,9 @@
   "ca_tipo": "naturale",
   "ca": 6,
   "campi": {
-   "Attacchi": "2 schianti 1d8 + Presa schiacciante (manovra di forma, sez. 4.14): se entrambi gli schianti colpiscono lo stesso bersaglio nello stesso round, Lotta gratuita (no AdO) con +4; mantenendo la presa, Stritolare 2d6+For automatici all'inizio di ogni turno.",
+   "Attacchi": "2 schianti 1d8 + Presa schiacciante (manovra di forma): se entrambi gli schianti colpiscono lo stesso bersaglio nello stesso round, Lotta gratuita (no AdO) con +4; mantenendo la presa, Stritolare 2d6+For automatici all'inizio di ogni turno.",
    "Sensi": "Scurovisione 18 m",
-   "Qualità": "Gabbia di costole (1/incontro, az. standard, manovra di forma sez. 4.14): tenta di imprigionare una creatura adiacente di taglia Media o inferiore — TS Riflessi o Immobilizzata dentro la gabbia toracica (TS Tempra ogni round per liberarsi vs DMC sez. 4.14; 1d6 perforanti automatici/round mentre è rinchiusa). Il Carnaio può muoversi portando con sé il prigioniero; Cura rapida 2; Stabilità: +4 DMC contro Sbilanciare e Spingere."
+   "Qualità": "Gabbia di costole (1/incontro, az. standard, manovra di forma): tenta di imprigionare una creatura adiacente di taglia Media o inferiore — TS Riflessi o Immobilizzata dentro la gabbia toracica (TS Tempra ogni round per liberarsi vs DMC della manovra di forma; 1d6 perforanti automatici/round mentre è rinchiusa). Il Carnaio può muoversi portando con sé il prigioniero; Cura rapida 2; Stabilità: +4 DMC contro Sbilanciare e Spingere."
   },
   "extra": [],
   "rd": "12/contundenti",
@@ -1387,7 +1387,7 @@
   "campi": {
    "Attacchi": "schianto 1d6 + 1d6 energia negativa aggiuntivi",
    "Sensi": "Scurovisione 18 m",
-   "Qualità": "Barcollante; Aura radiante necrotica (raggio 4,5 m, passiva): all'inizio di ogni turno del Carnaio, i viventi nell'aura subiscono danni da energia negativa (TS Volontà dimezza) e i non morti nell'aura (comprese le evocazioni del Necrarca) vengono curati della stessa quantità. Progressione: 2d6 al 12° (sblocco), +1d6 ogni 2 livelli oltre il 12° (14°: 3d6, 16°: 4d6, 18°: 5d6, 20°: 6d6); Pulsazione concentrata (1/incontro, az. standard): l'aura raddoppia il dado di danno/cura per 1 round."
+   "Qualità": "Barcollante; Aura radiante necrotica (raggio 4,5 m, passiva): all'inizio di ogni turno del Carnaio, i viventi nell'aura subiscono danni da energia negativa (TS Volontà dimezza) e i non morti nell'aura (comprese le evocazioni del Necrarca) vengono curati della stessa quantità. Progressione: 2d6 al 13° (sblocco), +1d6 ogni 2 livelli oltre il 13° (15°: 3d6, 17°: 4d6, 19°: 5d6), 6d6 al 20°; Pulsazione concentrata (1/incontro, az. standard): l'aura raddoppia il dado di danno/cura per 1 round."
   },
   "extra": [],
   "rd": "5/taglienti",
@@ -1426,7 +1426,7 @@
   "campi": {
    "Attacchi": "schianto 1d8 + Morsi degli inquilini: +1d6 danni perforanti (insetti nella ferita)",
    "Sensi": "Scurovisione 18 m",
-   "Qualità": "Barcollante; Sciame interno (passivo): ogni volta che il Carnaio subisce danno da un attacco in mischia, l'aggressore subisce automaticamente 2d6 danni perforanti + TS Tempra o Sanguinamento 1d4 e Nauseato 1 round; Eruzione dello sciame — si attiva (a) a 0 PF, (b) al cambio forma, (c) al ritorno: uno sciame di insetti indipendente (3 caselle, 2d6 automatici, Distrazione TS Tempra o Nauseato) si materializza e attacca i nemici più vicini per 1 round ogni 4 livelli del Carnaio (al 12°: 3 round), poi si disperde."
+   "Qualità": "Barcollante; Sciame interno (passivo): ogni volta che il Carnaio subisce danno da un attacco in mischia, l'aggressore subisce automaticamente 2d6 danni perforanti + TS Tempra o Sanguinamento 1d4 e Nauseato 1 round; Eruzione dello sciame — si attiva (a) a 0 PF, (b) al cambio forma, (c) al ritorno: uno sciame di insetti indipendente (3 caselle, 2d6 automatici, Distrazione TS Tempra o Nauseato) si materializza e attacca i nemici più vicini per 1 round ogni 4 livelli del Carnaio (al 13°: 3 round), poi si disperde."
   },
   "extra": [],
   "rd": "5/taglienti",
@@ -1457,7 +1457,7 @@
   "sciame": false,
   "descr": "Le viscere sono ancora fuori — non perché nessuno le abbia riposte, ma perché si muovono da sole, come tentacoli che cercano qualcosa da stringere. È veloce, più veloce di quanto dovrebbe essere, e la lingua è l'arma più pericolosa che porta con sé. Non incanta: paralizza.",
   "note": [
-   "⚔ FORMA COMBATTENTE (sez. 9.7): BAB pieno (pari al livello di classe); +1 PF/DV temporaneo addizionale (totale +4 PF/DV con bonus di categoria); capacità minori consentite (Cura rapida, mobilità). ⛔ ZERO INCANTESIMI in questa forma — eccezione unica alla sez. 4.12."
+   "⚔ FORMA COMBATTENTE: BAB pieno (pari al livello di classe); +1 PF temporaneo addizionale per livello (totale +4 per livello con il bonus di categoria); capacità minori consentite (Cura rapida, mobilità). ⛔ ZERO INCANTESIMI in questa forma — eccezione unica alle regole di Lancio di incantesimi in forma."
   ],
   "for": 6,
   "des": 4,
@@ -1465,7 +1465,7 @@
   "ca_tipo": "naturale",
   "ca": 4,
   "campi": {
-   "BAB pieno": "pari al livello di Carnaio (al 12°: +12/+7/+2, tre attacchi; al 20°: +20/+15/+10/+5)",
+   "BAB pieno": "pari al livello di Carnaio (al 13°: +13/+8/+3, tre attacchi; al 20°: +20/+15/+10/+5)",
    "Attacchi": "2 schianti 1d8 + Lingua paralizzante (attacco secondario, TxC di contatto): TS Tempra o Paralizzato 1d4 round (elfi NON immuni)",
    "Sensi": "Scurovisione 18 m",
    "Qualità": "Cura rapida 3; Agilità cadaverica: il Carnaio può compiere un passo di 3 m (invece di 1,5 m) come azione gratuita nel proprio turno."
@@ -1499,7 +1499,7 @@
   "sciame": false,
   "descr": "Non parla: sussurra. Il suono è troppo basso per capire le parole, ma abbastanza alto da impedire di ignorarlo. Chi resta in ascolto troppo a lungo smette di capire cosa sta facendo e perché. Chi si avvicina abbastanza scopre che le voci sembrano rispondergli, e che la risposta è sempre la stessa: avvicinarsi ancora.",
   "note": [
-   "Tipo Spirito → Semicorporeo (sez. 4.5): 50% danni non magici, 75% magici; attraversa solidi. Arma Accurata automatica. Bonus CA di deviazione (vale anche su CA di contatto). Volo libero dal 17°."
+   "Tipo Spirito → Semicorporeo (vedi Semicorporeo e Incorporeo): 50% danni non magici, 75% magici; attraversa solidi. Arma Accurata automatica. Bonus CA di deviazione (vale anche su CA di contatto). Volo libero dal 17°."
   ],
   "for": -2,
   "des": 6,
@@ -1540,7 +1540,7 @@
   "sciame": false,
   "descr": "Sembra quasi trasparente, come un'impronta lasciata nell'aria da qualcosa che non c'è più. Ma il tocco è reale — freddo, preciso, succhiante. Non lascia ferite visibili: lascia stanchezza, la sensazione di essere stati svuotati dall'interno. Il Carnaio invece si scalda.",
   "note": [
-   "Tipo Spirito → Semicorporeo (sez. 4.5). Arma Accurata automatica. Bonus CA di deviazione. Ruolo esclusivo: lifesteal personale del Carnaio (la Banshee minore cura solo le evocazioni, mai il Carnaio)."
+   "Tipo Spirito → Semicorporeo (vedi Semicorporeo e Incorporeo). Arma Accurata automatica. Bonus CA di deviazione. Ruolo esclusivo: lifesteal personale del Carnaio (la Banshee minore cura solo le evocazioni, mai il Carnaio)."
   ],
   "for": -2,
   "des": 4,
@@ -1581,7 +1581,7 @@
   "sciame": true,
   "descr": "Decine di teschi che volano in formazione caotica, mandibole schioccanti, orbite che puntano in ogni direzione. Il rumore che fanno da soli è già insopportabile; ma è l'urlo corale, quando decidono di emetterlo tutti insieme, che rompe la volontà.",
   "note": [
-   "Sciame: occupa 3 caselle, danno automatico (no TxC), immune a critici e danno di precisione. Talenti automatici (sez. 4.13): Arma Accurata + Manovre Agili. Modificatori taglia Minuscola applicati."
+   "Sciame: occupa 3 caselle, danno automatico (no TxC), immune a critici e danno di precisione. Talenti automatici: Arma Accurata + Manovre Agili. Modificatori taglia Minuscola applicati."
   ],
   "for": -2,
   "des": 6,
@@ -1622,7 +1622,7 @@
   "sciame": false,
   "descr": "L'armatura non è indossata: è cresciuta. Le piastre di ferro corroso si sono fuse alle vertebre, i rivetti spuntano dalle scapole, e la visiera è cucita alla mascella. Si muove con la fluidità di chi non distingue più tra sé e il proprio equipaggiamento. L'elemento che sceglie diventa parte del combattimento: non un'aggiunta, ma un'intenzione.",
   "note": [
-   "⚔ FORMA COMBATTENTE (sez. 9.7): BAB pieno; +1 PF/DV addizionale (totale +5 PF/DV); capacità minori consentite (Cura rapida, mobilità). ⛔ ZERO INCANTESIMI — eccezione unica alla sez. 4.12. Elemento scelto all'attivazione: Fuoco, Freddo, Acido o Elettricità."
+   "⚔ FORMA COMBATTENTE: BAB pieno; +1 PF temporaneo addizionale per livello (totale +5 per livello); capacità minori consentite (Cura rapida, mobilità). ⛔ ZERO INCANTESIMI — eccezione unica alle regole di Lancio di incantesimi in forma. Elemento scelto all'attivazione: Fuoco, Freddo, Acido o Elettricità."
   ],
   "for": 6,
   "des": 2,
@@ -1630,10 +1630,10 @@
   "ca_tipo": "naturale",
   "ca": 4,
   "campi": {
-   "BAB pieno": "pari al livello di Carnaio (al 15°: +15/+10/+5, tre attacchi; al 20°: +20/+15/+10/+5)",
+   "BAB pieno": "pari al livello di Carnaio (al 16°: +16/+11/+6/+1, quattro attacchi; al 20°: +20/+15/+10/+5)",
    "Attacchi": "arma marziale impugnata + 2d6 danni del tipo scelto, oppure 2 artigli 1d6 + 2d6 del tipo scelto",
    "Sensi": "Scurovisione 18 m",
-   "Qualità": "Esplosione della rovina (1/incontro, az. standard, cono 9 m): 1d6 danni del tipo scelto ogni 2 livelli del Carnaio (al 15°: 7d6, massimo 10d6), TS Riflessi dimezza; Cura rapida 4; Implacabile: il terreno difficile non magico non rallenta il Carnaio in questa forma."
+   "Qualità": "Esplosione della rovina (1/incontro, az. standard, cono 9 m): 1d6 danni del tipo scelto ogni 2 livelli del Carnaio (al 16°: 8d6, massimo 10d6), TS Riflessi dimezza; Cura rapida 4; Implacabile: il terreno difficile non magico non rallenta il Carnaio in questa forma."
   },
   "extra": [
    "Armatura della tomba: armatura completa corrosa fusa nel corpo (bonus armatura +9, nessuna penalità al movimento, non rimovibile né disarmabile). Competenze: armi marziali (tutte)."
@@ -1673,7 +1673,7 @@
   "sciame": false,
   "descr": "Le bende tengono insieme qualcosa che non dovrebbe più stare unito. Si muove con la pesantezza deliberata di un'architettura vivente: ogni passo è un atto di volontà tettonica. Chi la vede per la prima volta tende a fermarsi — e fermarsi, di fronte a questa cosa, è già un errore.",
   "note": [
-   "Taglia Grande: portata 1,5 m (aggiuntiva), BCM/DMC +2, −1 TxC e −1 CA da taglia (sez. 3.1). Dadi armi naturali scalati (schianto 1d8 → 2d6 con taglia Grande, sez. 3.3)."
+   "Taglia Grande: portata 1,5 m (aggiuntiva), BCM/DMC +2, −1 TxC e −1 CA da taglia (vedi Modificatori di taglia). Dadi armi naturali scalati (schianto 1d8 → 2d6 con taglia Grande; vedi Scaling dei dadi di danno delle armi naturali)."
   ],
   "for": 8,
   "des": -2,
@@ -1681,7 +1681,7 @@
   "ca_tipo": "naturale",
   "ca": 5,
   "campi": {
-   "Attacchi": "2 schianti 2d6 + Polvere della tomba (sul colpo): TS Tempra o Indebolito (−2 Forza) per 1 minuto (versione meccanica della Peste delle Mummie, sez. 6.3)",
+   "Attacchi": "2 schianti 2d6 + Polvere della tomba (sul colpo): TS Tempra o Indebolito (−2 Forza) per 1 minuto (versione meccanica della Peste delle Mummie; vedi Malus immediati e drenaggi)",
    "Sensi": "Scurovisione 18 m, Olfatto",
    "Qualità": "NON Barcollante (conserva gli istinti ferini); Disperazione (aura, raggio 9 m): la prima volta che una creatura vede il Carnaio in questa forma, deve superare un TS Volontà o essere Paralizzata dalla paura per 1d4 round (chi supera il TS o subisce l'effetto è immune per 24 ore). Effetto [paura, influenza mentale]; Travolgere (az. completa): il Carnaio si muove in linea retta fino a 2× velocità attraverso le caselle di nemici di taglia Media o inferiore — TS Riflessi o 2d6+For danni e Proni (chi supera il TS si sposta di lato)."
   },
@@ -1709,7 +1709,7 @@
   "tipo": "Ghoul",
   "taglia_raw": "Media",
   "combattente": false,
-  "stat": "For +2, Des +6 — Velocità: 9 m + volo 12 m (manovrabilità buona, sez. 4.6) — CA naturale: +3",
+  "stat": "For +2, Des +6 — Velocità: 9 m + volo 12 m (manovrabilità buona, max 1 m fino al 16° livello) — CA naturale: +3",
   "taglia": "Media",
   "sciame": false,
   "descr": "Le costole sono esposte, le orbite vuote tranne per due punti di luce che si spostano lentamente. Vola senza fare rumore e si ferma lontano, e quando tende il suo arco d'osso non mira al corpo: mira a qualcosa di più profondo. Chi viene colpito da quelle frecce sente che manca qualcosa, qualcosa che non si vede sulle mappe dell'anatomia.",
@@ -1718,7 +1718,7 @@
   ],
   "for": 2,
   "des": 6,
-  "velocita": "9 m + volo 12 m (manovrabilità buona, sez. 4.6)",
+  "velocita": "9 m + volo 12 m (manovrabilità buona, max 1 m fino al 16° livello)",
   "ca_tipo": "naturale",
   "ca": 3,
   "campi": {
@@ -1727,7 +1727,7 @@
    "Bonus abilità": "+8 Furtività, +4 Percezione"
   },
   "extra": [
-   "Arco spettrale: il Carnaio materializza un arco lungo d'osso che solo lui può usare; frecce spettrali a volontà (no munizioni). Raggio 30 m. Danno 1d8 + bonus Des. Colpisce la CA di contatto (le frecce attraversano armature e scudi). Ogni freccia a segno: TS Tempra o 1 livello negativo (sez. 6.4).",
+   "Arco spettrale: il Carnaio materializza un arco lungo d'osso che solo lui può usare; frecce spettrali a volontà (no munizioni). Raggio 30 m. Danno 1d8 + bonus Des. Colpisce la CA di contatto (le frecce attraversano armature e scudi). Ogni freccia a segno: TS Tempra o 1 livello negativo.",
    "Attacchi alternativi: in mischia, 2 artigli 1d4"
   ],
   "rd": "—",
@@ -1758,7 +1758,7 @@
   "sciame": false,
   "descr": "I capelli — se si possono chiamare ancora così — sono lunghi fino al suolo e terminano in uncini d'osso sottili come aghi. Quando ridono per la prima volta, al suono risponde qualcosa nel petto di chi ascolta. Il sorriso dura pochissimo: poi i capelli si tendono e il lavoro comincia.",
   "note": [
-   "La Presa multipla è una manovra di forma (sez. 4.14): usa BMC = livello + Cha + 4 e DMC = 10 + livello + Cha + 4. Il Carnaio NON è In Lotta mentre mantiene le prese: può castare normalmente (sez. 4.12)."
+   "La Presa multipla è una manovra di forma: usa BMC = livello + Cha + 4 e DMC = 10 + livello + Cha + 4. Il Carnaio NON è In Lotta mentre mantiene le prese: può lanciare incantesimi normalmente (forma umanoide)."
   ],
   "for": 4,
   "des": 4,
@@ -1766,9 +1766,9 @@
   "ca_tipo": "naturale",
   "ca": 3,
   "campi": {
-   "Attacchi": "3 ciocche unciniate (portata 3 m ciascuna): 1d6+For con Afferrare (manovra di forma, sez. 4.14) per ciascuna",
+   "Attacchi": "3 ciocche unciniate (portata 3 m ciascuna): 1d6+For con Afferrare (manovra di forma) per ciascuna",
    "Sensi": "Scurovisione 18 m, Vista in penombra",
-   "Qualità": "Presa multipla: fino a 3 prese simultanee (una per ciocca, una per bersaglio); mantenerle non impone In Lotta al Carnaio, che ha le mani libere e casta normalmente; i bersagli si liberano contro la DMC speciale (sez. 4.14); Stritolare con gli uncini: ogni bersaglio in presa subisce 1d6+For automatici all'inizio del turno del Carnaio + TS Tempra o Sanguinamento 1d4; Risata agghiacciante (passivo, al primo attacco del combattimento): chi sente entro 9 m, TS Volontà o Scosso 1d4 round. Effetto [paura, sonoro].",
+   "Qualità": "Presa multipla: fino a 3 prese simultanee (una per ciocca, una per bersaglio); mantenerle non impone In Lotta al Carnaio, che ha le mani libere e lancia incantesimi normalmente; i bersagli si liberano contro la DMC speciale della manovra di forma; Stritolare con gli uncini: ogni bersaglio in presa subisce 1d6+For automatici all'inizio del turno del Carnaio + TS Tempra o Sanguinamento 1d4; Risata agghiacciante (passivo, al primo attacco del combattimento): chi sente entro 9 m, TS Volontà o Scosso 1d4 round. Effetto [paura, sonoro].",
    "Bonus abilità": "+4 Furtività, +4 Acrobazia"
   },
   "extra": [],
@@ -1795,16 +1795,16 @@
   "tipo": "Spirito",
   "taglia_raw": "Grande",
   "combattente": false,
-  "stat": "For +6, Des +2 — Velocità: 9 m + volo 9 m perfetto (sez. 4.6) — Deviazione: +5",
+  "stat": "For +6, Des +2 — Velocità: 9 m + volo 9 m perfetto (max 1 m fino al 16° livello) — Deviazione: +5",
   "taglia": "Grande",
   "sciame": false,
   "descr": "È grande e vuoto, con un torace trasparente dove le anime imprigionate si muovono in circolo come pesci in una boccia. Non mangia la carne: mangia ciò che la muove. Chi viene toccato sente una sottrazione impossibile da descrivere — qualcosa come perdere un'opinione su sé stessi.",
   "note": [
-   "Tipo Spirito → Semicorporeo (sez. 4.5): 50% danni non magici, 75% magici; attraversa solidi. Arma Accurata (facoltativa: con For +6 conviene usare Forza). Bonus CA di deviazione. Taglia Grande: portata 1,5 m, BCM/DMC +2, −1 TxC e −1 CA da taglia. Volo libero dal 17°."
+   "Tipo Spirito → Semicorporeo (vedi Semicorporeo e Incorporeo): 50% danni non magici, 75% magici; attraversa solidi. Arma Accurata (facoltativa: con For +6 conviene usare Forza). Bonus CA di deviazione. Taglia Grande: portata 1,5 m, BCM/DMC +2, −1 TxC e −1 CA da taglia. Volo libero dal 17°."
   ],
   "for": 6,
   "des": 2,
-  "velocita": "9 m + volo 9 m perfetto (sez. 4.6)",
+  "velocita": "9 m + volo 9 m perfetto (max 1 m fino al 16° livello)",
   "ca_tipo": "deviazione",
   "ca": 5,
   "campi": {
@@ -1836,16 +1836,16 @@
   "tipo": "Spirito",
   "taglia_raw": "Media",
   "combattente": false,
-  "stat": "For −4, Des +8 — Velocità: volo 18 m perfetto (sez. 4.6) — Deviazione: +5",
+  "stat": "For −4, Des +8 — Velocità: volo 18 m perfetto (max 1 m fino al 16° livello) — Deviazione: +5",
   "taglia": "Media",
   "sciame": false,
   "descr": "La forma è appena abbozzata, come il ricordo di una donna visto da troppo lontano. Vola senza toccare nulla, lasciando un silenzio preciso ovunque passi, e quando decide di urlare il suono non esce come un grido normale: esce come qualcosa che si rompe, qualcosa di strutturale, e tutto ciò che era tenuto insieme smette di esserlo.",
   "note": [
-   "Tipo Spirito → Semicorporeo (sez. 4.5). Arma Accurata automatica. Bonus CA di deviazione. Volo libero dal 17°. Nota: il tocco cura gli altri non morti adiacenti, mai il Carnaio (ruolo esclusivo del Sanguigno, Categoria IV)."
+   "Tipo Spirito → Semicorporeo (vedi Semicorporeo e Incorporeo). Arma Accurata automatica. Bonus CA di deviazione. Volo libero dal 17°. Nota: il tocco cura gli altri non morti adiacenti, mai il Carnaio (ruolo esclusivo del Sanguigno, Categoria IV)."
   ],
   "for": -4,
   "des": 8,
-  "velocita": "volo 18 m perfetto (sez. 4.6)",
+  "velocita": "volo 18 m perfetto (max 1 m fino al 16° livello)",
   "ca_tipo": "deviazione",
   "ca": 5,
   "campi": {
@@ -1882,7 +1882,7 @@
   "sciame": false,
   "descr": "Non assomiglia a niente di specifico — non ancora. Attende immobile, confuso con il liquame del pavimento, finché qualcosa di caldo non si avvicina. Allora si muove. La digestione, per lui, è ancora un processo in corso: i frammenti che galleggiano dentro di lui appartenevano a qualcun altro, non molto tempo fa.",
   "note": [
-   "Talenti automatici (sez. 4.13): Arma Accurata + Manovre Agili. Modificatori taglia Minuscola: +2 TxC, +2 CA, +4 Furtività e Volare, −3 BCM/DMC. Forma: liquame giallastro animato con ossa sciolte e frammenti cranici galleggianti."
+   "Talenti automatici: Arma Accurata + Manovre Agili. Modificatori taglia Minuscola: +2 TxC, +2 CA, +4 Furtività e Volare, −3 BCM/DMC. Forma: liquame giallastro animato con ossa sciolte e frammenti cranici galleggianti."
   ],
   "for": -2,
   "des": 4,
@@ -1895,12 +1895,12 @@
    "Bonus abilità": "+8 Furtività"
   },
   "extra": [
-   "Avvolgere (manovra di forma, sez. 4.14, non provoca AdO, bersaglio fino a taglia Grande): il bersaglio avvolto è Intralciato e subisce i seguenti effetti simultanei:",
-   "• Acido automatico all'inizio di ogni turno del Carnaio: 1d6 ogni 5 livelli del Carnaio (al 15°: 3d6, al 20°: 4d6).",
+   "Avvolgere (manovra di forma, non provoca AdO, bersaglio fino a taglia Grande): il bersaglio avvolto è Intralciato e subisce i seguenti effetti simultanei:",
+   "• Acido automatico all'inizio di ogni turno del Carnaio: 1d6 ogni 5 livelli del Carnaio (al 16°: 3d6, al 20°: 4d6).",
    "• Se la testa è avvolta (scelta del Carnaio all'inizio dell'avvolgimento): il bersaglio non può pronunciare componenti verbali.",
    "• TS Tempra ogni round: in caso di fallimento, −1 CA cumulativo (equipaggiamento corroso, riparabile).",
-   "• Liberazione: prova di Lotta o Artista della Fuga contro la DMC speciale (sez. 4.14).",
-   "Un solo bersaglio avvolto alla volta. Mentre avvolge il Carnaio non può muoversi, ma può castare normalmente (sez. 4.12).",
+   "• Liberazione: prova di Lotta o Artista della Fuga contro la DMC speciale della manovra di forma.",
+   "Un solo bersaglio avvolto alla volta. Mentre avvolge il Carnaio non può muoversi; può lanciare incantesimi senza componenti verbali o somatiche.",
    "Imboscata perfetta: immobile e inattivo, il Carnaio è indistinguibile da liquame inerte (+20 Camuffare come oggetto). Chi non identifica la forma è Colto alla sprovvista contro il primo Avvolgere."
   ],
   "rd": "—",
@@ -1922,7 +1922,7 @@
   "sciame": false,
   "descr": "Non ha bisogno di inseguire: fa sì che gli altri vengano da lui. Si pianta al centro della battaglia con la certezza di chi conosce ogni passo che il nemico farà, e le braccia che si estendono a tre metri di distanza non sono braccia normali: sono confini. Entrare nella sua zona significa già aver perso qualcosa.",
   "note": [
-   "⚔ FORMA COMBATTENTE (sez. 9.7): BAB pieno; +1 PF/DV addizionale (totale +6 PF/DV); capacità minori consentite (Cura rapida, parata). ⛔ ZERO INCANTESIMI — eccezione unica alla sez. 4.12."
+   "⚔ FORMA COMBATTENTE: BAB pieno; +1 PF temporaneo addizionale per livello (totale +6 per livello); capacità minori consentite (Cura rapida, parata). ⛔ ZERO INCANTESIMI — eccezione unica alle regole di Lancio di incantesimi in forma."
   ],
   "for": 6,
   "des": 4,
@@ -1930,7 +1930,7 @@
   "ca_tipo": "naturale",
   "ca": 5,
   "campi": {
-   "BAB pieno": "pari al livello di Carnaio (al 18°: +18/+13/+8/+3, quattro attacchi; al 20°: +20/+15/+10/+5)",
+   "BAB pieno": "pari al livello di Carnaio (al 19°: +19/+14/+9/+4, quattro attacchi; al 20°: +20/+15/+10/+5)",
    "Attacchi": "arma marziale o esotica impugnata (o 2 artigli 1d6)",
    "Sensi": "Scurovisione 18 m",
    "Qualità": "Zona di controllo (portata 3 m): braccia e arma si estendono spettralmente — il Carnaio ha portata 3 m con qualsiasi arma da mischia; AdO illimitati: nessun limite al numero di attacchi di opportunità per round; Nessun passo è sicuro: i nemici entro 3 m che compiono un passo di 1,5 m o che attaccano un bersaglio diverso dal Carnaio provocano un AdO; Parata del maestro (1/round, az. immediata): quando un attacco in mischia colpisce il Carnaio, può fare una prova di TxC contrapposta — se il risultato del Carnaio supera quello dell'attaccante, l'attacco è parato; Cura rapida 5."
@@ -1973,7 +1973,7 @@
   "sciame": false,
   "descr": "Solleva muri dal nulla — no, non dal nulla: dall'archivio dei morti che porta con sé. Ogni parete di costole e vertebre che emerge dal terreno è costruita con materiali che avevano già servito una volta. Ridisegna il campo di battaglia con la stessa nonchalance di chi riordina i mobili di una stanza.",
   "note": [
-   "Taglia Enorme: portata 4,5 m (3 m con armi da mischia), BCM/DMC +3, −2 TxC e −2 CA da taglia (sez. 3.1). Numero massimo di segmenti attivi = bonus di Carisma del Carnaio."
+   "Taglia Enorme: portata 4,5 m (3 m con armi da mischia), BCM/DMC +3, −2 TxC e −2 CA da taglia (vedi Modificatori di taglia). Numero massimo di segmenti attivi = bonus di Carisma del Carnaio."
   ],
   "for": 6,
   "des": -2,
@@ -2105,7 +2105,7 @@
   "sciame": false,
   "descr": "Passa attraverso le pareti con l'indifferenza di chi non riconosce più la distinzione tra dentro e fuori. Quando sceglie un corpo, si insinua lentamente: prima un peso strano, poi una voce che non è tua, poi nient'altro. Chi lo ospita combatte ogni round per riprendere il controllo — e spesso, per poco, ce la fa.",
   "note": [
-   "Tipo Spirito → Semicorporeo (sez. 4.5): 50% danni non magici, 75% magici; attraversa solidi. Arma Accurata automatica. Bonus CA di deviazione. Volo libero. Effetto Malevolenza [possessione]: non morti, costrutti ed esseri senza anima sono immuni."
+   "Tipo Spirito → Semicorporeo (vedi Semicorporeo e Incorporeo): 50% danni non magici, 75% magici; attraversa solidi. Arma Accurata automatica. Bonus CA di deviazione. Volo libero. Effetto Malevolenza [possessione]: non morti, costrutti ed esseri senza anima sono immuni."
   ],
   "for": -4,
   "des": 8,
@@ -2146,7 +2146,7 @@
   "sciame": false,
   "descr": "Gli incantesimi che lo colpiscono non esplodono: scompaiono. Li assorbe con la naturalezza di chi ha fame, e quella fame è diretta, tattica, il motivo per cui gli incantatori d'alto livello si fermano quando lo vedono. Non temono il combattimento — temono di rimanere senza strumenti.",
   "note": [
-   "Tipo Spirito → Semicorporeo (sez. 4.5). Arma Accurata automatica. Bonus CA di deviazione. Volo libero. Contro nemici non magici è quasi inutile: massimo trade-off della Categoria VI."
+   "Tipo Spirito → Semicorporeo (vedi Semicorporeo e Incorporeo). Arma Accurata automatica. Bonus CA di deviazione. Volo libero. Contro nemici non magici è quasi inutile: massimo trade-off della Categoria VI."
   ],
   "for": -2,
   "des": 6,
@@ -2156,7 +2156,7 @@
   "campi": {
    "Attacchi": "tocco di contatto (usa Destrezza per TxC) 3d6 necrotici + Brucia magia: se il bersaglio è un incantatore, TS Volontà o perde 1 slot o preparazione del livello più alto rimasto; il Carnaio recupera PF pari a 5× il livello dello slot bruciato.",
    "Sensi": "Scurovisione 18 m; Individuazione del Magico permanente.",
-   "Qualità": "Semicorporeo; Assorbire incantesimo (3/incontro, az. immediata): quando un incantesimo nemico ha come bersaglio il Carnaio o un alleato adiacente — prova 1d20 + livello del Carnaio vs CD 11 + LI dell'incantatore nemico. Successo: l'incantesimo è negato e il Carnaio sceglie tra: (a) recuperare PF pari a 5× il livello dell'incantesimo, oppure (b) ottenere +2 alla CD del prossimo incantesimo lanciato entro 1 round; Aura di interferenza (passiva, raggio 3 m): gli incantatori nemici che lanciano entro 3 m devono superare una prova di Concentrazione (CD sez. 4.9 + livello dell'incantesimo) o perdono l'incantesimo."
+   "Qualità": "Semicorporeo; Assorbire incantesimo (3/incontro, az. immediata): quando un incantesimo nemico ha come bersaglio il Carnaio o un alleato adiacente — prova 1d20 + livello del Carnaio vs CD 11 + LI dell'incantatore nemico. Successo: l'incantesimo è negato e il Carnaio sceglie tra: (a) recuperare PF pari a 5× il livello dell'incantesimo, oppure (b) ottenere +2 alla CD del prossimo incantesimo lanciato entro 1 round; Aura di interferenza (passiva, raggio 3 m): gli incantatori nemici che lanciano entro 3 m devono superare una prova di Concentrazione (CD degli effetti speciali + livello dell'incantesimo) o perdono l'incantesimo."
   },
   "extra": [],
   "rd": "—",
@@ -2195,7 +2195,7 @@
   "ca_tipo": "naturale",
   "ca": 3,
   "campi": {
-   "Attacchi": "Scaglia reliquie (az. standard, raggio 18 m, TxC con Destrezza): 1d6 danni ogni 2 livelli del Carnaio (al 18°: 9d6, massimo 10d6), taglienti/perforanti + TS Tempra o Sanguinamento 1d6; Multilancio (az. completa): scaglia 2 reliquie contro lo stesso bersaglio o bersagli diversi.",
+   "Attacchi": "Scaglia reliquie (az. standard, raggio 18 m, TxC con Destrezza): 1d6 danni ogni 2 livelli del Carnaio (al 19°: 9d6, massimo 10d6), taglienti/perforanti + TS Tempra o Sanguinamento 1d6; Multilancio (az. completa): scaglia 2 reliquie contro lo stesso bersaglio o bersagli diversi.",
    "Sensi": "Vista cieca 12 m",
    "Qualità": "Senza forma stabile: immune a danni di precisione e colpi critici; Orbita tagliente (passiva): chiunque inizi il proprio turno adiacente al Carnaio o entri in uno spazio adiacente subisce automaticamente 4d6 danni taglienti (nessun TS; al 20°: 5d6); le creature in volo adiacenti devono superare un TS Riflessi o sono Prone in aria e cadono; Scudo di detriti (passivo): gli attacchi a distanza con proiettili fisici contro il Carnaio e gli alleati adiacenti hanno 50% di probabilità di essere deflessi; i proiettili deflessi vengono assorbiti nell'orbita.",
    "Bonus abilità": "+8 Volare"
@@ -2220,7 +2220,7 @@
   "sciame": false,
   "descr": "Non c'è più distinzione tra lui e la magia che lancia: si sono fusi a livello fondamentale. Ogni incantesimo che produce è più potente, più lungo, più profondo di quanto dovrebbe essere per qualunque limite teorico. Le proprie ossa sono diventate un'estensione della volontà stessa — e quella volontà non ha più intenzione di fermarsi.",
   "note": [
-   "Apoteosi del caster. L'Eco della filatteria fornisce +1 slot per ogni livello lanciabile (al 20°: +1 slot dal 1° al 9° = 9 slot extra). L'Eco arcano bypassa i cap di danno: una Palla di Fuoco con LI effettivo 22 causa fino a 22d6. Nessuna forma combattente: in forma Lich si casta normalmente."
+   "Apoteosi del caster. L'Eco della filatteria fornisce +1 slot per ogni livello lanciabile (al 20°: +1 slot dal 1° al 9° = 9 slot extra). L'Eco arcano bypassa i cap di danno: una Palla di Fuoco con LI effettivo 22 causa fino a 22d6. Nessuna forma combattente: in forma Lich (umanoide) si lanciano incantesimi normalmente."
   ],
   "for": 0,
   "des": 2,
@@ -2265,7 +2265,7 @@
   "sciame": false,
   "descr": "Quello che si vede non è un mostro: è un fenomeno geografico. Si muove lentamente, con la certezza di chi sa che il tempo lavora per lui. Le spine che scaglia a distanza sembrano provenire da una catapulta, e il carapace riflette i raggi con la nonchalance di uno specchio. Abbatterlo richiede uno sforzo collettivo sostenuto — finché c'è energia positiva, non scende sotto un punto ferita.",
   "note": [
-   "BAB ¾ (al 20°: +15/+10/+5) — NON è forma combattente (sez. 9.7): in questa forma il Carnaio può ancora lanciare incantesimi. Taglia Enorme: portata 4,5/3 m, BCM/DMC +3, −2 TxC e −2 CA. PF totali: +8 PF/DV (=+6 di categoria +2 extra). RI = 11 + livello del Carnaio (al 20°: RI 31)."
+   "BAB ¾ (al 20°: +15/+10/+5) — NON è forma combattente: non vieta gli incantesimi, ma come forma non umanoide esclude quelli con componenti verbali o somatiche. Taglia Enorme: portata 4,5/3 m, BCM/DMC +3, −2 TxC e −2 CA. PF temporanei: +8 per livello (+6 di categoria e +2 extra). RI = 11 + livello del Carnaio (al 20°: RI 31)."
   ],
   "for": 10,
   "des": -4,
@@ -2276,7 +2276,7 @@
    "BAB ¾": "al 20° = +15/+10/+5 (tre attacchi con attacco completo; TxC con Forza = +10+15 = +25 al primo attacco)",
    "Attacchi": "morso 4d6 (critico 19-20/×3) + 2 artigli 2d6",
    "Sensi": "Scurovisione 18 m, Olfatto",
-   "Qualità": "NON Barcollante; Rigenerazione 10: sospesa per 1 round solo dai danni di energia positiva; finché attiva il Carnaio non scende sotto 1 PF; Inghiottire (manovra di forma sez. 4.14, su morso riuscito contro Grande o inferiore): 3d6 danni (acido + contundente) per round dentro, il bersaglio è Intralciato; uscita: 15 danni taglienti dall'interno (CA interna 12); Carapace marcio: raggi e linee magiche dirette contro il Carnaio hanno 30% di essere riflesse verso il mittente (verificato prima del TxC o TS)."
+   "Qualità": "NON Barcollante; Rigenerazione 10: sospesa per 1 round solo dai danni di energia positiva; finché attiva il Carnaio non scende sotto 1 PF; Inghiottire (manovra di forma, su morso riuscito contro Grande o inferiore): 3d6 danni (acido + contundente) per round dentro, il bersaglio è Intralciato; uscita: 15 danni taglienti dall'interno (CA interna 12); Carapace marcio: raggi e linee magiche dirette contro il Carnaio hanno 30% di essere riflesse verso il mittente (verificato prima del TxC o TS)."
   },
   "extra": [
    "Lancio di spine ossee (az. standard, raggio 36 m): fino a 4 spine, TxC a distanza con Forza (BAB ¾ + For), 2d6+For danni ciascuna, contro bersagli uguali o diversi."
@@ -2317,7 +2317,7 @@
   "sciame": false,
   "descr": "Ha imparato da secoli di osservazione a sembrare vivo quando vuole, morto quando serve, e nessuna delle due cose quando sceglie di mostrarsi per quello che è. La voce che usa per dominare non è la stessa voce che usa per parlare — è qualcosa di più antico, che bypassa il ragionamento e va direttamente alla volontà.",
   "note": [
-   "Schiavi del sangue = creazione non morti (sez. 4.10 — privilegio esclusivo della Categoria Speciale). Max 2 schiavi attivi contemporaneamente; durano 1 ora o fino a fine trasformazione."
+   "Schiavi del sangue = creazione non morti (vedi Creazione di non morti; privilegio esclusivo della Categoria Speciale). Max 2 schiavi attivi contemporaneamente; durano 1 ora o fino a fine trasformazione."
   ],
   "for": 6,
   "des": 6,
@@ -2327,7 +2327,7 @@
   "campi": {
    "Attacchi": "schianto 1d8 + Drenaggio energetico: TS Tempra o 2 livelli negativi; il Carnaio guadagna 5 PF temporanei per ogni livello negativo inflitto (1 ora).",
    "Sensi": "Scurovisione 18 m",
-   "Qualità": "Cura rapida 5; Dominio (gaze, az. standard, raggio 9 m): TS Volontà o Dominato (come Dominare Persona, LI = livello, nessuna concentrazione). Fino a 2 bersagli dominati simultaneamente (il terzo libera il più vecchio). Effetto [influenza mentale, compulsione]; Fascino della notte (aura, raggio 6 m): i nemici nell'aura subiscono −2 ai TS contro gli effetti [influenza mentale] del Carnaio (Dominio e incantesimi); Figli della notte (1/incontro, az. standard): evoca 1d4+1 sciami di pipistrelli (2d6 automatici, Distrazione TS Tempra o Nauseato; volo 12 m) che obbediscono per 1 minuto; Schiavi del sangue ⚠ (creazione non morti, sez. 4.10): un umanoide portato a Cos 0 dal Morso del sangue si rialza dopo 1d4 round come schiavo vampirico (statistiche dello Zombie veloce). Max 2 schiavi, durano 1 ora; Forma di nube (az. standard): come Forma Gassosa (volo 6 m perfetto)."
+   "Qualità": "Cura rapida 5; Dominio (gaze, az. standard, raggio 9 m): TS Volontà o Dominato (come Dominare Persona, LI = livello, nessuna concentrazione). Fino a 2 bersagli dominati simultaneamente (il terzo libera il più vecchio). Effetto [influenza mentale, compulsione]; Fascino della notte (aura, raggio 6 m): i nemici nell'aura subiscono −2 ai TS contro gli effetti [influenza mentale] del Carnaio (Dominio e incantesimi); Figli della notte (1/incontro, az. standard): evoca 1d4+1 sciami di pipistrelli (2d6 automatici, Distrazione TS Tempra o Nauseato; volo 12 m) che obbediscono per 1 minuto; Schiavi del sangue ⚠ (creazione non morti; vedi Creazione di non morti): un umanoide portato a Cos 0 dal Morso del sangue si rialza dopo 1d4 round come schiavo vampirico (statistiche dello Zombie veloce). Max 2 schiavi, durano 1 ora; Forma di nube (az. standard): come Forma Gassosa (volo 6 m perfetto)."
   },
   "extra": [
    "Morso del sangue (su bersaglio In Lotta, Paralizzato, Indifeso o consenziente): drenaggio 1d4 Cos (senza limite cumulativo; Cos 0 → Morto) + il Carnaio si cura di 5 PF per punto drenato."
@@ -2360,7 +2360,7 @@
   "sciame": false,
   "descr": "Non è un'ombra: è l'assenza di luce in forma pensante. Si muove attraverso i muri con l'indifferenza di un pensiero cattivo, e dove passa le luci non si spengono per il vento — si spengono perché ha deciso che si spengano. Gli uncini d'ombra che distende sono attacchi di contatto: non toccano la carne, toccano qualcosa di più difficile da riparare.",
   "note": [
-   "⚠ INCORPOREO — esclusiva assoluta della Categoria Speciale (sez. 4.5): immune ai danni non magici; 50% dai magici (effetti di forza: danno pieno); attraversa i solidi. Tutti gli attacchi della forma sono attacchi di contatto. Bonus CA di deviazione (vale anche su CA di contatto). La Forza è irrilevante: usare sempre Destrezza. Taglia Enorme: portata 4,5/3 m, −2 TxC e −2 CA da taglia. Volo libero."
+   "⚠ INCORPOREO — esclusiva assoluta della Categoria Speciale (vedi Semicorporeo e Incorporeo): immune ai danni non magici; 50% dai magici (effetti di forza: danno pieno); attraversa i solidi. Tutti gli attacchi della forma sono attacchi di contatto. Bonus CA di deviazione (vale anche su CA di contatto). La Forza è irrilevante: usare sempre Destrezza. Taglia Enorme: portata 4,5/3 m, −2 TxC e −2 CA da taglia. Volo libero."
   ],
   "for": null,
   "des": 4,
@@ -2409,7 +2409,7 @@
   "ca_tipo": "naturale",
   "ca": 0,
   "campi": {
-   "Attacchi": "danni da sciame 4d6 automatici + TS Tempra o Sanguinamento 1d6; Distrazione (TS Tempra o Nauseato 1 round); Disarmare di massa (az. gratuita 1/round, manovra di forma sez. 4.14).",
+   "Attacchi": "danni da sciame 4d6 automatici + TS Tempra o Sanguinamento 1d6; Distrazione (TS Tempra o Nauseato 1 round); Disarmare di massa (az. gratuita 1/round, manovra di forma).",
    "Sensi": "Scurovisione 18 m, Percezione dei Vivi 18 m.",
    "Qualità": "RD 10/— (pura); Guardia del corpo: se la Testa è entro 9 m, ogni volta che la Testa subirebbe danni il Carnaio può scegliere di reindirizzarli al Torso (nessuna azione, illimitato per round)."
   },
@@ -2417,11 +2417,11 @@
    "Il corpo si separa in 3 parti che agiscono in posizioni diverse. PF separati: ogni parte = 40% dei PF massimi del Carnaio (totale 120%). Nel proprio turno il Carnaio distribuisce le proprie azioni normali tra le parti come preferisce; in più ogni parte esegue un'azione di movimento gratuita per round. Distanza max 30 m dalla Testa (oltre: parte inerte). Nemici tra Torso e Sciame: fiancheggiati.",
    "PF separati: ogni parte ha PF propri = 40% dei PF massimi del Carnaio (totale: 120%). Parte a 0 → inerte (non distrutta, non eliminata). Testa a 0 PF → la trasformazione termina: il Carnaio si ricompone nella posizione della Testa con PF pari alla somma dei PF rimanenti delle altre parti (min 1). Tutte a 0 → ritorna alla forma base e diventa Morente. Termine normale: PF del Carnaio = somma PF rimanenti (max: PF massimi).",
    "▶ La Testa alata (Minuscola — la caster)",
-   "Unica parte da cui il Carnaio può lanciare incantesimi. Arma Accurata + Manovre Agili (sez. 4.13). Taglia Minuscola: +2 TxC, +2 CA.",
+   "Unica parte da cui il Carnaio può lanciare incantesimi, anche con componenti verbali e somatiche: eccezione voluta alla regola delle forme non umanoidi. Arma Accurata + Manovre Agili. Taglia Minuscola: +2 TxC, +2 CA.",
    "▶ Il Torso rampante (Media — la guardia)",
    "For +6, Des +0 — Velocità: 9 m — CA naturale: +6",
    "▶ Lo Sciame d'arti (Minuscola — sciame 2 caselle — il flagello)",
-   "Des +6 — Velocità: 9 m + scalata 9 m. Arma Accurata + Manovre Agili (sez. 4.13). Taglia Minuscola: +2 TxC, +2 CA.",
+   "Des +6 — Velocità: 9 m + scalata 9 m. Arma Accurata + Manovre Agili. Taglia Minuscola: +2 TxC, +2 CA.",
    "Tratti sciame: immune a critici e danno di precisione; vulnerabile +50% ai danni da area.",
    "▶ Regole comuni alle tre parti",
    "Le azioni del Carnaio sono distribuite liberamente tra le parti in qualsiasi combinazione. Ogni parte esegue un'azione di movimento gratuita per round. Una parte che supera i 30 m dalla Testa diventa Inabile finché non torna entro distanza. Ricomposizione (az. di movimento, parti adiacenti): il Carnaio torna intero oppure cambia forma/ritorna alla forma originale."

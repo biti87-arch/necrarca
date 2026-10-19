@@ -14,6 +14,7 @@ Ogni volta che si aggiorna il ramo `main`, GitHub Actions compila l'app (file `.
 ## Struttura
 - `www/index.html` — l'app completa (una sola pagina, funziona senza connessione). Si genera con `python3 sorgenti/build.py`.
 - `sorgenti/` — modello della pagina (`template.html`), dati estratti dai manuali (`morti.json`, `forme.json`) e script di estrazione.
+  - Forme non morte: `python3 sorgenti/estrai_forme_txt.py Libro_dei_Morti_Forme_Non_Morte_v2_5.docx forme.txt` e poi `python3 sorgenti/parse_forme.py forme.txt sorgenti/forme.json`. Dal 20/10/2026 la fonte è il libro **v2.5** (regole allineate al Necrarca v2.4 FINALE).
 - `www/vendor/` — font locali (Spectral SC, IBM Plex Sans, IBM Plex Mono).
 - `android/` — progetto Android generato da Capacitor 6.
 - `android/app/necrarca.keystore` — chiave di firma: serve per installare gli aggiornamenti sopra la versione precedente. Non cancellarla.

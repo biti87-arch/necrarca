@@ -1,5 +1,9 @@
-import re, json
-L=[l.rstrip() for l in open('/home/claude/src/forme_non_morte.txt',encoding='utf8')]
+import re, json, sys
+# Uso: python3 parse_forme.py forme_non_morte.txt forme.json
+#   forme_non_morte.txt = pandoc -t markdown --wrap=none Libro_dei_Morti_Forme_Non_Morte_vX.docx
+SRC = sys.argv[1] if len(sys.argv) > 1 else '/home/claude/src/forme_non_morte.txt'
+OUT = sys.argv[2] if len(sys.argv) > 2 else '/home/claude/app/forme.json'
+L=[l.rstrip() for l in open(SRC,encoding='utf8')]
 def clean(s):
     return s.replace('\\[','[').replace('\\]',']').replace('\\*','*').replace('\\+','+').replace('\\-','-').strip()
 L=[clean(l) for l in L]
@@ -58,7 +62,7 @@ for f in forms:
     f['semicorporeo']= f['tipo']=='Spirito' and f['cat']!='Speciale' or 'Semicorporeo' in f['campi'].get('Qualità','')
     f['incorporeo']='INCORPOREO' in txt or 'Incorporeo' in f['campi'].get('Qualità','')
     if f['incorporeo']: f['semicorporeo']=False
-json.dump(forms,open('/home/claude/app/forme.json','w',encoding='utf8'),ensure_ascii=False,indent=1)
+json.dump(forms,open(OUT,'w',encoding='utf8'),ensure_ascii=False,indent=1)
 from collections import Counter
 print(len(forms),Counter(f['cat'] for f in forms))
 for f in forms:
@@ -93,6 +97,6 @@ for f in forms:
         cand=[e for e in f['extra'] if e.startswith(('Attacco (1)','Attacchi melee','Attacchi alternativi'))]
         src=' + '.join(e.split(':',1)[1].strip() for e in cand) if cand else ''
     f['armi']=parse_armi(src)
-json.dump(forms,open('/home/claude/app/forme.json','w',encoding='utf8'),ensure_ascii=False,indent=1)
+json.dump(forms,open(OUT,'w',encoding='utf8'),ensure_ascii=False,indent=1)
 for f in forms:
     print(f"{f['nome'][:26]:26} {'U' if f['umanoide'] else '-'} ", '; '.join(f"{a['n']}×{a['nome']} {a['dado']}{' C' if a.get('contatto') else ''}{' S' if a.get('secondario') else ''}" for a in f['armi']) or '!!! '+f['campi'].get('Attacchi','')[:80])
